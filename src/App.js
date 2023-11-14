@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Nav from './Components/Nav';
 import Herosection from './Components/Herosection';
-import Cards from './Components/Pages/Cards';
+import FeaturedCars from './Components/Pages/FeaturedCars';
 
 
 import './App.css';
@@ -15,7 +15,7 @@ function App() {
       <div>
           <Nav></Nav>
           <Herosection></Herosection>
-          <Cards></Cards>
+          <FeaturedCars></FeaturedCars>
 
 
           {/* <Login></Login> */}

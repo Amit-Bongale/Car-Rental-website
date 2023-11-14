@@ -1,6 +1,7 @@
 import './css/Herosection.css'
 
 import carimg from '../Assets/images/main-car.png'
+import wheel from '../Assets/icons/wheel.png'
 
 function Herosection(){
     return(
@@ -17,7 +18,13 @@ function Herosection(){
                         Welcome to Rides For Rent, where the road to comfort meets unbeatable affordability. Elevate your travel experience with our fleet of meticulously maintained vehicles, designed to provide the utmost comfort at minimal prices. Embark on journeys that redefine your expectations, as we seamlessly blend luxury with savings. Your adventure begins with a click
                     </div>
 
-                    <button className='button'> Discover Cars</button>
+                    {/* <button className='button'> Discover Cars</button> */}
+
+                    <button class="button">
+                        <img src={wheel} alt="wheel"  class="svgIcon"  />
+                        Explore
+                    </button>
+
 
                 </div>
                 

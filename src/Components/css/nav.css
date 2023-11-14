@@ -10,6 +10,11 @@
     padding: 20px;
 }
 
+.logo{
+    color: white;
+    font-weight:600 ;
+}
+
 .nav-link{
     margin: 0px 25px;
     padding: 5px 20px;

@@ -11,7 +11,7 @@ function Nav(){
 
             <div className="nav-container flex">
 
-                <div className="logo">logo</div>
+                <div className="logo">Rides For Rent</div>
 
                 <div className=" nav-elemts flex-center">
 

@@ -11,6 +11,11 @@
 
 }
 
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 .flex{
     display: flex;
     flex-wrap: wrap;

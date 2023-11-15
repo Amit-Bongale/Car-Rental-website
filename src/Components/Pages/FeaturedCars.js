@@ -1,38 +1,48 @@
 
-import car from '../../Assets/images/main-car.png'
 import arrow from '../../Assets/icons/right-arrow.png'
 
 import '../css/Featuredcars.css'
 
-// import cars from '../../Assets/json/cars.json'
+import carslist from '../../Assets/json/cars'
 
 function FeaturedCars(){
 
     return(
 
         <div className='card-container'>
-            {/* {cars.map((items,index) => {
-                <h1>{items.model}</h1>
-            })} */}
 
-            <div className='card'>
+            {carslist.cars.map((car,index) => {
+               return(
+                <div>
 
-                <div className='image-container'>
-                    <img src={car} alt="car" />
+                    <div className='card'>
+
+                        <div className='image-container'>
+                            <img src={car.image_urls[0]} alt="car" />
+                        </div>
+                        
+                        <div className='card-text'>
+
+                            <h2 className='title'>{car.model}</h2>
+                            <h2>price : {car.price_per_km}$/km</h2>
+                            
+                            <button className='card-button'>
+                                <span>View</span>
+                                <img src={arrow} alt="arrow" />
+                            </button>
+
+                        </div>
+
+                     </div>
+                    
                 </div>
                 
-                <div className='card-text'>
+               );
 
-                    <h2 className='title'>Nisan GTR</h2>
-                    <h2>price : 50rs/km</h2>
-                    
-                    <button className='card-button'>
-                        <span>View</span>
-                        <img src={arrow} alt="arrow" />
-                    </button>
+            })}
 
-                </div>
-
+            <div>
+                <button className='button view-button'> View More</button>
             </div>
 
         </div>

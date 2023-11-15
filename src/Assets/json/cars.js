@@ -1,4 +1,4 @@
-{
+var carslist = {
     "cars": [
       {
         "model": "Toyota Camry",
@@ -99,3 +99,5 @@
       }
     ]
   }
+
+  export default carslist;

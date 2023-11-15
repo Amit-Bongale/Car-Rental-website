@@ -14,6 +14,7 @@ function sendToBackend()
         "name":name,
         "phone": phone
     };
+    
     try{
     fetch(
         "http://localhost:3000/users",

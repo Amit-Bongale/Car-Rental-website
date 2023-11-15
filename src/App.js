@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Herosection from './Components/Herosection';
 import FeaturedCars from './Components/Pages/FeaturedCars';
-
+import Features from './Components/Pages/Features'; 
 
 import './App.css';
 
@@ -16,6 +16,7 @@ function App() {
           <Nav></Nav>
           <Herosection></Herosection>
           <FeaturedCars></FeaturedCars>
+          <Features></Features>
 
 
           {/* <Login></Login> */}

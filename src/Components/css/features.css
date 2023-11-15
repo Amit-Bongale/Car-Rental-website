@@ -1,0 +1,36 @@
+.feature-title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+
+.features-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.feature-content{
+    display: flex;
+    background-color: rgb(255, 250, 240);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.feature-description{
+    width: 500px;
+}
+
+.feature-image{
+    margin: 20px;
+    margin-top: 45px;
+    padding: 10px;
+}
+
+.feature-text > h2 {
+    margin: 6px;
+}

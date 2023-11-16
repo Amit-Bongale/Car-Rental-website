@@ -3,7 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Herosection from './Components/Herosection';
 import FeaturedCars from './Components/Pages/FeaturedCars';
-import Features from './Components/Pages/Features'; 
+import Features from './Components/Pages/Features';
+import Contact from './Components/Pages/Contact';
 
 import './App.css';
 
@@ -17,6 +18,8 @@ function App() {
           <Herosection></Herosection>
           <FeaturedCars></FeaturedCars>
           <Features></Features>
+          
+          <Contact></Contact>
 
 
           {/* <Login></Login> */}

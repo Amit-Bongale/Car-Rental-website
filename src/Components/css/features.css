@@ -23,14 +23,17 @@
 
 .feature-description{
     width: 500px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .feature-image{
     margin: 20px;
-    margin-top: 45px;
+    margin-top: 40px;
     padding: 10px;
 }
 
 .feature-text > h2 {
-    margin: 6px;
+    margin: 6px 0px;
 }

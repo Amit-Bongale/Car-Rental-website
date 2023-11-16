@@ -13,7 +13,7 @@ function FeaturedCars(){
 
             {carslist.cars.map((car,index) => {
                return(
-                <div>
+                <div> 
 
                     <div className='card'>
 

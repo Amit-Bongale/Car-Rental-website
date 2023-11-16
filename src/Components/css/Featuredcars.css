@@ -18,6 +18,7 @@
     transition: all ease-in-out 50ms;
 }
 
+
 .card:hover{
     scale: 1.01;
     border: 1px solid  orange;

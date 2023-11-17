@@ -1,75 +1,56 @@
+import arrow from '../../Assets/icons/right-arrow.png'
 
-import { useState } from "react";
+import '../css/Login.css'
 
 function Login(){
-
-let [name, setName] = useState("");
-let [phone, setPhone] = useState("");
-let [result, setResult] = useState("");
-
-function sendToBackend()
-{
-
-    var data = {
-        "name":name,
-        "phone": phone
-    };
-    
-    try{
-    fetch(
-        "http://localhost:3000/users",
-        {
-            method:"POST",
-           
-            headers: { 'Content-Type': 'application/json'},
-            body: data
-        }
-        
-    ).then((res) =>{
-             setResult(res.json())
-    })}
-    catch(error){
-console.log(error)
-    }
-}
     return(
         <div>
-           
-                <label>
-                    Name
-                </label>
-                <input onChange={(val)=>{
-                    setName(val.target.value)
-                }
+            <div className="main-container-sigin">
 
-                }>
-                </input>
-                <br></br>
-                <label>
-                    Phone
-                </label>
-                <input onChange={(val)=>{
-                    setPhone(val.target.value)
-                }
+                <div className="Signup-main-container">
 
-                }>
-                </input>
-                <br></br>
-                <button type="submit"  onClick={sendToBackend}>Submit</button>
+                    <div className="signup-side-img">
+                        <div className="Quote-container">
+                            {/* <h2>Beyond Destinations, Create Connections</h2> */}
+                            <h2>Tailoring Journeys for Families and Friends.</h2>
+                        </div>
+                    </div>
 
-                <br>
-                </br>
-                <h1>
-                    {name} 
-                </h1>
-                <h1>
-                    {phone}
-                </h1>
+                    <div className="Main-signin-form">
 
-             <h1>
-                {result}
-             </h1>
-          
+                        <div className="signin-logo">
+                            <h2>Welcome to Rides for Rent</h2>
+                        </div>
+
+                        <div className="Signin_form">
+                            <div className="Username-container">
+                                <label>Username</label>
+                                <input type="text" />
+                            </div>  
+                            <div className="Username-container">
+                                <label>Password</label>
+                                <input type="password" />
+                            </div>
+                            <div className="Signin_button_container">
+                                <button className="Signin_button">Log in</button>
+                            </div>
+                            <div className="Signup_button_container">
+                                New User?
+                                join us now
+
+                                <button className='card-button' id='signup-button'>
+                                    <span>Sign Up</span>
+                                    <img src={arrow} alt="arrow" />
+                                </button>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     );
 }

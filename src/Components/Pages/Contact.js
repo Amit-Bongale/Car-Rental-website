@@ -1,5 +1,11 @@
 import '../css/Contact.css'
 
+import { Link, Outlet } from 'react-router-dom'
+
+import callicon from '../../Assets/icons/call.png'
+import locationicon from '../../Assets/icons/location.png'
+import emailicon from '../../Assets/icons/mail.png'
+
 function Contact(){
 
     return(
@@ -26,22 +32,23 @@ function Contact(){
             </form>
 
             <div >
+
                 <h2>Quick Links</h2>
                 <div className='Quick-links-container' >
-                    <button className="quick-links">Home</button>
-                    <button className="quick-links">Cars</button>
-                    <button className="quick-links">Login</button>
+                    <Link to='/Home'> <button className="quick-links">Home</button> </Link>
+                    <Link to=''>  <button className="quick-links">Cars</button> </Link>
+                    <Link to='/login'> <button className="quick-links"> Login </button> </Link>
                 </div>
                
             </div>
 
             <div className='our-details'>
                 <h2>Rides for rent</h2>
-                <h2>Mobile no : 795469123</h2>
-                <h2>Mail : ridesforride@gmail.com</h2>
-                <h2>Location:banglore </h2>
+                <div className='details'> <img src={callicon} alt="mobileno" height={20} />+91 795469123 </div>
+                <div className='details'> <img src={emailicon} alt="email" height={20} /> ridesforride@gmail.com  </div>
+                <div className='details'> <img src={locationicon} alt="location" height={20} /> Banglore, Karnataka</div>
             </div>
-            
+            <Outlet></Outlet>
         </div>
     );
 }

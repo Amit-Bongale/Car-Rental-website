@@ -17,7 +17,7 @@ function Features(){
                 <div className="feature-content">
 
                     <div className="feature-image">
-                        <img src={affordableicon} width={50} alt="feature image" />
+                        <img src={affordableicon} width={50} alt="featured" />
                     </div>
 
                     <div className="feature-text">
@@ -28,14 +28,12 @@ function Features(){
                         
                     </div>
 
-                
-                    
                 </div>
 
                 <div className="feature-content">
 
                     <div className="feature-image">
-                        <img src={booking} width={50} alt="feature image" />
+                        <img src={booking} width={50} alt="feature" />
                     </div>
 
                     <div className="feature-text">
@@ -51,7 +49,7 @@ function Features(){
                 <div className="feature-content">
 
                     <div className="feature-image">
-                        <img src={cars} width={50} alt="feature image" />
+                        <img src={cars} width={50} alt="feature" />
                     </div>
 
                     <div className="feature-text">
@@ -66,7 +64,7 @@ function Features(){
                 <div className="feature-content">
 
                     <div className="feature-image">
-                        <img src={comfort} width={50} alt="feature image" />
+                        <img src={comfort} width={50} alt="feature" />
                     </div>        
 
 

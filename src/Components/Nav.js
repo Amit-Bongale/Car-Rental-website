@@ -2,7 +2,6 @@ import { Outlet, Link } from "react-router-dom";
 
 import './css/nav.css'
 
-
 function Nav(){
 
     return(
@@ -15,14 +14,18 @@ function Nav(){
 
                 <div className=" nav-elemts flex-center">
 
-                    <button className="nav-link">Home</button>
-                    <button className="nav-link">Cars</button>
-                    <button className="nav-link">Login</button>
+                    <Link to='/'>  <button className="nav-link">Home</button> </Link>
+                   
+                    <Link to='/cardetails'> <button className="nav-link">Cars</button>  </Link>
+                    <Link to='/login'> <button className="nav-link">Login</button> </Link>
+                    
                     <button className="nav-link">Contact us</button>
 
                 </div>
 
             </div>
+
+            <Outlet></Outlet>
             
         </div>
     );

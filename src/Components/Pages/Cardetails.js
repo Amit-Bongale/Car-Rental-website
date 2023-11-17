@@ -1,7 +1,10 @@
+
+
+
 function Cardetails(){
     return(
         <div>
-            
+            car details
         </div>
     );
 }

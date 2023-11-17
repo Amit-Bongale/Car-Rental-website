@@ -12,6 +12,7 @@ function FeaturedCars(){
         <div className='card-container'>
 
             {carslist.cars.map((car,index) => {
+                
                return(
                 <div> 
 

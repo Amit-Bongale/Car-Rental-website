@@ -10,7 +10,7 @@ function CustomRouters(){
         <Routes>
             <Route path='/' element={<Home></Home>}> </Route>
             <Route path='/login' element={<Login></Login>} ></Route>
-            <Route path='/cardetails' element={<Cardetails></Cardetails>}></Route>
+            <Route path='/cardetails/:carname?' element={<Cardetails></Cardetails>}></Route>
         </Routes>
     );
     

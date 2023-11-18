@@ -1,0 +1,36 @@
+.image-slider-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.slide-container {
+    width: 50%; 
+    margin: 0 20px;
+}
+
+  
+.slider-image {
+    justify-self: center; 
+}
+
+  
+.slider-image img {
+    min-height: 160px;
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+#right-arrow{
+    background-color: transparent;
+    border: 0;
+}
+
+#left-arrow{
+    background-color: transparent;
+    border: 0;
+    rotate: -180deg;
+}

@@ -1,5 +1,6 @@
 
 import arrow from '../../Assets/icons/right-arrow.png'
+import { Outlet, Link } from 'react-router-dom';
 
 import '../css/Featuredcars.css'
 
@@ -8,7 +9,7 @@ import carslist from '../../Assets/json/cars'
 function FeaturedCars(){
 
     return(
-
+<>
         <div className='card-container'>
 
             {carslist.cars.map((car,index) => {
@@ -28,7 +29,7 @@ function FeaturedCars(){
                             <h2>price : {car.price_per_km}$/km</h2>
                             
                             <button className='card-button'>
-                                <span>View</span>
+                                <span><Link to={`cardetails/${car.model}`}>  View </Link></span>
                                 <img src={arrow} alt="arrow" />
                             </button>
 
@@ -43,11 +44,14 @@ function FeaturedCars(){
             })}
 
             <div>
-                <button className='button view-button'> View More</button>
+               <button className='button view-button'> View More</button>
             </div>
 
-        </div>
+          
 
+        </div>
+        <Outlet></Outlet>
+</>
     );
 
 }

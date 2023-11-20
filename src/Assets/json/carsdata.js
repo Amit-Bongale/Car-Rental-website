@@ -62,7 +62,7 @@ let Carsdata = {
             
             "https://stimg.cardekho.com/images/carinteriorimages/930x620/Mercedes-Benz/C-Class/10858/1690452454517/dashboard-59.jpg",
 
-            "https://stimg.cardekho.com/images/carinteriorimages/930x620/Mercedes-Benz/C-Class/10858/1690452454517/interior-image-211.jpg",
+            "https://stimg.cardekho.com/images/carinteriorimages/930x620/Mercedes-Benz/C-Class/10858/1690452454517/interior-image-211.jpg"
             
         ]
       },
@@ -83,7 +83,7 @@ let Carsdata = {
 
           "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lexus/ES/9399/1665652746848/exterior-image-165.jpg",
 
-          "https://stimg.cardekho.com/images/carinteriorimages/930x620/Lexus/ES/9399/1665652673614/rear-arm-rest-close-view-194.jpg",
+          "https://stimg.cardekho.com/images/carinteriorimages/930x620/Lexus/ES/9399/1665652673614/rear-arm-rest-close-view-194.jpg"
           
         ]
       },
@@ -103,7 +103,7 @@ let Carsdata = {
           
           "https://stimg2.cardekho.com/images/roadTestimages/930x620/20171110_205512/483/volkswagen0.jpg",
 
-          "https://di-uploads-development.dealerinspire.com/stonemountainvw/uploads/2017/11/2017-Passat-6-1024x640.jpeg",
+          "https://di-uploads-development.dealerinspire.com/stonemountainvw/uploads/2017/11/2017-Passat-6-1024x640.jpeg"
           
         ]
         },

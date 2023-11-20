@@ -7,7 +7,7 @@ import '../css/slider.css'
 
 import arrow from '../../Assets/icons/arrow.png'
 
-const ImageSlider = () => {
+const ImageSlider = ( image1 ) => {
 
     const sliderRef = useRef(null);
 
@@ -35,7 +35,7 @@ const ImageSlider = () => {
             <Slider ref={sliderRef} {...settings} className='slide-container'>
 
                 <div className='slider-image'>
-                    <img src="https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/orlando-toyota-1662757322.png?resize=660:*" alt="Image1" />
+                    <img src={image1} alt="Image1" />
                 </div>
                 <div className='slider-image'>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKnv0y4vl7fNhkJwW9VeeErHG5CanuAl97eRBPQ_V-Z4AduykXan9eZj61phsa0oHczA&usqp=CAU" alt="Image2" />

@@ -15,6 +15,7 @@ function FeaturedCars(){
             {carslist.cars.map((car,index) => {
                 
                return(
+                
                 <div> 
 
                     <div className='card'>
@@ -28,10 +29,10 @@ function FeaturedCars(){
                             <h2 className='title'>{car.model}</h2>
                             <h2>price : {car.price_per_km}$/km</h2>
                             
-                            <button className='card-button'>
-                                <span><Link to={`cardetails/${car.model}`}>  View </Link></span>
+                            <Link to={`cardetails/${car.model}`}><button className='card-button'>
+                                <span>  View </span>
                                 <img src={arrow} alt="arrow" />
-                            </button>
+                            </button> </Link>
 
                         </div>
 

@@ -45,15 +45,12 @@ console.log(error)
                 }>
                 </input>
                 <br></br>
-                <label>
-                    Phone
-                </label>
+                <label>Phone</label>
+
                 <input onChange={(val)=>{
                     setPhone(val.target.value)
-                }
+                }}></input>
 
-                }>
-                </input>
                 <br></br>
                 <button type="submit"  onClick={sendToBackend}>Submit</button>
 

@@ -9,7 +9,7 @@ import carslist from '../../Assets/json/cars'
 function FeaturedCars(){
 
     return(
-<>
+    <>
         <div className='card-container'>
 
             {carslist.cars.map((car,index) => {
@@ -30,7 +30,7 @@ function FeaturedCars(){
                             <h2>price : {car.price_per_km}$/km</h2>
                             
                             <Link to={`cardetails/${car.model}`}><button className='card-button'>
-                                <span>  View </span>
+                                <span> View </span>
                                 <img src={arrow} alt="arrow" />
                             </button> </Link>
 
@@ -45,14 +45,12 @@ function FeaturedCars(){
             })}
 
             <div>
-               <button className='button view-button'> View More</button>
+            <Link to='/cars'> <button className='button view-button'> View More</button></Link>
             </div>
-
-          
 
         </div>
         <Outlet></Outlet>
-</>
+    </>
     );
 
 }

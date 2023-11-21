@@ -2,6 +2,8 @@ import './Details.css'
 
 import ImageSlider from "../Cardcaurosal";
 
+import star from '../../../Assets/icons/star.png'
+
 // import carslist from '../../Assets/json/cars';
 
 import { useParams } from 'react-router-dom';
@@ -37,6 +39,8 @@ function Cardetails(){
             }
         )})
 
+        window.scrollTo(0, 0)
+
     },[]);
 
 
@@ -44,21 +48,24 @@ function Cardetails(){
 
         <div className="cardetails-container">
 
-            <ImageSlider image1={cardetails.imageurls}></ImageSlider>
+            <ImageSlider image1={cardetails.imageurl1} image2={cardetails.imageurl2} image3={cardetails.imageurl3} image4={cardetails.imageurl4} className='imageslider'></ImageSlider>
                 
             <div className="cardetails">
                 
                 <div className="car-title"> 
-                    <h2>{cardetails.model}</h2>
-                    <h2>{cardetails.carrating}</h2>
+                    <h1>{cardetails.model}</h1>
+                    <div className='car-ratings'>
+                        <h2 className='car-rating-elem'>{cardetails.carrating}</h2> 
+                        <img src={star} alt="rating" height={20} className='car-rating-elem'/>
+                    </div>
                 </div>
 
+                <div></div>
                 <h2>price: {cardetails.priceperkm} rs/km</h2>
                 <h2> Seats : {cardetails.seats}</h2>
 
-                <button className='car-booking-button'> Book Now <img src={arrow} alt="arrow" height={10}/>
+                <button className='car-booking-button'> Rent Now <img src={arrow} alt="arrow" height={10}/>
                 </button>
-                {/* <img src={cardetails.imageurls} alt="car" /> */}
             </div>
 
             <div className='driver-details-container'>
@@ -68,10 +75,10 @@ function Cardetails(){
                 </div>
                 
                 <div className='driver-details' >
-                    <h2>{cardetails.drivername}</h2>
-                    <h2>{cardetails.driverrating}</h2>
-                    <h2>{cardetails.drivercontact}</h2>
-                    <h2>{cardetails.driveremail}</h2>
+                    <h2>Name: {cardetails.drivername}</h2>
+                    <h2>Mobile no: {cardetails.drivercontact}</h2>
+                    <h2>Email: {cardetails.driveremail}</h2>
+                    <h2>Ratings: {cardetails.driverrating}</h2>
                 </div>
                 
             </div>

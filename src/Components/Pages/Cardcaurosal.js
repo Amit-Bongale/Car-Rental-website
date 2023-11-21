@@ -7,7 +7,7 @@ import '../css/slider.css'
 
 import arrow from '../../Assets/icons/arrow.png'
 
-const ImageSlider = ( image1 ) => {
+const ImageSlider = ( {image1,image2,image3,image4} ) => {
 
     const sliderRef = useRef(null);
 
@@ -28,6 +28,7 @@ const ImageSlider = ( image1 ) => {
     };
 
     return (
+        
         <div className='image-slider-container'>
 
             <button onClick={goToPrev} id='left-arrow'><img src={arrow} alt="left" height={40} /></button>
@@ -35,13 +36,16 @@ const ImageSlider = ( image1 ) => {
             <Slider ref={sliderRef} {...settings} className='slide-container'>
 
                 <div className='slider-image'>
-                    <img src={image1} alt="Image1" />
+                    <img src={image1} alt="car1" />
                 </div>
                 <div className='slider-image'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKnv0y4vl7fNhkJwW9VeeErHG5CanuAl97eRBPQ_V-Z4AduykXan9eZj61phsa0oHczA&usqp=CAU" alt="Image2" />
+                    <img src={image2} alt="car2" />
                 </div>
                 <div className='slider-image'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNI2-zacQBkKj3e01PwrGdIhlmkwCJaV1Ydg&usqp=CAU" alt="Image3" />
+                    <img src={image3} alt="car3" />
+                </div>
+                <div className='slider-image'>
+                    <img src={image4} alt="car4" />
                 </div>
                 {/* Add more slides as needed */}
             

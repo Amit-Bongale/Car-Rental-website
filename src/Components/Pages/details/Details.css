@@ -1,18 +1,42 @@
+.imageslider{
+    margin-top: 80px;
+}
+
 .cardetails{
     margin: 0px  100px;   
 }
 
 .car-title{
- display: flex;
- justify-content: space-between;
-    
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    height: 55px;
+}
+
+.car-ratings{
+    display: flex;
+    padding: 10px;
+    background-color: rgb(205, 255, 205);
+    height: 35px;
+    border-radius: 8px;
+}
+
+.car-ratings > h2{
+    margin: -3px;
+}
+
+.car-rating-elem{
+    padding: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .driver-details-container{
-    margin: 10px 100px;
+    margin: 50px 100px;
     display: flex;
     background-color: rgb(251, 250, 223);
-    height: 400px;
+    height: 300px;
     border-radius: 20px;
 }
 

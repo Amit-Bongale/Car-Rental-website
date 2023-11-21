@@ -73,6 +73,11 @@
     cursor: pointer;
     border: none;
     background: #fff;
+    text-decoration: none;
+}
+
+.featuredcard-text{
+    text-decoration: none;
 }
 
 .card-button > img {
@@ -96,4 +101,5 @@
 .view-button{
     margin-top: -30px;
     padding-left: 35px;
+    text-decoration: none;
 }

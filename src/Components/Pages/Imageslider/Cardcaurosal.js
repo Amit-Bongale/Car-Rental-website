@@ -3,9 +3,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import '../css/slider.css'
+import './slider.css'
 
-import arrow from '../../Assets/icons/arrow.png'
+import arrow from '../../../Assets/icons/arrow.png'
 
 const ImageSlider = ( {image1,image2,image3,image4} ) => {
 
@@ -16,7 +16,7 @@ const ImageSlider = ( {image1,image2,image3,image4} ) => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1
     };
 
     const goToNext = () => {

@@ -8,7 +8,7 @@ import { Link, Outlet } from 'react-router-dom';
 function Cars(){
     return(
 
-        <div className='card-container'>
+        <div className='card-container' id='view-page'>
             {carslist.cars.map((car,index) => {
                 
                 return(

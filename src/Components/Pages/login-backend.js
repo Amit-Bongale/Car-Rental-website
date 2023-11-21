@@ -20,7 +20,6 @@ function sendToBackend()
         "http://localhost:3000/users",
         {
             method:"POST",
-           
             headers: { 'Content-Type': 'application/json'},
             body: data
         }
@@ -40,9 +39,7 @@ console.log(error)
                 </label>
                 <input onChange={(val)=>{
                     setName(val.target.value)
-                }
-
-                }>
+                }}>
                 </input>
                 <br></br>
                 <label>Phone</label>

@@ -28,7 +28,7 @@ function Booking(){
 
         try{
 
-            fetch('http://localhost:3000/cars/users' ,
+            fetch('http://localhost:3000/cars/bookings' ,
             { method :'POST', headers:{'Content-Type' : 'application/json'} ,
                 body: JSON.stringify(data) }
             )  .then((res) => res.json())
@@ -47,7 +47,7 @@ function Booking(){
 
     
     return(
-        
+
         <div>
            
             <div className='booking-container'>
@@ -58,22 +58,22 @@ function Booking(){
                     <input onChange={(val) => {setname(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter your name' />
             
                     <label className='booking-label'>Mobile</label>
-                    <input onChange={(val) => {setmobile(val.target.value)}} className='booking-inputbar' type="number" placeholder='enter your name' />
+                    <input onChange={(val) => {setmobile(val.target.value)}} className='booking-inputbar' type="number" placeholder='enter your Mobile number' />
             
                     <label className='booking-label'>Email</label>
-                    <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your name' />
+                    <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
                 
                     <label className='booking-label'>location</label>
-                    <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter your name' />
+                    <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
                 
                     <label className='booking-label'>date</label>
-                    <input onChange={(val) => {setdate(val.target.value)}} className='booking-inputbar' type="date" placeholder='enter your name' />
+                    <input onChange={(val) => {setdate(val.target.value)}} className='booking-inputbar' type="date" placeholder='enter pickup date' />
                 
                     <label className='booking-label'>pick up time</label>
-                    <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter your name' />
+                    <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
                 
                     <label className='booking-label'>drop time</label>
-                    <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter your name' />
+                    <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter droping time' />
 
                 </div>
 

@@ -5,6 +5,7 @@ import Login from './Pages/Login';
 import Cardetails from './Pages/details/CarDetails';
 import Cars from './Pages/Cars/Cars';
 import ViewCardetails from './Pages/viewpage/viewpage';
+import Contact from './Pages/Contact';
 
 import Booking from './Pages/booking/Booking';
 
@@ -21,6 +22,7 @@ function CustomRouters(){
             {/* <Route path='/details' element={<Details></Details>}></Route> */}
             <Route path='/cars' element={<Cars></Cars>}></Route>
             <Route path='/booking' element={<Booking></Booking>}></Route>
+            <Route path='/contactus' element={<Contact></Contact>}></Route>
             
         </Routes>
     );

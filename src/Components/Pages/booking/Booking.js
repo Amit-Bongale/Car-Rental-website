@@ -37,7 +37,7 @@ function Booking(){
                 console.error('Error:', error);
             });
 
-            alert('data inserted')
+            alert('Car booked Sucessfully')
         }
         catch (error){
             console.log(error)

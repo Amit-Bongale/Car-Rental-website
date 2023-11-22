@@ -6,11 +6,41 @@ import callicon from '../../Assets/icons/call.png'
 import locationicon from '../../Assets/icons/location.png'
 import emailicon from '../../Assets/icons/mail.png'
 
+import { useState } from 'react'
+
 function Contact(){
+
+    let [firstname, setfirstname] = useState('')
+    let [lastname, setlastname] = useState('')
+    let [email, setemail] = useState('')
+    let [mobile, setnumber] = useState('')
+    let [message, setmessage] = useState('')
+    let [result, setresult] = useState('')
+
+    function send(){
+        let data = {
+            'firstname':firstname,
+            'lastname':lastname,
+            'email':email,
+            'mobile':mobile,
+            'message': message
+        }
+
+        try{
+            fetch('http://localhost:3000/cars/contact', {method:'Post' , headers:{'Content-Type': 'application/json'}, body:JSON.stringify(data)})
+            .then((res) => res.json())
+            // .then((data) => setresult(data))
+            .catch((error) => console.log('Error:',error));
+            alert('data inserted')
+        }
+        catch (error){
+            console.log(error)
+        }
+    }
 
     return(
 
-        <div className="footer-container">
+        <div className="footer-container" id='contactus'>
 
             
 
@@ -20,14 +50,19 @@ function Contact(){
                 </div>
                 
                 <div className="names-field">
-                    <input type="text" id="firstname"  placeholder="first name" className='name-input'/>
-                    <input type="text" id="lastname" placeholder="Last name" className='name-input'/>
+
+                    <input type="text" id="firstname"  placeholder="first name" className='name-input' onChange={(val) => { setfirstname(val.target.value) }}/>
+
+                    <input type="text" id="lastname" placeholder="Last name" className='name-input' onChange={(val) => { setlastname(val.target.value) }}/>
                 </div>
 
-                <input  type="email" placeholder="Email" className="contact-bar"/>
-                <input type="number" placeholder="Mobile number" className="contact-bar"/>
-                <input type="text" placeholder="Leave a Message"  id='message-bar' className="contact-bar"/>
-                <button type="submit" className="button" id='contact-button'> Submit </button>
+                <input  type="email" placeholder="Email" className="contact-bar" onChange={(val) => { setemail(val.target.value) }}/>
+
+                <input type="number" placeholder="Mobile number" className="contact-bar" onChange={(val) => { setnumber(val.target.value) }}/>
+
+                <input type="text" placeholder="Leave a Message"  id='message-bar' className="contact-bar" onChange={(val) => { setmessage(val.target.value) }}/>
+
+                <button type="submit" className="button" id='contact-button' onClick={send}> Submit </button>
 
             </form>
 

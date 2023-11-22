@@ -3,6 +3,8 @@ import './css/Herosection.css'
 import carimg from '../Assets/images/main-car.png'
 import wheel from '../Assets/icons/wheel.png'
 
+import { Link, Outlet } from 'react-router-dom';
+
 function Herosection(){
     return(
         <div className='hero-container flex'>
@@ -20,10 +22,10 @@ function Herosection(){
 
                     {/* <button className='button'> Discover Cars</button> */}
 
-                    <button class="button">
+                    <Link to='/cars'> <button class="button">
                         <img src={wheel} alt="wheel"  class="svgIcon"  />
                         Explore
-                    </button>
+                    </button> </Link>
 
 
                 </div>
@@ -35,6 +37,8 @@ function Herosection(){
                 <img className="main-car" src={carimg} alt="main img" />
 
             </div>
+
+            <Outlet></Outlet>
             
         </div>
     );

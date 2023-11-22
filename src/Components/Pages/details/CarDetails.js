@@ -84,7 +84,8 @@ function Cardetails(){
                 </div>
                 
             </div>
-        
+
+            <Outlet></Outlet>
         </div>
     );
 }

@@ -1,0 +1,58 @@
+.imageslider{
+    margin-top: 80px;
+}
+
+.cardetails{
+    margin: 0px  100px;   
+}
+
+.car-title{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    height: 55px;
+}
+
+.car-ratings{
+    display: flex;
+    padding: 10px;
+    background-color: rgb(205, 255, 205);
+    height: 35px;
+    border-radius: 8px;
+}
+
+.car-ratings > h2{
+    margin: -3px;
+}
+
+.car-rating-elem{
+    padding: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.driver-details-container{
+    margin: 50px 100px;
+    display: flex;
+    background-color: rgb(251, 250, 223);
+    height: 300px;
+    border-radius: 20px;
+}
+
+.driver-image{
+    margin: 10px;
+    padding: 10px;
+}
+
+.driver-details{
+    margin: 0px 20px;
+    padding: 20px;
+}
+
+.car-booking-button{
+    background-color: orange;
+    border: 0;
+    padding: 20px;
+    border-radius: 20px;
+}

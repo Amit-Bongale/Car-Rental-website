@@ -16,7 +16,7 @@ function Nav(){
 
                     <Link to='/'>  <button className="nav-link">Home</button> </Link>
                    
-                    <Link to='/cardetails'> <button className="nav-link">Cars</button>  </Link>
+                    <Link to='/cars'> <button className="nav-link">Cars</button>  </Link>
                     <Link to='/login'> <button className="nav-link">Login</button> </Link>
                     
                     <button className="nav-link">Contact us</button>

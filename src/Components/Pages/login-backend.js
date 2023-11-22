@@ -3,35 +3,34 @@ import { useState } from "react";
 
 function Login1(){
 
-let [name, setName] = useState("");
-let [phone, setPhone] = useState("");
-let [result, setResult] = useState("");
+    let [name, setName] = useState("");
+    let [phone, setPhone] = useState("");
+    let [result, setResult] = useState("");
 
-function sendToBackend()
-{
+    function sendToBackend()
+    {
 
-    var data = {
-        "name":name,
-        "phone": phone
-    };
-    
-    try{
-    fetch(
-        "http://localhost:3000/users",
-        {
-            method:"POST",
-           
-            headers: { 'Content-Type': 'application/json'},
-            body: data
-        }
+        var data = {
+            "name":name,
+            "phone": phone
+        };
         
-    ).then((res) =>{
-             setResult(res.json())
-    })}
-    catch(error){
-console.log(error)
+        try{
+        fetch(
+            "http://localhost:3000/users",
+            {
+                method:"POST",
+                headers: { 'Content-Type': 'application/json'},
+                body: data
+            }
+            
+        ).then((res) =>{
+                setResult(res.json())
+        })}
+        catch(error){
+            console.log(error)
+        }
     }
-}
     return(
         <div>
            
@@ -40,20 +39,15 @@ console.log(error)
                 </label>
                 <input onChange={(val)=>{
                     setName(val.target.value)
-                }
-
-                }>
+                }}>
                 </input>
                 <br></br>
-                <label>
-                    Phone
-                </label>
+                <label>Phone</label>
+
                 <input onChange={(val)=>{
                     setPhone(val.target.value)
-                }
+                }}></input>
 
-                }>
-                </input>
                 <br></br>
                 <button type="submit"  onClick={sendToBackend}>Submit</button>
 

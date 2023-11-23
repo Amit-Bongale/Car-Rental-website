@@ -8,16 +8,16 @@ import emailicon from '../../Assets/icons/mail.png'
 
 import { useState } from 'react'
 
-function Contact(){
+function Footer(){
 
     let [firstname, setfirstname] = useState('')
     let [lastname, setlastname] = useState('')
     let [email, setemail] = useState('')
     let [mobile, setnumber] = useState('')
     let [message, setmessage] = useState('')
-    let [result, setresult] = useState('')
 
     function send(){
+
         let data = {
             'firstname':firstname,
             'lastname':lastname,
@@ -29,7 +29,6 @@ function Contact(){
         try{
             fetch('http://localhost:3000/cars/contact', {method:'Post' , headers:{'Content-Type': 'application/json'}, body:JSON.stringify(data)})
             .then((res) => res.json())
-            // .then((data) => setresult(data))
             .catch((error) => console.log('Error:',error));
             alert('data inserted')
         }
@@ -42,9 +41,8 @@ function Contact(){
 
         <div className="footer-container" id='contactus'>
 
-            
-
             <form className="contact-form">
+
                 <div>
                     <h2>Reach To Us</h2>
                 </div>
@@ -54,6 +52,7 @@ function Contact(){
                     <input type="text" id="firstname"  placeholder="first name" className='name-input' onChange={(val) => { setfirstname(val.target.value) }}/>
 
                     <input type="text" id="lastname" placeholder="Last name" className='name-input' onChange={(val) => { setlastname(val.target.value) }}/>
+
                 </div>
 
                 <input  type="email" placeholder="Email" className="contact-bar" onChange={(val) => { setemail(val.target.value) }}/>
@@ -69,23 +68,29 @@ function Contact(){
             <div >
 
                 <h2>Quick Links</h2>
+
                 <div className='Quick-links-container' >
-                    <Link to='/Home'> <button className="quick-links">Home</button> </Link>
-                    <Link to=''>  <button className="quick-links">Cars</button> </Link>
+                    <Link to='/'> <button className="quick-links">Home</button> </Link>
+                    <Link to='/cars'>  <button className="quick-links">Cars</button> </Link>
                     <Link to='/login'> <button className="quick-links"> Login </button> </Link>
                 </div>
                
             </div>
 
             <div className='our-details'>
+
                 <h2>Rides for rent</h2>
+
                 <div className='details'> <img src={callicon} alt="mobileno" height={20} />+91 795469123 </div>
                 <div className='details'> <img src={emailicon} alt="email" height={20} /> ridesforride@gmail.com  </div>
                 <div className='details'> <img src={locationicon} alt="location" height={20} /> Banglore, Karnataka</div>
+                
             </div>
+
             <Outlet></Outlet>
+
         </div>
     );
 }
 
-export default Contact;
+export default Footer;

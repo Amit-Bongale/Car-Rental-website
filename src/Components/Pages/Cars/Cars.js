@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import arrow from '../../../Assets/icons/right-arrow.png'
 
 import carslist from '../../../Assets/json/carsdata'
@@ -6,6 +7,11 @@ import '../../css/Featuredcars.css'
 import { Link, Outlet } from 'react-router-dom';
 
 function Cars(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
+    
     return(
 
         <div className='card-container' id='view-page'>

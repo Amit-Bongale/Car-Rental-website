@@ -1,0 +1,96 @@
+.contactus-outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:#fff099; */
+    /* background-image:
+    radial-gradient(at 52% 2%, hsla(42,69%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 9% 9%, rgb(210, 218, 93) 0px, transparent 50%),
+    radial-gradient(at 5% 76%, hsla(25,76%,71%,1) 0px, transparent 50%),
+    radial-gradient(at 81% 76%, rgb(248, 154, 71) 0px, transparent 50%),
+    radial-gradient(at 13% 92%, hsla(36,76%,63%,1) 0px, transparent 50%),
+    radial-gradient(at 20% 21%, hsla(49,91%,75%,1) 0px, transparent 50%),
+    radial-gradient(at 72% 37%, hsla(19,89%,77%,1) 0px, transparent 50%); */
+    height: 91vh;
+}
+
+.contactus-main-container{
+    display: flex;
+    background-color:rgb(255, 250, 240);
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    padding: 0px;
+    width: 900px;
+    border-radius: 15px;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container > label{
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container > input{
+    background-color: transparent;
+    border: 0px;
+    font-size: 20px;
+    border-bottom: .5px solid black;
+    outline: none;
+    width: 300px;
+    margin-top: 8px;
+    padding: 2px;
+}
+
+.signup-checkbox-container{
+    display: flex;
+    margin-right: 20px;
+}
+
+.submit_container{
+    margin: 30px;
+}
+
+.submit_button{
+    width: 200px;
+    background-color:orange;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.contact-side-image{
+    width: 400px;
+    height: 560px;
+    background-image: url("../../../Assets//images/silver-car.jpg");
+    background-size: 420px;
+    color: black;
+    margin-left: 150px;
+}
+
+.contactus-quote-container{
+    color:black;
+    margin: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.contact_form{
+    margin-left: 50px;
+}

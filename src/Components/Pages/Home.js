@@ -3,15 +3,22 @@ import '../../App.css'
 import Herosection from '../Herosection';
 import FeaturedCars from '../Pages/FeaturedCars';
 import Features from '../Pages/Features';
-import Contact from '../Pages/Contact';
+import Footer from './Footer';
+
+import { useEffect } from 'react';
 
 function Home(){
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
+
     return(
         <div>
             <Herosection></Herosection>
             <FeaturedCars></FeaturedCars>
             <Features></Features>
-            <Contact></Contact>
+            <Footer></Footer>
         </div>
     );
 }

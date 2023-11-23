@@ -1,39 +1,47 @@
 
 .main-container-sigin{
-    margin: 1.5% 5% 0% 5%;
+    margin: 0.2% 5% 0% 5%;
     padding: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Signup-main-container{
+
+
+.Signin-main-container{
     background-color:  rgb(255, 250, 240);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3%;
+    margin: 0px 3%;
     width: 900px;
+    flex-direction: row-reverse;
 }
-.signup-side-img{
-    width: 360px;
-    height: 500px;
-    background-image: url("../../Assets/images/carwithpassenger.jpg");
-    background-size: 360px;
-    margin-left: -220px;
+
+.signin-side-img{
+    width: 500px;
+    height: 600px;
+    background-image: url("../../../Assets/images/car2.jpg");
+    background-size: 460px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
 }
+
 .Main-signin-form{
     width: 30%;
     margin: 10px;
     margin-left: 100px;
 
 }
-.Quote-container{
-    color:rgb(0, 0, 0);
+
+.signin-Quote-container{
+    color: white;
     margin: 30px;
     text-align: center;
-    line-height: 30px;
-    font-size: 14px;
+    line-height: 34px;
+    font-size: 16px;
 }
+
 .signin-logo{
     margin: 2px;
 }

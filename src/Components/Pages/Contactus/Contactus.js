@@ -38,6 +38,7 @@ function Contactus(){
 
 
     return(
+
         <div className="contactus-outer-container">
             <div className="contactus-main-container">
                 <div className="contact-container">
@@ -82,9 +83,7 @@ function Contactus(){
                     </div>
 
                 </div>
-
             </div>
-            
         </div>
     );
 }

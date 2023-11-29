@@ -2,6 +2,7 @@ import '../css/Contact.css'
 
 import { Link, Outlet } from 'react-router-dom'
 
+import logowhite from '../../Assets/Logo/rides for rent logo white.png'
 import callicon from '../../Assets/icons/call.png'
 import locationicon from '../../Assets/icons/location.png'
 import emailicon from '../../Assets/icons/mail.png'
@@ -79,7 +80,9 @@ function Footer(){
 
             <div className='our-details'>
 
-                <h2>Rides for rent</h2>
+                <Link to='/'> <div>
+                    <img className="logowhite" src={logowhite} alt="logo white" />
+                </div> </Link>
 
                 <div className='details'> <img src={callicon} alt="mobileno" height={20} />+91 795469123 </div>
                 <div className='details'> <img src={emailicon} alt="email" height={20} /> ridesforride@gmail.com  </div>

@@ -6,6 +6,11 @@
     /* backdrop-filter: blur(5px); */
 }
 
+.logo{
+    width: 180px;
+    margin-top: -10px;
+}
+
 .nav-elemts{
     justify-content: space-around;
     padding: 20px;

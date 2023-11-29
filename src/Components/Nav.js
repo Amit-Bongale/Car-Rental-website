@@ -1,5 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 
+import logo from '../Assets/Logo/rides for rent logo orange.png'
+
 import './css/nav.css'
 
 function Nav(){
@@ -10,7 +12,9 @@ function Nav(){
 
             <div className="nav-container flex">
 
-                <div className="logo">Rides For Rent</div>
+                <Link to='/'> <div >
+                    <img className="logo" src={logo} alt="" />
+                </div> </Link>
 
                 <div className=" nav-elemts flex-center">
 

@@ -1,4 +1,4 @@
-import '../css/Contact.css'
+import './Contact.css'
 
 import { Link, Outlet } from 'react-router-dom'
 

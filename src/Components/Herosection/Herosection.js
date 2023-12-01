@@ -1,7 +1,7 @@
-import './css/Herosection.css'
+import './Herosection.css'
 
-import carimg from '../Assets/images/main-car.png'
-import wheel from '../Assets/icons/wheel.png'
+import carimg from '../../Assets/images/main-car.png'
+import wheel from '../../Assets/icons/wheel.png'
 
 import { Link, Outlet } from 'react-router-dom';
 

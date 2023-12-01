@@ -1,13 +1,13 @@
 import {Routes, Route } from 'react-router-dom';
 
-import Home from './Pages/Home';
-import Login from './Pages/Login';
-import Cardetails from './Pages/details/CarDetails';
-import Cars from './Pages/Cars/Cars';
-import ViewCardetails from './Pages/viewpage/viewpage';
-import Signup from './Pages/signup/Signup';
-import Contactus from './Pages/Contactus/Contactus';
-import Booking from './Pages/booking/Booking';
+import Home from './Home';
+import Login from './login/Login';
+import Cardetails from './details/CarDetails';
+import Cars from './Cars/Cars';
+import ViewCardetails from './viewpage/viewpage';
+import Signup from './signup/Signup';
+import Contactus from './Contactus/Contactus';
+import Booking from './booking/Booking';
 
 
 function CustomRouters(){

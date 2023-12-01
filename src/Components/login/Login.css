@@ -1,0 +1,101 @@
+
+.loginsection{
+    background-image: url(../../Assets/images/pexels-mathias-reding-9322198.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -120px;
+    height: 88vh;
+}
+
+.main-container-login{
+    margin: 1.5% 5% 0% 5%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logo{
+    text-align: center;
+}
+
+.login-main-container{
+    background-color:  rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.Main-login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.Quote-container{
+    color:rgb(255, 255, 255);
+    margin: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.Username-container > label{
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+.Username-container{
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+}
+
+.Username-container > input{
+    background-color: transparent;
+    border: 0px;
+    font-size: 20px;
+    border-bottom: .5px solid rgb(0, 0, 0);
+    outline: none;
+    width: 300px;
+    margin-top: 8px;
+    padding: 2px;
+}
+
+.login_button_container{
+    color: white;
+    margin: 20px 0px 10px 0px
+}
+
+.login_button{
+    width: 200px;
+    background-color:orange;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+#signup-button{
+    background-color: transparent;
+    box-shadow: none;
+    margin-left: -8px;
+    margin-top: 2px;
+    color: white;
+}

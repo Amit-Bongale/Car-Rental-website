@@ -1,4 +1,4 @@
-import '../css/features.css'
+import './features.css'
 
 import affordableicon from  '../../Assets/icons/affordable.png'
 import booking from '../../Assets/icons/booking.png'

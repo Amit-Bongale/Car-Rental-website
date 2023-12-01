@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './slider.css'
 
-import arrow from '../../../Assets/icons/arrow.png'
+import arrow from '../../Assets/icons/arrow.png'
 
 const ImageSlider = ( {image1,image2,image3,image4} ) => {
 

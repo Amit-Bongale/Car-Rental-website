@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import arrow from '../../../Assets/icons/right-arrow.png'
+import arrow from '../..//Assets/icons/right-arrow.png'
 
-import carslist from '../../../Assets/json/carsdata'
-import '../../css/Featuredcars.css'
+import carslist from '../../Assets/json/carsdata'
+import '../featuredcars/Featuredcars.css'
 
 import { Link, Outlet } from 'react-router-dom';
 

@@ -1,9 +1,9 @@
-import '../../App.css'
+import '../App.css'
 
-import Herosection from '../Herosection';
-import FeaturedCars from '../Pages/FeaturedCars';
-import Features from '../Pages/Features';
-import Footer from './Footer';
+import Herosection from './Herosection/Herosection';
+import FeaturedCars from './featuredcars/FeaturedCars';
+import Features from './Features/Features';
+import Footer from './footer/Footer';
 
 import { useEffect } from 'react';
 

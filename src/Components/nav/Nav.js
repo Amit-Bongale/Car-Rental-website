@@ -1,8 +1,8 @@
 import { Outlet, Link } from "react-router-dom";
 
-import logo from '../Assets/Logo/rides for rent logo orange.png'
+import logo from '../../Assets/Logo/rides for rent logo orange.png'
 
-import './css/nav.css'
+import './nav.css'
 
 function Nav(){
 

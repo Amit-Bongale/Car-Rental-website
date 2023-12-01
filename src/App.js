@@ -1,24 +1,18 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import Nav from './Components/Nav';
-
-
 import CustomRouters from './Components/Routers';
- 
-import './App.css';
-// import Cursor from './Components/Pages/CustomCursor/cursor';
 
-// import Login from './Components/Pages/Login';
+import Nav from './Components/nav/Nav';
+
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Nav></Nav>
-        {/* <Cursor></Cursor> */}
 
-        <CustomRouters></CustomRouters>
-      </div>
+      <Nav></Nav>
+      <CustomRouters></CustomRouters>
+      
     </BrowserRouter>
   );
 }

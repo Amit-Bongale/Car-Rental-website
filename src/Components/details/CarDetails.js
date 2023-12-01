@@ -1,20 +1,19 @@
-import '../details/Details.css'
+import './Details.css'
 
 import ImageSlider from "../Imageslider/Cardcaurosal";
 
-import star from '../../../Assets/icons/star.png'
+import star from '../../Assets/icons/star.png'
 
-// import carslist from '../../Assets/json/cars';
 
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 
-import arrow from '../../../Assets/icons/arrow.png'
-import driverimage from '../../../Assets/icons/driver.jpg'
+import arrow from '../../Assets/icons/arrow.png'
+import driverimage from '../../Assets/icons/driver.jpg'
 
-function ViewCardetails(){
+function Cardetails(){
 
     let { carname } = useParams();
 
@@ -25,7 +24,7 @@ function ViewCardetails(){
         let bodyData = { "car":carname
         };
 
-        fetch( 'http://localhost:3000/cars/carsdata',
+        fetch( 'http://localhost:3000/cars',
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -47,7 +46,7 @@ function ViewCardetails(){
 
     return(
 
-        <div className="cardetails-container" id='view-page'>
+        <div className="cardetails-container">
 
             <ImageSlider image1={cardetails.imageurl1} image2={cardetails.imageurl2} image3={cardetails.imageurl3} image4={cardetails.imageurl4} className='imageslider'></ImageSlider>
                 
@@ -84,9 +83,10 @@ function ViewCardetails(){
                 </div>
                 
             </div>
+
             <Outlet></Outlet>
         </div>
     );
 }
 
-export default ViewCardetails;
+export default Cardetails;

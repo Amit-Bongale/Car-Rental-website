@@ -2,7 +2,7 @@
 import arrow from '../../Assets/icons/right-arrow.png'
 import { Outlet, Link } from 'react-router-dom';
 
-import '../css/Featuredcars.css'
+import './Featuredcars.css'
 
 import carslist from '../../Assets/json/cars'
 
@@ -27,7 +27,7 @@ function FeaturedCars(){
                         <div className='card-text'>
 
                             <h2 className='title'>{car.model}</h2>
-                            <h2>price : {car.price_per_km}$/km</h2>
+                            <h2>price : {car.price_per_km} rs/km</h2>
                             
                             <Link to={`cardetails/${car.model}`}><button className='card-button'>
                                 <span> View </span>

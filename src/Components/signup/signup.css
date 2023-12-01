@@ -46,13 +46,14 @@
     margin: 2px;
 }
 .Username-container > label{
-    color: gray;
+    color: black;
     margin-top: 20px;
 }
 .Username-container{
     display: flex;
     flex-direction: column;
 }
+
 .Username-container > input{
     background-color: transparent;
     border: 0px;
@@ -76,11 +77,13 @@
     padding: 5px;
     border-radius: 10px;
     height: 50px;
+    cursor:pointer;
 }
 
-#signup-button{
+#login-button{
     background-color: transparent;
     box-shadow: none;
     margin-left: -8px;
     margin-top: 2px;
+    color: black;
 }

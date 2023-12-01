@@ -27,6 +27,7 @@ function Signup(){
                         </div>
 
                         <div className="Signin_form">
+                            
                             <div className="Username-container">
                                 <label>Username</label>
                                 <input type="text" />
@@ -46,16 +47,16 @@ function Signup(){
                             <div className="Signin_button_container">
                                 <button className="Signin_button">Sign in</button>
                             </div>
+
                             <div className="Signup_button_container">
                                 Alredy our Customer?
                                 <Link to='/login'>
-                                <button className='card-button' id='signup-button'>
+                                <button className='card-button' id='login-button'>
                                     <span>login</span>
                                     <img src={arrow} alt="arrow" />
                                 </button> </Link>
                                 
                             </div>
-                         
 
                         </div>
 

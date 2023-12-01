@@ -33,7 +33,7 @@ function Login(){
                                 <button className="login_button">Log in</button>
                             </div>
 
-                            <div className="login_button_container">
+                            <div className="login_text_container">
                                 New User? join us now
                                 
                                 <Link to='/signup'>

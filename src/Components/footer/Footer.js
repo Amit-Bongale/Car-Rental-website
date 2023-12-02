@@ -74,7 +74,7 @@ function Footer(){
                     <Link to='/'> <button className="quick-links">Home</button> </Link>
                     <Link to='/cars'>  <button className="quick-links">Cars</button> </Link>
                     <Link to='/login'> <button className="quick-links"> Login </button> </Link>
-                    <Link to='/search'> <button className="quick-links"> search </button> </Link>
+                    {/* <Link to='/search'> <button className="quick-links"> search </button> </Link> */}
                 </div>
                
             </div>

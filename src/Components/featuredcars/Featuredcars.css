@@ -12,7 +12,9 @@
 
 
 #view-page{
-    margin-top: 10px;
+    margin-top: 0px;
+    padding-top: 50px;
+    min-height: 65vh;
 }
 
 

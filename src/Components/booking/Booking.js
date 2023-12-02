@@ -63,7 +63,7 @@ function Booking(){
                     <label className='booking-label'>Email</label>
                     <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
                 
-                    <label className='booking-label'>location</label>
+                    <label className='booking-label'>Pickup location</label>
                     <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
                 
                     <label className='booking-label'>date</label>

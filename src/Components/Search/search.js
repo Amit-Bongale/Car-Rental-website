@@ -19,7 +19,7 @@ function Search(){
         if (search === '') {
             setresult([]);
         } else {
-            let data = Carsdata.cars.filter(car => car.model.toLowerCase().includes(search.trim().toLowerCase()));
+            let data = Carsdata.cars.filter(car => car.model.toLowerCase().includes(search.toLowerCase()));
             console.log('Filtered data:', data);
             setresult(data);
         }

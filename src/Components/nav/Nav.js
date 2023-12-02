@@ -25,7 +25,7 @@ function Nav(){
                     
                     <Link to='/contactus'> <button className="nav-link"> Contact us </button> </Link>
 
-                    <Link to='/search'> <button className="nav-link"> search </button> </Link>
+                    {/* <Link to='/search'> <button className="nav-link"> search </button> </Link> */}
                     
                 </div>
 

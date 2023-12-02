@@ -31,7 +31,7 @@ function Footer(){
             fetch('http://localhost:3000/cars/contact', {method:'Post' , headers:{'Content-Type': 'application/json'}, body:JSON.stringify(data)})
             .then((res) => res.json())
             .catch((error) => console.log('Error:',error));
-            alert('data inserted')
+            alert('thanks for contacting')
         }
         catch (error){
             console.log(error)
@@ -74,6 +74,7 @@ function Footer(){
                     <Link to='/'> <button className="quick-links">Home</button> </Link>
                     <Link to='/cars'>  <button className="quick-links">Cars</button> </Link>
                     <Link to='/login'> <button className="quick-links"> Login </button> </Link>
+                    <Link to='/search'> <button className="quick-links"> search </button> </Link>
                 </div>
                
             </div>

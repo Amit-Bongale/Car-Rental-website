@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 function Signup(){
 
     return(
-        
         <div className="main-container-sigin">
             <div className="Signin-main-container">
 

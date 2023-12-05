@@ -9,6 +9,7 @@
     --text-200:#444648;
     --lightgrey:#cccccc;
     --white: #ffffff;
+    
 }
 
 *{
@@ -16,6 +17,9 @@
     text-decoration: none;
 }
 
+a:-webkit-any-link{
+    text-decoration: none;
+}
 
 .flex{
     display: flex;

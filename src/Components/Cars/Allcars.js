@@ -1,34 +1,57 @@
 import {useState, useEffect } from 'react';
 import arrow from '../..//Assets/icons/right-arrow.png'
 
-import carslist from '../../Assets/json/carsdata'
 import '../featuredcars/Featuredcars.css'
 import './cars.css'
 
 import { Link, Outlet } from 'react-router-dom';
 
-function Cars(){
 
+function Allcars(){
+    
     let [search , setsearch] = useState('')
     let [result , setresult] = useState([])
+    let [carsdata, setcars] = useState([])
 
+    let [carsFound, setCarsFound] = useState(1);
+
+    useEffect(() => {
+        try {
+            fetch('http://localhost:3000/carsdata', { method: "POST" })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log('Fetched data:', data);
+                    setcars(data);
+                })
+                .catch(error => {
+                    console.log('Error fetching data:', error);
+                });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }, []);
+    
+    
     useEffect(() => {
 
         if (search === '') {
             setresult([]);
+            setCarsFound(1)
         } else {
-            let data = carslist.cars.filter(car => car.model.toLowerCase().includes(search.toLowerCase()));
+            let data = carsdata.filter(car => car.model.toLowerCase().includes(search.toLowerCase()));
             console.log('Filtered data:', data);
             setresult(data);
+            console.log(data.length)
+            setCarsFound(data.length > 0);
         }
 
-    }, [search]);
+    }, [search] );
 
     useEffect(() => {
         window.scrollTo(0, 0)
     },[])
 
-    const renderCars = result.length > 0 ? result : carslist.cars;
+    const renderCars = result.length > 0 ? result : carsdata;
 
     return(
 
@@ -40,23 +63,24 @@ function Cars(){
             </div>
         
             <div className='card-container' id='view-page'>
-                {
+                
+                { carsFound ? (
                     renderCars.map((car) => {
                     
                     return(
                     
-                        <div>
+                        <div className='cards'>
     
                             <div className='card'>
     
                                 <div className='image-container'>
-                                    <img src={car.image_urls[0]} alt="car" />
+                                    <img src={car.imageurl1} alt="car" />
                                 </div>
                             
                                 <div className='card-text'>
     
                                     <h2 className='title'>{car.model}</h2>
-                                    <h2>price : {car.price_per_km}rs/km</h2>
+                                    <h2>price : {car.priceperkm} rs/km</h2>
                                 
                                     <Link to={`cardetails/${car.model}`}><button className='card-button'>
                                         <span> View </span>
@@ -72,13 +96,15 @@ function Cars(){
                     
                     );
     
-                })}
+                })) : (
+                    <p>No cars found</p>
+                )}
 
                 <Outlet></Outlet>
-
+                
             </div>
         </div>
     );
 }
 
-export default Cars
+export default Allcars;

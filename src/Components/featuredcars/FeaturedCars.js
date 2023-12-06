@@ -11,38 +11,41 @@ function FeaturedCars(){
     return(
     <>
         <div className='card-container'>
-
-            {carslist.cars.map((car,index) => {
+            <div className='cards'>
+            { carslist.cars.map((car) => {
                 
-               return(
-                
-                <div> 
-
-                    <div className='card'>
-
-                        <div className='image-container'>
-                            <img src={car.image_urls[0]} alt="car" />
-                        </div>
-                        
-                        <div className='card-text'>
-
-                            <h2 className='title'>{car.model}</h2>
-                            <h2>price : {car.price_per_km} rs/km</h2>
-                            
-                            <Link to={`cardetails/${car.model}`}><button className='card-button'>
-                                <span> View </span>
-                                <img src={arrow} alt="arrow" />
-                            </button> </Link>
-
-                        </div>
-
+                return(
+                 
+                 <div> 
+ 
+                     <div className='card'>
+ 
+                         <div className='image-container'>
+                             <img src={car.image_urls[0]} alt="car" />
+                         </div>
+                         
+                         <div className='card-text'>
+ 
+                             <h2 className='title'>{car.model}</h2>
+                             <h2>price : {car.price_per_km} rs/km</h2>
+                             
+                             <Link to={`cardetails/${car.model}`}><button className='card-button'>
+                                 <span> View </span>
+                                 <img src={arrow} alt="arrow" />
+                             </button> </Link>
+ 
+                         </div>
+ 
                      </div>
-                    
-                </div>
-                
-               );
+                     
+                 </div>
+                 
+                );
+ 
+             })}
+            </div>
 
-            })}
+           
 
             <div>
             <Link to='/cars'> <button className='button view-button'> View More</button></Link>

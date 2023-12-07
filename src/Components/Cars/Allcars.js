@@ -9,13 +9,15 @@ import { Link, Outlet } from 'react-router-dom';
 
 function Allcars(){
     
-    let [search , setsearch] = useState('')
-    let [result , setresult] = useState([])
     let [carsdata, setcars] = useState([])
 
+    let [search , setsearch] = useState('')
+
+    let [result , setresult] = useState([])
     let [carsFound, setCarsFound] = useState(1);
 
     useEffect(() => {
+
         try {
             fetch('http://localhost:3000/carsdata', { method: "POST" })
                 .then((res) => res.json())
@@ -31,7 +33,7 @@ function Allcars(){
         }
     }, []);
     
-    
+
     useEffect(() => {
 
         if (search === '') {
@@ -47,11 +49,14 @@ function Allcars(){
 
     }, [search] );
 
+
     useEffect(() => {
         window.scrollTo(0, 0)
     },[])
 
+
     const renderCars = result.length > 0 ? result : carsdata;
+
 
     return(
 
@@ -63,45 +68,49 @@ function Allcars(){
             </div>
         
             <div className='card-container' id='view-page'>
-                
+
+                {/* set carsFound = 1(true) if cars found, else set to 0(false) */}
+
                 { carsFound ? (
+
                     renderCars.map((car) => {
                     
-                    return(
-                    
-                        <div className='cards'>
-    
-                            <div className='card'>
-    
-                                <div className='image-container'>
-                                    <img src={car.imageurl1} alt="car" />
+                        return(
+                            
+                            <div className='cards'>
+        
+                                <div className='card'>
+        
+                                    <div className='image-container'>
+                                        <img src={car.imageurl1} alt="car" />
+                                    </div>
+                                
+                                    <div className='card-text'>
+        
+                                        <h2 className='title'>{car.model}</h2>
+                                        <h2>price : {car.priceperkm} rs/km</h2>
+                                    
+                                        <Link to={`cardetails/${car.model}`}><button className='card-button'>
+                                            <span> View </span>
+                                            <img src={arrow} alt="arrow" />
+                                            </button>
+                                        </Link>
+        
+                                    </div>
+        
                                 </div>
                             
-                                <div className='card-text'>
-    
-                                    <h2 className='title'>{car.model}</h2>
-                                    <h2>price : {car.priceperkm} rs/km</h2>
-                                
-                                    <Link to={`cardetails/${car.model}`}><button className='card-button'>
-                                        <span> View </span>
-                                        <img src={arrow} alt="arrow" />
-                                        </button>
-                                    </Link>
-    
-                                </div>
-    
                             </div>
                         
-                        </div>
-                    
-                    );
-    
-                })) : (
+                        );
+                    })
+
+                ) : (
                     <p>No cars found</p>
                 )}
 
                 <Outlet></Outlet>
-                
+
             </div>
         </div>
     );

@@ -3,6 +3,8 @@ import './Booking.css';
 
 import { useState} from 'react';
 
+import wheel from '../../Assets/icons/wheel.png'
+
 
 function Booking(){ 
 
@@ -10,20 +12,21 @@ function Booking(){
     let [mobile, setmobile] = useState('')
     let [email, setemail] = useState('')
     let [location, setlocation] = useState('')
-    let [date, setdate] = useState('')
+    let [time, settime] = useState('')
     let [pickup , setpickup] = useState('')
-    let [droptime, setdrop] = useState('')
-    let [result, setresult] = useState('')
+    let [dropdate, setdrop] = useState('')
+    // let [result, setresult] = useState('')
     
     function send(){
+
         var data = {
             'name':name,
             'mobile':mobile,
             'email':email,
             'location':location,
-            'date':date,
-            'pickup':pickup,
-            'droptime':droptime
+            'pickuptime':time,
+            'pickupdate':pickup,
+            'dropdate':dropdate
         }
 
         try{
@@ -32,7 +35,7 @@ function Booking(){
             { method :'POST', headers:{'Content-Type' : 'application/json'} ,
                 body: JSON.stringify(data) }
             )  .then((res) => res.json())
-             .then( (data) => { setresult(data)} )
+            //  .then( (data) => { setresult(data)} )
              .catch((error) => {
                 console.error('Error:', error);
             });
@@ -48,7 +51,7 @@ function Booking(){
     
     return(
 
-        <div>
+        <div className='booking-section'>
            
             <div className='booking-container'>
 
@@ -63,28 +66,36 @@ function Booking(){
                     <label className='booking-label'>Email</label>
                     <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
                 
+                    
+                
+                    <div className='times'>
+                        <div className='picktimes'>
+                            <label className='booking-label' >From</label>
+                            <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' id='time' type="date" placeholder='enter pickup time' />
+                        </div>
+                       
+                        <div className='picktimes'>
+                            <label className='booking-label'>To</label>
+                            <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar'   id='time' type="date" placeholder='enter droping time' /> 
+                        </div>
+                    </div>
+
                     <label className='booking-label'>Pickup location</label>
                     <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
-                
-                    <label className='booking-label'>date</label>
-                    <input onChange={(val) => {setdate(val.target.value)}} className='booking-inputbar' type="date" placeholder='enter pickup date' />
-                
-                    <label className='booking-label'>pick up time</label>
-                    <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
-                
-                    <label className='booking-label'>drop time</label>
-                    <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter droping time' />
 
+                    <label className='booking-label'>Pickup time</label>
+                    <input onChange={(val) => {settime(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
+                   
                 </div>
 
-                <div className='booking-image'>
-                    {/* <img src="" alt="booking" /> */}
-                </div>
-
+                <button className='button' type='submit' onClick={send}>
+                    <img src={wheel} alt="wheel" height={25} />
+                    Book Now
+                </button>
 
             </div>
 
-            <button className='button' type='submit' onClick={send}>Book Now</button>
+           
         
         </div>
     );

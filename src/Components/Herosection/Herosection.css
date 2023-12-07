@@ -1,6 +1,7 @@
 .hero-container{
     margin-top: 90px;
-    overflow: hidden    ;
+    overflow: hidden;
+    justify-content: space-around;
 }
 
 .text{
@@ -43,27 +44,27 @@
     padding-left: 20px;
     margin: 20px 0px 10px 50px;
     transition-duration: .5s;
-  }
+}
+
   
-  .svgIcon {
+.svgIcon {
     height: 25px;
     width: 25px;
     transition-duration: 1.5s;
-  }
+}
 
   
-  .button:hover {
+.button:hover {
     background-color:rgb(247, 132, 39) ;
     transition-duration: .5s;
     box-shadow: 0 0 15px rgb(255, 172, 63),
     0 0 25px rgb(255, 172, 63)
-  }
+}
   
-  .button:hover .svgIcon {
+.button:hover .svgIcon {
     transform: rotate(360deg);
     transition-duration: 1.5s;
-  }
-
+}
 
 
 .main-car{
@@ -73,6 +74,7 @@
     animation-duration: 2s;
 }
 
+
 @keyframes car {
     from{
         transform: translateX(800px);
@@ -81,6 +83,7 @@
         transform: translateX(0px);
     }
 }
+
 
 @keyframes text {
     from{

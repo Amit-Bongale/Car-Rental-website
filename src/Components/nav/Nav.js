@@ -21,11 +21,12 @@ function Nav(){
                     <Link to='/'>  <button className="nav-link">Home</button> </Link>
                    
                     <Link to='/cars'> <button className="nav-link">Cars</button>  </Link>
+                    
                     <Link to='/login'> <button className="nav-link">Login</button> </Link>
                     
                     <Link to='/contactus'> <button className="nav-link"> Contact us </button> </Link>
 
-                    {/* <Link to='/search'> <button className="nav-link"> search </button> </Link> */}
+                    <Link to=''> <button className="nav-link"> trip </button> </Link>
                     
                 </div>
 

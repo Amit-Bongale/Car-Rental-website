@@ -1,21 +1,67 @@
+.booking-section{
+    /* background-image: url('../../Assets/images/pexels-bradley-de-melo-19109811.jpg'); */
+    background-color:hsla(20,100%,80%,1);
+    background-image:
+    radial-gradient(at 20% 20%, hsla(38,83%,64%,1) 0px, transparent 50%),
+    radial-gradient(at 59% 90%, hsla(40,69%,64%,1) 0px, transparent 50%),
+    radial-gradient(at 83% 71%, hsla(13,76%,67%,1) 0px, transparent 50%),
+    radial-gradient(at 48% 58%, hsla(24,69%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 23% 83%, hsla(30,66%,63%,1) 0px, transparent 50%),
+    radial-gradient(at 7% 54%, hsla(22,69%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 58% 16%, hsla(24,72%,77%,1) 0px, transparent 50%);
+    height: 80vh;
+    padding: 50px;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .booking-container{
+    margin: 0px 0px 0px 20%;
+    padding: 20px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.221);
+    backdrop-filter: blur(20px);
+    border: 2px solid white;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1) , 
+    8px 8px 10px  rgba(255, 255, 255, 0.2) inset;
 }
 
 .booking-text{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .booking-inputbar{
     width: 300px;
-    height: 20px;
+    height: 28px;
     padding: 10px;
     margin: 5px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 0px;
 }
 
 .booking-label{
-    margin: 8px 20px;
-    font-size: 14px;
+    margin: 10px 20px 0px 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.times{
+    display: flex;
+}
+
+.picktimes{
+    display: flex;
+    flex-direction: column;
+}
+
+#time{
+    width: 120px;
 }

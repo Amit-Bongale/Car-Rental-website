@@ -1,0 +1,25 @@
+
+.cars-input-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 10px 50px;
+    left: 300px;
+   
+}
+
+.insert-car-label{
+    margin: 10px;
+}
+
+.insert-car-input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.row{
+    width: 250px;
+}

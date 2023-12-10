@@ -26,7 +26,7 @@ function Nav(){
                     
                     <Link to='/contactus'> <button className="nav-link"> Contact us </button> </Link>
 
-                    <Link to=''> <button className="nav-link"> trip </button> </Link>
+                    <Link to='/admin'> <button className="nav-link"> Admin </button> </Link>
                     
                 </div>
 

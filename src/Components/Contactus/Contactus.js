@@ -1,4 +1,5 @@
 
+import Nav from '../nav/Nav'
 import './contactus.css'
 
 import { useState } from 'react'
@@ -38,7 +39,8 @@ function Contactus(){
 
 
     return(
-
+        <>
+        <Nav></Nav>
         <div className="contactus-outer-container">
             <div className="contactus-main-container">
                 <div className="contact-container">
@@ -85,6 +87,7 @@ function Contactus(){
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

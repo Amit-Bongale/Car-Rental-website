@@ -1,4 +1,6 @@
-import '../details/Details.css'
+import '../Featuredcardetails/Details.css'
+import Nav from '../nav/Nav'
+
 
 import ImageSlider from "../Imageslider/Cardcaurosal";
 
@@ -10,7 +12,7 @@ import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 
-import arrow from '../../Assets/icons/arrow.png'
+import arrow from '../../Assets/icons/arrow-white.png'
 import driverimage from '../../Assets/icons/driver.jpg'
 
 function ViewCardetails(){
@@ -46,6 +48,9 @@ function ViewCardetails(){
 
     return(
 
+        <>
+        <Nav></Nav>
+
         <div className="cardetails-container" id='view-page'>
 
             <ImageSlider image1={cardetails.imageurl1} image2={cardetails.imageurl2} image3={cardetails.imageurl3} image4={cardetails.imageurl4} className='imageslider'></ImageSlider>
@@ -53,6 +58,7 @@ function ViewCardetails(){
             <div className="cardetails">
                 
                 <div className="car-title"> 
+               
                     <h1>{cardetails.model}</h1>
                     <div className='car-ratings'>
                         <h2 className='car-rating-elem'>{cardetails.carrating}</h2> 
@@ -85,6 +91,7 @@ function ViewCardetails(){
             </div>
             <Outlet></Outlet>
         </div>
+        </>
     );
 }
 

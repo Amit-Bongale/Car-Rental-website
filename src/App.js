@@ -10,9 +10,8 @@ function App() {
   return (
     <BrowserRouter>
 
-      <Nav></Nav>
       <CustomRouters></CustomRouters>
-      
+
     </BrowserRouter>
   );
 }

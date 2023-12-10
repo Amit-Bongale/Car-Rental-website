@@ -1,4 +1,5 @@
 import arrow from '../../Assets/icons/right-arrow.png'
+import Nav from '../nav/Nav';
 
 import './signup.css'
 
@@ -7,6 +8,8 @@ import { Link } from 'react-router-dom';
 function Signup(){
 
     return(
+        <>
+        <Nav></Nav>
         <div className="main-container-sigin">
             <div className="Signin-main-container">
 
@@ -59,6 +62,7 @@ function Signup(){
             </div>
 
         </div>
+        </>
     );
 }
 

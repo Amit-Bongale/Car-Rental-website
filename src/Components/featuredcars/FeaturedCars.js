@@ -30,8 +30,8 @@ function FeaturedCars(){
                              <h2>price : {car.price_per_km} rs/km</h2>
                              
                              <Link to={`cardetails/${car.model}`}><button className='card-button'>
-                                 <span> View </span>
-                                 <img src={arrow} alt="arrow" />
+                                <span> View </span>
+                                <img src={arrow} alt="arrow" />
                              </button> </Link>
  
                          </div>

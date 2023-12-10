@@ -1,13 +1,19 @@
-
+import Nav from '../nav/Nav'
 import './Booking.css';
 
 import { useState} from 'react';
 
 import wheel from '../../Assets/icons/wheel.png'
+import { useParams } from 'react-router-dom';
 
 
 function Booking(){ 
 
+    // calculating price
+    // let {price} = useParams();
+    // let [day,setdays] = useState('')
+
+    
     let [name, setname] = useState('')
     let [mobile, setmobile] = useState('')
     let [email, setemail] = useState('')
@@ -16,6 +22,7 @@ function Booking(){
     let [pickup , setpickup] = useState('')
     let [dropdate, setdrop] = useState('')
     // let [result, setresult] = useState('')
+   
     
     function send(){
 
@@ -50,7 +57,8 @@ function Booking(){
 
     
     return(
-
+        <>
+        <Nav></Nav>
         <div className='booking-section'>
            
             <div className='booking-container'>
@@ -95,9 +103,25 @@ function Booking(){
 
             </div>
 
+            {/* cALCULTAING PRICE   */}
+            {/* <div>
+
+                <p>enter days</p>
+                <input type="number" className='booking-inputbar' onChange={(val) => {setdays(val.target.value)}} value={day} />
+
+                <div>Summery</div>
+                <h1>price = {price * day} rs.</h1>
+            </div>
+             */}
+
+            
+
            
         
         </div>
+
+        </>
+
     );
 }
 

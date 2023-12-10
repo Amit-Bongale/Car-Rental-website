@@ -10,10 +10,11 @@ import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 
-import arrow from '../../Assets/icons/arrow.png'
+import arrow from '../../Assets/icons/arrow-white.png'
 import driverimage from '../../Assets/icons/driver.jpg'
+import Nav from '../nav/Nav';
 
-function Cardetails(){
+function FeaturedCardetails(){
 
     let { carname } = useParams();
 
@@ -46,6 +47,10 @@ function Cardetails(){
 
     return(
 
+        <>
+
+        <Nav></Nav>
+
         <div className="cardetails-container">
 
             <ImageSlider image1={cardetails.imageurl1} image2={cardetails.imageurl2} image3={cardetails.imageurl3} image4={cardetails.imageurl4} className='imageslider'></ImageSlider>
@@ -64,7 +69,7 @@ function Cardetails(){
                 <h2>price: {cardetails.priceperkm} rs/km</h2>
                 <h2> Seats : {cardetails.seats}</h2>
 
-                <Link to='/booking'>
+                <Link to={`/booking/${cardetails.priceperkm}`}>
                 <button className='car-booking-button'> Rent Now <img src={arrow} alt="arrow" height={10}/>
                 </button></Link>
             </div>
@@ -86,7 +91,8 @@ function Cardetails(){
 
             <Outlet></Outlet>
         </div>
+        </>
     );
 }
 
-export default Cardetails;
+export default FeaturedCardetails;

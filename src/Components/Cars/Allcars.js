@@ -1,5 +1,8 @@
 import {useState, useEffect } from 'react';
-import arrow from '../..//Assets/icons/right-arrow.png'
+import arrow from '../..//Assets/icons/arrow.png'
+
+
+import Nav from '../nav/Nav';
 
 import '../featuredcars/Featuredcars.css'
 import './cars.css'
@@ -44,7 +47,7 @@ function Allcars(){
             console.log('Filtered data:', data);
             setresult(data);
             console.log(data.length)
-            setCarsFound(data.length > 0);
+            setCarsFound(data.length);
         }
 
     }, [search] );
@@ -61,6 +64,8 @@ function Allcars(){
     return(
 
         <div>
+
+            <Nav></Nav>
 
             <div className='search-container'>
                 <h2>Search Cars </h2>

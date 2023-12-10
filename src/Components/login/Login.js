@@ -1,4 +1,5 @@
 import arrow from '../../Assets/icons/right-arrow.png'
+import Nav from '../nav/Nav';
 
 import './Login.css'
 
@@ -8,6 +9,8 @@ function Login(){
 
     return(
 
+        <>
+        <Nav></Nav>
         <div className='loginsection'>
 
             <div className="main-container-login">
@@ -53,6 +56,7 @@ function Login(){
             </div>
 
         </div>
+        </>
     );
 }
 

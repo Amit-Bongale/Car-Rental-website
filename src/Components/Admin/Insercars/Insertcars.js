@@ -8,13 +8,11 @@ function Insertcars() {
       <AdminNav></AdminNav>
 
       <div className="cars-input-container">
-        <table>
-          <thead>
-            <th></th>
-          </thead>
+        <table className="cars-input-table">
+
           <tbody>
 
-            <tr >
+            <tr className="cars-insert-body" >
               <td className="row">
                 <label className="insert-car-label">Car Model</label>
               </td>

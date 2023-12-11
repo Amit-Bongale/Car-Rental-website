@@ -69,7 +69,7 @@ function FeaturedCardetails(){
                 <h2>price: {cardetails.priceperkm} rs/Day</h2>
                 <h2> Seats : {cardetails.seats}</h2>
 
-                <Link to={`/booking/${cardetails.priceperkm}`}>
+                <Link to={`/booking/${cardetails.model}`}>
                 <button className='car-booking-button'> Rent Now <img src={arrow} alt="arrow" height={10}/>
                 </button></Link>
             </div>

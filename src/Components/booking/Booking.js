@@ -1,7 +1,7 @@
 import Nav from '../nav/Nav'
 import './Booking.css';
 
-import { useState} from 'react';
+import { useState , useEffect} from 'react';
 
 import wheel from '../../Assets/icons/wheel.png'
 import { useParams } from 'react-router-dom';
@@ -9,10 +9,10 @@ import { useParams } from 'react-router-dom';
 
 function Booking(){ 
 
-    // calculating price
-    let {price} = useParams();
-    let [day,setdays] = useState('')
-
+    let { carname } = useParams();
+    
+    let [cardetails,setDetails] = useState({})
+ 
     
     let [name, setname] = useState('')
     let [mobile, setmobile] = useState('')
@@ -21,9 +21,59 @@ function Booking(){
     let [time, settime] = useState('')
     let [pickup , setpickup] = useState('')
     let [dropdate, setdrop] = useState('')
-    // let [result, setresult] = useState('')
-   
+
+    let [days , setdays] = useState(0)
+
+
+    useEffect(() => {
+
+        // calculating days
+        const start = new Date(pickup);
+        const end = new Date(dropdate);
+
+        if (end < start) {
+            alert("End date cannot be earlier than the start date. Please choose a valid date range.");
+            return;
+        }
+
+        // Calculate the difference in milliseconds
+        const timeDifference = end - start;
+
+        // Convert milliseconds to days
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        console.log(daysDifference)
+        setdays(daysDifference)
+        
+    }, [pickup, dropdate]);
     
+
+    useEffect(()=>{
+
+        let bodyData = { "car":carname
+        };
+
+        fetch( 'http://localhost:3000/cars/carsdata',
+            {
+                method:"POST",
+                body:JSON.stringify(bodyData),
+                headers: { 'Content-Type': 'application/json'},
+            },
+        )
+
+        .then((res)=>{
+            res.json().then((val)=>{
+                console.log(val)
+                setDetails(val[0])
+            }
+        )})
+
+    },[]);
+
+    let price = cardetails.priceperkm
+
+
+
+    // Send Booking Info to Backend
     function send(){
 
         var data = {
@@ -42,7 +92,6 @@ function Booking(){
             { method :'POST', headers:{'Content-Type' : 'application/json'} ,
                 body: JSON.stringify(data) }
             )  .then((res) => res.json())
-            //  .then( (data) => { setresult(data)} )
              .catch((error) => {
                 console.error('Error:', error);
             });
@@ -54,70 +103,71 @@ function Booking(){
         }
     }
   
-
     
     return(
         <>
         <Nav></Nav>
         <div className='booking-section'>
-           
+
             <div className='booking-container'>
 
-                <div className='booking-text'>
+                <div >
 
-                    <label className='booking-label'>Name</label>
-                    <input onChange={(val) => {setname(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter your name' />
-            
-                    <label className='booking-label'>Mobile</label>
-                    <input onChange={(val) => {setmobile(val.target.value)}} className='booking-inputbar' type="number" placeholder='enter your Mobile number' />
-            
-                    <label className='booking-label'>Email</label>
-                    <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
+                    <div className='booking-text'>
+
+                        <label className='booking-label'>Name</label>
+                        <input onChange={(val) => {setname(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter your name' />
                 
+                        <label className='booking-label'>Mobile</label>
+                        <input onChange={(val) => {setmobile(val.target.value)}} className='booking-inputbar' type="number" placeholder='enter your Mobile number' />
+                
+                        <label className='booking-label'>Email</label>
+                        <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
                     
-                
-                    <div className='times'>
-                        <div className='picktimes'>
-                            <label className='booking-label' >From</label>
-                            <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' id='time' type="date" placeholder='enter pickup time' />
+                        
+                    
+                        <div className='times'>
+                            <div className='picktimes'>
+                                <label className='booking-label' >From</label>
+                                <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' id='time' type="date" placeholder='enter pickup time' />
+                            </div>
+                        
+                            <div className='picktimes'>
+                                <label className='booking-label'>To</label>
+                                <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar'   id='time' type="date" placeholder='enter droping time' /> 
+                            </div>
                         </div>
-                       
-                        <div className='picktimes'>
-                            <label className='booking-label'>To</label>
-                            <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar'   id='time' type="date" placeholder='enter droping time' /> 
-                        </div>
+
+                        <label className='booking-label'>Pickup location</label>
+                        <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
+
+                        <label className='booking-label'>Pickup time</label>
+                        <input onChange={(val) => {settime(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
+                    
                     </div>
 
-                    <label className='booking-label'>Pickup location</label>
-                    <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
+                    <button className='button' type='submit' onClick={send}>
+                        <img src={wheel} alt="wheel" height={25}  class="svgIcon" />
+                        Book Now
+                    </button>
 
-                    <label className='booking-label'>Pickup time</label>
-                    <input onChange={(val) => {settime(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
-                   
                 </div>
 
-                <button className='button' type='submit' onClick={send}>
-                    <img src={wheel} alt="wheel" height={25} />
-                    Book Now
-                </button>
+                {/* CALCULTAING PRICE  */}
+                <div className='booking-summery'>
+                    <h1>Booking summery</h1>
+                    <hr/>
+
+                    <div>
+                        <img src={cardetails.imageurl1} alt="car" height={250} style={{borderRadius: 20, marginTop:10}} />
+                        <h3>  car name : {cardetails.model}</h3>
+                    </div>
+                   
+                    <h2>Total Price = {price * days} rs.</h2>
+                </div>
 
             </div>
-
-            {/* CALCULTAING PRICE  */}
-            <div>
-
-                <p>enter days</p>
-                <input type="number" className='booking-inputbar' onChange={(val) => {setdays(val.target.value)}} value={day} />
-
-                <div>Summery</div>
-                <h1>price = {price * day} rs.</h1>
-            </div>
-            
-
-            
-
            
-        
         </div>
 
         </>

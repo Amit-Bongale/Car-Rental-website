@@ -24,7 +24,7 @@ function CustomRouters(){
             <Route path='/cardetails/:carname?' element={<FeaturedCardetails></FeaturedCardetails>}></Route>
             <Route path='/cars/cardetails/:carname?' element={<ViewCardetails></ViewCardetails>}></Route>
             <Route path='/cars' element={<Allcars></Allcars>}></Route>
-            <Route path='/booking/:price?' element={<Booking></Booking>}></Route>
+            <Route path='/booking/:carname?' element={<Booking></Booking>}></Route>
             <Route path='/contactus' element={<Contactus></Contactus>}></Route>
             <Route path='/signup' element={<Signup></Signup>}></Route>
             

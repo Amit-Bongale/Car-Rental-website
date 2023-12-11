@@ -70,7 +70,7 @@ function ViewCardetails(){
                 <h2>price: {cardetails.priceperkm} rs/km</h2>
                 <h2> Seats : {cardetails.seats}</h2>
 
-                <Link to='/booking'>
+                <Link to={`/booking/${cardetails.model}`}>
                 <button className='car-booking-button'> Rent Now <img src={arrow} alt="arrow" height={10}/>
                 </button></Link>
             </div>

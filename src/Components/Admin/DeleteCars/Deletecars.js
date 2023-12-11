@@ -9,20 +9,20 @@ function Deletecars() {
   let [carsdata , setcars] = useState([])
 
   useEffect(() => {
-      try {
-          fetch('http://localhost:3000/carsdata', { method: "POST" })
-              .then((res) => res.json())
-              .then((data) => {
-                  console.log('Fetched data:', data);
-                  setcars(data);
-              })
-              .catch(error => {
-                  console.log('Error fetching data:', error);
-              });
-      } catch (error) {
+        try {
+            fetch('http://localhost:3000/carsdata', { method: "POST" })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log('Fetched data:', data);
+                setcars(data);
+            })
+            .catch(error => {
+                console.log('Error fetching data:', error);
+            });
+        } catch (error) {
           console.error('Error:', error);
-      }
-  },[])
+        }
+    },[])
 
 
   return (
@@ -53,6 +53,7 @@ function Deletecars() {
                 carsdata.map((car) => (
                   
                   <tr className="deatils-table-row">
+
                     <td className="details-table-data">
                         <button> delete car</button>
                     </td>

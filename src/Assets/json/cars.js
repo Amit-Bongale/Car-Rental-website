@@ -7,7 +7,7 @@ var carslist = {
       "driver_rating": 4.5,
       "car_rating": 4.2,
       "seats": 5,
-      "price_per_km": 10.0,
+      "price_per_km": 3000,
       "driver_contact": "+91 98765 43210",
       "driver_email": "rajesh.kumar@gmail.com",
       "image_urls": [
@@ -23,7 +23,7 @@ var carslist = {
       "driver_rating": 4.2,
       "car_rating": 4.0,
       "seats": 5,
-      "price_per_km": 11.5,
+      "price_per_km": 2500,
       "driver_contact": "+91 87654 32109",
       "driver_email": "priya.sharma@gmail.com",
       "image_urls": [
@@ -39,7 +39,7 @@ var carslist = {
       "driver_rating": 4.0,
       "car_rating": 3.8,
       "seats": 4,
-      "price_per_km": 9.0,
+      "price_per_km": 3200,
       "driver_contact": "+91 76543 21098",
       "driver_email": "vikram.singh@gmail.com",
       "image_urls": [
@@ -55,7 +55,7 @@ var carslist = {
       "driver_rating": 4.8,
       "car_rating": 4.5,
       "seats": 5,
-      "price_per_km": 12.0,
+      "price_per_km": 2800,
       "driver_contact": "+91 65432 10987",
       "driver_email": "ananya.patel@gmail.com",
       "image_urls": [
@@ -71,7 +71,7 @@ var carslist = {
       "driver_rating": 4.3,
       "car_rating": 4.1,
       "seats": 4,
-      "price_per_km": 10.5,
+      "price_per_km": 3000,
       "driver_contact": "+91 54321 09876",
       "driver_email": "rahul.verma@gmail.com",
       "image_urls": [
@@ -87,7 +87,7 @@ var carslist = {
       "driver_rating": 4.7,
       "car_rating": 4.4,
       "seats": 5,
-      "price_per_km": 11.5,
+      "price_per_km": 4800,
       "driver_contact": "+91 32109 87654",
       "driver_email": "divya.kapoor@gmail.com",
       "image_urls": [

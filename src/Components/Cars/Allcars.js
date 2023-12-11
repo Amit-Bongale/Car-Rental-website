@@ -1,6 +1,5 @@
 import {useState, useEffect } from 'react';
-import arrow from '../..//Assets/icons/arrow.png'
-
+import arrow from '../../Assets/icons/right-arrow.png'
 
 import Nav from '../nav/Nav';
 
@@ -93,7 +92,7 @@ function Allcars(){
                                     <div className='card-text'>
         
                                         <h2 className='title'>{car.model}</h2>
-                                        <h2>price : {car.priceperkm} rs/km</h2>
+                                        <h2>price : {car.priceperkm} rs/Day</h2>
                                     
                                         <Link to={`cardetails/${car.model}`}><button className='card-button'>
                                             <span> View </span>

@@ -62,7 +62,7 @@ function Insertcars() {
 
             <tr>
               <td>
-                <label className="insert-car-label">Pricing per km</label>
+                <label className="insert-car-label">Pricing per Day</label>
               </td>
               <td>
                 <input className="insert-car-input" type="text" />

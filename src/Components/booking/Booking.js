@@ -10,8 +10,8 @@ import { useParams } from 'react-router-dom';
 function Booking(){ 
 
     // calculating price
-    // let {price} = useParams();
-    // let [day,setdays] = useState('')
+    let {price} = useParams();
+    let [day,setdays] = useState('')
 
     
     let [name, setname] = useState('')
@@ -103,8 +103,8 @@ function Booking(){
 
             </div>
 
-            {/* cALCULTAING PRICE   */}
-            {/* <div>
+            {/* CALCULTAING PRICE  */}
+            <div>
 
                 <p>enter days</p>
                 <input type="number" className='booking-inputbar' onChange={(val) => {setdays(val.target.value)}} value={day} />
@@ -112,7 +112,7 @@ function Booking(){
                 <div>Summery</div>
                 <h1>price = {price * day} rs.</h1>
             </div>
-             */}
+            
 
             
 

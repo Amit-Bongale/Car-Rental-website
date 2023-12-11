@@ -10,14 +10,14 @@ function AdminCardetails() {
     useEffect(() => {
         try {
             fetch('http://localhost:3000/carsdata', { method: "POST" })
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log('Fetched data:', data);
-                    setcars(data);
-                })
-                .catch(error => {
-                    console.log('Error fetching data:', error);
-                });
+            .then((res) => res.json())
+            .then((data) => {
+                console.log('Fetched data:', data);
+                setcars(data);
+            })
+            .catch(error => {
+                console.log('Error fetching data:', error);
+            });
         } catch (error) {
             console.error('Error:', error);
         }
@@ -37,7 +37,7 @@ function AdminCardetails() {
                     <th className="details-table-header"> Driver Rating</th>
                     <th className="details-table-header"> car Rating</th>
                     <th className="details-table-header"> Seats</th>
-                    <th className="details-table-header"> Pricing per km</th>
+                    <th className="details-table-header"> Pricing</th>
                     <th className="details-table-header"> Contact Number</th>
                     <th className="details-table-header"> Email</th>
                     <th className="details-table-header"> Image 1</th>

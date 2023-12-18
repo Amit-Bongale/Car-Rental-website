@@ -18,6 +18,7 @@ function AdminNav() {
 
         <div className='admin-navlink-container'>
 
+
           <Link to='/admin'><button className='admin-nav-button'> Cars Details </button> </Link>
 
           <Link to='/admin/insertcars'><button className='admin-nav-button'> Insert Cars </button> </Link>

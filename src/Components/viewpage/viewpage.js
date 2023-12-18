@@ -67,7 +67,7 @@ function ViewCardetails(){
                 </div>
 
                 <div></div>
-                <h2>price: {cardetails.priceperkm} rs/km</h2>
+                <h2>price: {cardetails.priceperday} rs/km</h2>
                 <h2> Seats : {cardetails.seats}</h2>
 
                 <Link to={`/booking/${cardetails.model}`}>

@@ -1,0 +1,99 @@
+[
+  {
+    "type": "header",
+    "version": "5.2.1",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+  },
+  { "type": "database", "name": "cars" },
+  {
+    "type": "table",
+    "name": "featuredcars",
+    "database": "cars",
+    "data": [
+      {
+        "model": "Chevrolet Malibu",
+        "drivername": "Ananya Patel",
+        "driverrating": "4.8",
+        "carrating": "4.5",
+        "seats": "5",
+        "priceperkm": "2800",
+        "drivercontact": "+91 65432 10987",
+        "driveremail": "ananya.patel@gmail.com",
+        "imageurl1": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2024/cars/malibu/01-images/colorizer/images/2024-malibu-1sp-gnt-colorizer.jpg?imwidth=600",
+        "imageurl2": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2024/cars/malibu/01-images/mov/2024-malibu-mov-design-01.png?imwidth=1200",
+        "imageurl3": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2024/cars/malibu/01-images/gallery/previews/2024-malibu-mov-gallery-preview-03.png?imwidth=419",
+        "imageurl4": "https://cdn.jdpower.com/JDPA_2020-Chevrolet-Malibu-RS-Red-Front-Quarter-Small.jpg"
+      },
+      {
+        "model": "Tesla Model 3",
+        "drivername": "Divya Kapoor",
+        "driverrating": "4.7",
+        "carrating": "4.4",
+        "seats": "5",
+        "priceperkm": "4800",
+        "drivercontact": "+91 32109 87654",
+        "driveremail": "divya.kapoor@gmail.com",
+        "imageurl1": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Tesla/Model-3/5251/1693556345148/front-left-side-47.jpg",
+        "imageurl2": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Tesla/Model-3/5251/1693556412217/dashboard-59.jpg",
+        "imageurl3": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Tesla/Model-3/5251/1693556412217/door-view-of-driver-seat-51.jpg",
+        "imageurl4": "https://cars.usnews.com/static/images/Auto/custom/15203/2023_Tesla_Model_3_Rear_Seats_1.jpg"
+      },
+      {
+        "model": "Honda Accord",
+        "drivername": "Priya Sharma",
+        "driverrating": "4.2",
+        "carrating": "4.0",
+        "seats": "5",
+        "priceperkm": "2500",
+        "drivercontact": "+91 87654 32109",
+        "driveremail": "priya.sharma@gmail.com",
+        "imageurl1": "https://imgd.aeplcdn.com/664x374/cw/ec/21613/Honda-Accord-Right-Front-Three-Quarter-64767.jpg?v=201711021421&q=80",
+        "imageurl2": "https://imgd.aeplcdn.com/664x374/cw/ec/21613/Honda-Accord-Right-Rear-Three-Quarter-64769.jpg?v=201711021421&q=80",
+        "imageurl3": "https://imgd.aeplcdn.com/664x374/cw/ec/21613/Honda-Accord-Interior-64770.jpg?v=201711021421&q=80",
+        "imageurl4": "https://imgd.aeplcdn.com/664x374/cw/ec/21613/Honda-Accord-Exterior-82684.jpg?v=201711021421&q=80"
+      },
+      {
+        "model": "Nissan Altima",
+        "drivername": "Rahul Verma",
+        "driverrating": "4.3",
+        "carrating": "4.1",
+        "seats": "4",
+        "priceperkm": "3000",
+        "drivercontact": "+91 54321 09876",
+        "driveremail": "rahul.verma@gmail.com",
+        "imageurl1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfFU6J_PnR7JS-HVPVQm5kRJjqlm_tQ3jAdQ&usqp=CAU",
+        "imageurl2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvdhJO6yyO2cT8uZ3xZGrr7-C8L3u2WSdPow&usqp=CAU",
+        "imageurl3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Zx0ORcibgj6zwaDecSpyyJq4k9TsgCbrTA&usqp=CAU",
+        "imageurl4": "https://www.nissanusa.com/content/dam/Nissan/us/vehicles/altima/2024/Gallery/interior/360/charcoal-sport-leather.png"
+      },
+      {
+        "model": "Toyota Camry",
+        "drivername": "Rajesh Kumar",
+        "driverrating": "4.5",
+        "carrating": "4.2",
+        "seats": "5",
+        "priceperkm": "3000",
+        "drivercontact": "+91 98765 43210",
+        "driveremail": "rajesh.kumar@gmail.com",
+        "imageurl1": "https://imgd-ct.aeplcdn.com/1056x660/n/b886bsa_1460381.jpg?q=80",
+        "imageurl2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKnv0y4vl7fNhkJwW9VeeErHG5CanuAl97eRBPQ_V-Z4AduykXan9eZj61phsa0oHczA&usqp=CAU",
+        "imageurl3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNI2-zacQBkKj3e01PwrGdIhlmkwCJaV1Ydg&usqp=CAU",
+        "imageurl4": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/orlando-toyota-1662757322.png?resize=660:*"
+      },
+      {
+        "model": "Ford Fusion",
+        "drivername": "Vikram Singh",
+        "driverrating": "4.0",
+        "carrating": "3.8",
+        "seats": "4",
+        "priceperkm": "3200",
+        "drivercontact": "+91 76543 21098",
+        "driveremail": "vikram.singh@gmail.com",
+        "imageurl1": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2019_Ford_Fusion_Titanium_Energi%2C_front_2.29.20.jpg/1920px-2019_Ford_Fusion_Titanium_Energi%2C_front_2.29.20.jpg",
+        "imageurl2": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ford_Fusion_%282nd_generation%29_IMG_5310.jpg/1920px-Ford_Fusion_%282nd_generation%29_IMG_5310.jpg",
+        "imageurl3": "https://cars.usnews.com/static/images/Auto/izmo/i154319660/2020_ford_fusion_dashboard.jpg",
+        "imageurl4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc1iTxm0jxzF3CuI8AxBIc8yMcn_2j5rQciA&usqp=CAU"
+      }
+    ]
+  }
+]

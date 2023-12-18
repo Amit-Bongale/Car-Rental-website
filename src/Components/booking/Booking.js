@@ -69,7 +69,7 @@ function Booking(){
 
     },[]);
 
-    let price = cardetails.priceperkm
+    let price = cardetails.priceperday
 
 
 
@@ -159,7 +159,7 @@ function Booking(){
                     <hr/>
 
                     <div>
-                        <img src={cardetails.imageurl1} alt="car" height={250} style={{borderRadius: 20, marginTop:10}} />
+                        <img src={cardetails.imageurl1} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
                         <h3>  car name : {cardetails.model}</h3>
                     </div>
                    

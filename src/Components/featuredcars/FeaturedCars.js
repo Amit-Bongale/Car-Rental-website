@@ -12,11 +12,11 @@ function FeaturedCars(){
     <>
         <div className='card-container'>
             <div className='cards'>
-            { carslist.cars.map((car) => {
+            { carslist.cars.map((car, index) => {
                 
                 return(
                  
-                 <div> 
+                 <div key={index}> 
  
                      <div className='card'>
  

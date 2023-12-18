@@ -16,6 +16,7 @@ function Allcars(){
     let [search , setsearch] = useState('')
 
     let [result , setresult] = useState([])
+    
     let [carsFound, setCarsFound] = useState(1);
 
     useEffect(() => {
@@ -92,7 +93,7 @@ function Allcars(){
                                     <div className='card-text'>
         
                                         <h2 className='title'>{car.model}</h2>
-                                        <h2>price : {car.priceperkm} rs/Day</h2>
+                                        <h2>price : {car.priceperday} rs/Day</h2>
                                     
                                         <Link to={`cardetails/${car.model}`}><button className='card-button'>
                                             <span> View </span>

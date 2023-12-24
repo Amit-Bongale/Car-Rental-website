@@ -14,7 +14,8 @@ function Features(){
 
             <div className="features-container">
 
-                <div className="feature-content">
+                <div className="feature-content" data-aos='zoom-in' data-aos-duration='200'
+                    data-aos-delay='100'>
 
                     <div className="feature-image">
                         <img src={affordableicon} width={50} alt="featured" />
@@ -30,7 +31,8 @@ function Features(){
 
                 </div>
 
-                <div className="feature-content">
+                <div className="feature-content" data-aos='zoom-in' data-aos-duration='250'
+                    data-aos-delay='250'>
 
                     <div className="feature-image">
                         <img src={booking} width={50} alt="feature" />
@@ -46,7 +48,8 @@ function Features(){
                 
                 </div>
 
-                <div className="feature-content">
+                <div className="feature-content" data-aos='zoom-in' data-aos-duration='300'
+                    data-aos-delay='300'>
 
                     <div className="feature-image">
                         <img src={cars} width={50} alt="feature" />
@@ -61,7 +64,7 @@ function Features(){
                 
                 </div>
 
-                <div className="feature-content">
+                <div className="feature-content" data-aos='zoom-in' data-aos-duration='350' data-aos-delay='400'>
 
                     <div className="feature-image">
                         <img src={comfort} width={50} alt="feature" />

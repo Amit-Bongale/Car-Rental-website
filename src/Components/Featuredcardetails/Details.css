@@ -63,4 +63,9 @@
     border: 0;
     padding: 20px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+.car-booking-button:hover {
+    box-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
 }

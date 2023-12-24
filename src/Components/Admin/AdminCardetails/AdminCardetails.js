@@ -68,7 +68,7 @@ function AdminCardetails() {
                                 {car.seats}
                             </td>
                             <td className="details-table-data">
-                                {car.priceperkm}
+                                {car.priceperday}
                             </td>
 
                             <td className="details-table-data">

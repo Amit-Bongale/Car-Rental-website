@@ -6,9 +6,11 @@ import './deletecars.css'
 
 function Deletecars() {
 
-  let [carsdata , setcars] = useState([])
+    let [carsdata , setcars] = useState([])
 
-  useEffect(() => {
+    // let [carmodel , setcarmodel] = useState('')
+
+    useEffect(() => {
         try {
             fetch('http://localhost:3000/carsdata', { method: "POST" })
             .then((res) => res.json())
@@ -19,13 +21,53 @@ function Deletecars() {
             .catch(error => {
                 console.log('Error fetching data:', error);
             });
+            
         } catch (error) {
           console.error('Error:', error);
         }
     },[])
 
 
+    function printcar(model) {
+
+        console.log( model);
+
+    }
+
+
+   // function deletecars(model){
+
+        // console.log(`Deleting car with model: ${model}`);
+
+        // let carsmodel1 = model
+
+        // console.log(carsmodel1)
+        
+    
+
+        // try {
+        //     fetch('http://localhost:3000/deletecars', { method: "POST" , headers: {
+        //     'Content-Type': 'application/json'} , body: JSON.stringify({ model: carmodel }) })
+        //     .then((res) => res.json())
+        //     .catch(error => {
+        //         console.log('Error fetching data:', error);
+        //     });
+
+
+        //     alert('Car Deleted Sucessfully');
+        //     const result =  response.text();
+        //     alert(result);
+            
+        // } catch (error) {
+        //   console.error('Error:', error);
+        // }
+    // }
+
+   
+
+
   return (
+    
     <div> 
         <AdminNav></AdminNav>
 
@@ -52,14 +94,16 @@ function Deletecars() {
               {
                 carsdata.map((car) => (
                   
-                  <tr className="deatils-table-row">
+                  <tr className="deatils-table-row" >
 
                     <td className="details-table-data">
-                        <button> delete car</button>
+                        <button onClick={() => printcar(car.model)} > delete car </button>
                     </td>
-                    <td className="details-table-data">
+
+                    <td className="details-table-data" >
                         {car.model} 
                     </td>
+                  
                     <td className="details-table-data">
                         {car.drivername}
                     </td>
@@ -69,14 +113,12 @@ function Deletecars() {
                     <td className="details-table-data">
                         {car.carrating}
                     </td>
-
                     <td className="details-table-data">
                         {car.seats}
                     </td>
                     <td className="details-table-data">
-                        {car.priceperkm}
+                        {car.priceperday}
                     </td>
-
                     <td className="details-table-data">
                         {car.drivercontact}
                     </td>
@@ -101,6 +143,7 @@ function Deletecars() {
               }
                 
             </table>
+            
         </div>
 
     </div>

@@ -16,27 +16,28 @@ function FeaturedCars(){
                 
                 return(
                  
-                 <div key={index}> 
+                 <div key={index} >
  
-                     <div className='card'>
+                    <div className='card'  data-aos='zoom-in-up' data-aos-duration='350'
+                    data-aos-delay= {car.aosDelay} >
  
-                         <div className='image-container'>
-                             <img src={car.image_urls[0]} alt="car" />
-                         </div>
+                        <div className='image-container'>
+                            <img src={car.image_urls[0]} alt="car" />
+                        </div>
                          
-                         <div className='card-text'>
+                        <div className='card-text'>
  
-                             <h2 className='title'>{car.model}</h2>
-                             <h2>price : {car.price_per_km} rs/Day</h2>
-                             
-                             <Link to={`cardetails/${car.model}`}><button className='card-button'>
-                                <span> View </span>
-                                <img src={arrow} alt="arrow" />
-                             </button> </Link>
+                            <h2 className='title'>{car.model}</h2>
+                            <h2>price : {car.price_per_km} rs/Day</h2>
+                            
+                            <Link to={`cardetails/${car.model}`}><button className='card-button'>
+                            <span> View </span>
+                            <img src={arrow} alt="arrow" />
+                            </button> </Link>
  
-                         </div>
+                        </div>
  
-                     </div>
+                    </div>
                      
                  </div>
                  

@@ -84,7 +84,8 @@ function Allcars(){
                             
                             <div className='cards'>
         
-                                <div className='card'>
+                                <div className='card' data-aos='zoom-in-down' data-aos-duration='400'
+                                    data-aos-delay= {car.aosDelay}>
         
                                     <div className='image-container'>
                                         <img src={car.imageurl1} alt="car" />

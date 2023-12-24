@@ -15,6 +15,7 @@
     align-items: center;
     gap: 80px;
     padding: 30px;
+   
 
 }
 
@@ -34,8 +35,8 @@
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border: 1px solid transparent;
+    animation: pop 3s;
 }
-
 
 .card:hover{
     scale: 1.05;

@@ -1,8 +1,13 @@
-import React from 'react'
+
 import AdminNav from '../AdminNav/AdminNav';
+import './deletecars.css'
+
+import arrow from '../../../Assets/icons/arrow-white.png'
 
 import { useState, useEffect } from 'react';
+import { Link , Outlet } from 'react-router-dom';
 import './deletecars.css'
+
 
 function Deletecars() {
 
@@ -27,12 +32,6 @@ function Deletecars() {
         }
     },[])
 
-
-    function printcar(model) {
-
-        console.log( model);
-
-    }
 
 
    // function deletecars(model){
@@ -71,9 +70,9 @@ function Deletecars() {
     <div> 
         <AdminNav></AdminNav>
 
-        <div className='cars-details-container'>
+        {/* <div className='cars-details-container'> */}
           
-            <table className='details-table'>
+            {/* <table className='details-table'>
 
               <tr>
                 <th className="details-table-header"> </th>
@@ -95,15 +94,15 @@ function Deletecars() {
                 carsdata.map((car) => (
                   
                   <tr className="deatils-table-row" >
-
+                        <Link to={`/confirmdelete/${car.model}`}>
+                            <button onClick={console.log('clicked car')}> delete car </button>
+                        </Link>
                     <td className="details-table-data">
-                        <button onClick={() => printcar(car.model)} > delete car </button>
+                        
                     </td>
-
                     <td className="details-table-data" >
                         {car.model} 
                     </td>
-                  
                     <td className="details-table-data">
                         {car.drivername}
                     </td>
@@ -129,7 +128,7 @@ function Deletecars() {
                         <img  src={car.imageurl1} alt="image1" height={40} />
                     </td>
                     <td className="details-table-data">
-                            <img  src={car.imageurl2} alt="image1" height={40} />
+                        <img  src={car.imageurl2} alt="image1" height={40} />
                     </td>
                     <td className="details-table-data">
                         <img  src={car.imageurl3} alt="image1" height={40} />
@@ -142,9 +141,57 @@ function Deletecars() {
                 ))
               }
                 
-            </table>
+            </table> */}
+
+        <div className='flex delete-card-container'>
+
+        {
+
+        carsdata.map((car) => (
+
             
+
+        <div className='deletecards  '> 
+        
+        <div className='card ' >
+
+            <div className='image-container'>
+                <img src={car.imageurl1} alt="car" />
+            </div>
+        
+            <div className='card-text'>
+
+                <h2 className='title'>{car.model}</h2>
+                <h2>price : {car.priceperday} rs/Day</h2>
+            
+                <Link to={`/confirmdelete/${car.model}`}>
+                    <button className='card-button'>
+                    <span> Delete </span>
+                    <img src={arrow} alt="arrow" />
+                    </button>
+                </Link>
+
+            </div>
+
         </div>
+    
+    </div>
+
+            
+
+
+            
+
+            ))
+            }
+
+</div>
+            
+       
+
+       
+
+        <Outlet></Outlet>
 
     </div>
   )

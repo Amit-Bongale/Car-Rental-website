@@ -1,0 +1,14 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.deletecards{
+    height: 4%;
+    width:  400px;
+    padding: 20px;
+}
+
+.delete-card-container{
+    margin-left: 320px;
+}

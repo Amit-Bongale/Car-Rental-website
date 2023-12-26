@@ -183,7 +183,7 @@ function Insertcars() {
             </tr>
           </tbody>
 
-          <button type="submit" onClick={send}> submit </button>
+          <button type="submit" className="insertcar-button" onClick={send}> submit </button>
 
         </table>
 

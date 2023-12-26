@@ -1,0 +1,66 @@
+.Confirmdelete-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.deletecar-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px;
+    background-color: rgba(223, 220, 220, 0.1);
+    border: 1px solid rgba(192, 192, 192, 0.397);
+    padding: 16px;
+    border-radius: 12px;
+    width: 600px;
+}
+
+.deletecardetails-container{
+    margin-top: 20px;
+}
+
+.deletecar-image{
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgb(196, 195, 195);
+}
+
+.deletecar-title{
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#delterating{
+    width: 70px;
+}
+
+.delete-buttons-container{
+    display: flex;
+    justify-content: center;
+}
+
+.cardelete-button{
+    padding: 16px 60px;
+    margin: 10px 20px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+
+.yes{
+    background-color: rgb(25, 182, 25);
+}
+.no{
+    background-color: rgb(239, 57, 57);
+}
+
+.cardelete-button:hover {
+    scale: 1.05;
+    box-shadow: 0px 5px 10px rgb(167, 167, 167);
+}

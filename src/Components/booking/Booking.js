@@ -83,7 +83,8 @@ function Booking(){
             'location':location,
             'pickuptime':time,
             'pickupdate':pickup,
-            'dropdate':dropdate
+            'dropdate':dropdate,
+            'carmodel' : carname
         }
 
         try{
@@ -111,7 +112,7 @@ function Booking(){
 
             <div className='booking-container'>
 
-                <div >
+                <div>
 
                     <div className='booking-text'>
 
@@ -161,7 +162,10 @@ function Booking(){
                     <div>
                         <img src={cardetails.imageurl1} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
                         <h3>  car name : {cardetails.model}</h3>
+                        <h3>  seats : {cardetails.seats}</h3>
+                        <h3>  driver name : {cardetails.drivername}</h3>
                     </div>
+                    <hr/>
                    
                     <h2>Total Price = {price * days} rs.</h2>
                 </div>

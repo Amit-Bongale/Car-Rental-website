@@ -125,8 +125,6 @@ function Booking(){
                         <label className='booking-label'>Email</label>
                         <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
                     
-                        
-                    
                         <div className='times'>
                             <div className='picktimes'>
                                 <label className='booking-label' >From</label>

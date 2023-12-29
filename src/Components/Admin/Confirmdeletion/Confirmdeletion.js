@@ -7,9 +7,15 @@ import './confirmdeletion.css'
 
 import star from '../../../Assets/icons/star.png'
 
-function Confirmdeletion() {
-  
-    let { model } = useParams();
+
+
+function Confirmdeletion({ model , setpopup}) {
+
+
+    const handleChildClick = () => {
+        setpopup(false);
+    };
+    
 
     let [cardetails,setDetails] = useState({})
 
@@ -37,8 +43,6 @@ function Confirmdeletion() {
         window.scrollTo(0, 0)
 
     },[]);
-
-    
 
 
     function deletecars(){
@@ -71,8 +75,10 @@ function Confirmdeletion() {
     return(
 
         <div className="Confirmdelete-section">
-
+           
             <div className="deletecar-section">
+
+        
 
                 <img src={cardetails.imageurl1} alt="car" height={300} className="deletecar-image" />
 
@@ -99,13 +105,14 @@ function Confirmdeletion() {
                         
                         <div className="delete-buttons-container">
 
-                            <Link to='/deletecars'>
-                                <button className='cardelete-button yes' onClick={deletecars}> yes </button>
-                            </Link>
-
-                            <Link to='/deletecars'>
-                                <button className='cardelete-button no'> No </button>
-                            </Link>
+                            {/* <Link to='/deletecars'> */}
+                                <button className='cardelete-button yes' onClick={() => {deletecars();   handleChildClick();} }> yes </button>
+                            {/* </Link> */}
+                        
+                            {/* <Link to='/deletecars'> */}
+                                <button className='cardelete-button no' onClick={() => handleChildClick()}> No </button>
+                                
+                            {/* </Link> */}
 
                         </div>
                         

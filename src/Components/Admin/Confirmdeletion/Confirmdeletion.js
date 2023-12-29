@@ -1,21 +1,15 @@
-
-import { Link , Outlet} from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 
 import './confirmdeletion.css'
 
 import star from '../../../Assets/icons/star.png'
 
 
+function Confirmdeletion({model , setpopup}) {
 
-function Confirmdeletion({ model , setpopup}) {
-
-
-    const handleChildClick = () => {
+    const handleclick = () => {
         setpopup(false);
     };
-    
 
     let [cardetails,setDetails] = useState({})
 
@@ -78,8 +72,6 @@ function Confirmdeletion({ model , setpopup}) {
            
             <div className="deletecar-section">
 
-        
-
                 <img src={cardetails.imageurl1} alt="car" height={300} className="deletecar-image" />
 
                 <div className="deletecardetails-container">
@@ -104,22 +96,17 @@ function Confirmdeletion({ model , setpopup}) {
                         <h2>Do you like to delete this car</h2>
                         
                         <div className="delete-buttons-container">
-
-                            {/* <Link to='/deletecars'> */}
-                                <button className='cardelete-button yes' onClick={() => {deletecars();   handleChildClick();} }> yes </button>
-                            {/* </Link> */}
-                        
-                            {/* <Link to='/deletecars'> */}
-                                <button className='cardelete-button no' onClick={() => handleChildClick()}> No </button>
-                                
-                            {/* </Link> */}
+                           
+                            <button className='cardelete-button yes'
+                            onClick={() => {deletecars();   handleclick();} }> yes </button>
+                                                
+                            <button className='cardelete-button no' onClick={() => handleclick()}> No </button>
 
                         </div>
                         
                     </div>
 
                 </div>
-                <Outlet></Outlet>
             </div>
         </div>
     );

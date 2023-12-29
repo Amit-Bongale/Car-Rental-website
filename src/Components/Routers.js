@@ -14,6 +14,7 @@ import AdminCardetails from './Admin/AdminCardetails/AdminCardetails';
 import Deletecars from './Admin/DeleteCars/Deletecars';
 import Insertcars from './Admin/Insercars/Insertcars';
 import Confirmdeletion from './Admin/Confirmdeletion/Confirmdeletion';
+import BookedCardetails from './Admin/BookedCarsDetails/BookedCardetails';
 
 function CustomRouters(){
     return(
@@ -34,6 +35,7 @@ function CustomRouters(){
             <Route path='/admin/insertcars' element={<Insertcars></Insertcars>}></Route>
             <Route path='/deletecars' element={<Deletecars></Deletecars>}></Route>
             <Route path='/confirmdelete/:model?' element={<Confirmdeletion></Confirmdeletion>}></Route>
+            <Route path='/admin/Bookedcars' element={<BookedCardetails></BookedCardetails>}></Route>
             
         </Routes>
         

@@ -25,6 +25,8 @@ function AdminNav() {
 
           <Link to='/deletecars'> <button className='admin-nav-button'> Delete Cars</button> </Link> 
 
+          <Link to='/admin/Bookedcars'> <button className='admin-nav-button'> Bookings </button> </Link> 
+
           <Link to='/'> <button className='admin-nav-button'> Home </button> </Link> 
 
         </div>

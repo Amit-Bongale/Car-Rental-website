@@ -5,7 +5,6 @@ import './deletecars.css'
 import arrow from '../../../Assets/icons/arrow-white.png'
 
 import { useState, useEffect } from 'react';
-import { Link , Outlet } from 'react-router-dom';
 import './deletecars.css'
 
 import Confirmdeletion from '../Confirmdeletion/Confirmdeletion';
@@ -39,7 +38,7 @@ function Deletecars() {
         }
     },[carmodel , popup ])
 
-    
+
   return (
     
     <div> 
@@ -68,14 +67,12 @@ function Deletecars() {
                     <h2 className='title'>{car.model}</h2>
                     <h2>price : {car.priceperday} rs/Day</h2>
                 
-                    {/* <Link to={`/confirmdelete/${car.model}`}> */}
-                        <button className='card-button' onClick={() => {setpopup(true);
-                            setcarmodel(car.model); }}>
-                        <span> Delete </span>
-                        <img src={arrow} alt="arrow" />
-                        </button>
-                    {/* </Link> */}
-
+                    <button className='card-button' onClick={() => {setpopup(true);
+                        setcarmodel(car.model); }}>
+                    <span> Delete </span>
+                    <img src={arrow} alt="arrow" />
+                    </button>
+            
                 </div>
 
             </div>
@@ -86,8 +83,6 @@ function Deletecars() {
         }
 
         </div>  
-
-        <Outlet></Outlet>
 
     </div>
   )

@@ -3,6 +3,7 @@
     color: white;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -83,4 +84,71 @@ input:focus{
 
 .details > img {
     padding: 0px 10px;
+}
+
+
+
+@media (max-width: 479px){
+
+    .contact-form{
+        width: 280px;
+        margin: 10px;
+    }
+
+    .name-input{
+        height: 10px;
+        padding: 20px;
+        margin: 10px;
+        width: 240px;
+        border-radius: 10px;
+    }
+
+    .contact-bar{
+        width: 240px;
+    }
+
+    input:focus{
+        outline: 1px solid orange;
+    }
+
+    .quicklinks-main-container{
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+    .Quick-links-container{
+        align-items: center;
+        text-align: center;
+    }
+    
+    .quick-links{
+        background-color: transparent;
+        color: white;
+        border: 0;
+        padding: 10px;
+        margin: 20px;
+    }
+        
+    .our-details{
+        padding: 0px;
+        margin: 8px;
+        margin-top: 40px;
+    }
+
+    .logowhite{
+        width: 200px;
+        margin-left: 30px;
+    }
+
+    .details{
+        padding: 8px;
+        font-size: 18px;
+        display: flex;  
+        align-items: center;
+    }
+
+    .details > img {
+        padding: 0px 10px;
+    }
+ 
 }

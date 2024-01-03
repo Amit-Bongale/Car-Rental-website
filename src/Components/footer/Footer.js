@@ -66,7 +66,7 @@ function Footer(){
 
             </form>
 
-            <div >
+            <div className='quicklinks-main-container' >
 
                 <h2>Quick Links</h2>
 

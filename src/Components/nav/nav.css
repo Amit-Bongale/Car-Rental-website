@@ -1,9 +1,9 @@
+
 .nav-container{
     /* background-color: var(--darkorang); */
     height: 60px;
     align-items: center;
     justify-content: space-around;
-    /* backdrop-filter: blur(5px); */
 }
 
 .logo{
@@ -11,14 +11,13 @@
     margin-top: -10px;
 }
 
+.menu-icon{
+    visibility: hidden;
+}
+
 .nav-elemts{
     justify-content: space-around;
     padding: 20px;
-}
-
-.logo{
-    color: rgb(255, 0, 0);
-    font-weight:600 ;
 }
 
 .nav-link{
@@ -39,3 +38,76 @@
     border-radius: 5px;
     font-weight: 600;
 }
+
+
+/* Media Queries */
+
+
+/* Extra Small Devices (phones, portrait and landscape) */
+@media (max-width: 479px) {
+
+    .nav-menu{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+
+    .menu-icon{
+        visibility: visible;
+        background-color: transparent;
+        border: 0px;
+    }
+
+    .nav-container{
+       height: 60px;
+       padding: 0px;
+       overflow: visible;
+    }
+
+    .logo{
+        width: 120px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-elemts{
+        position: relative;
+        display: flex;
+        text-align: center;
+        padding: 80px;
+        height: 90vh;
+        width: 100vw;
+        flex-direction: column;
+        background-color: orange;
+        z-index: 5;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .menu-visible{
+        visibility: visible;
+       /* transform: translateY(0px);
+       transition: all 200ms ease-in-out; */
+    }
+
+    .menu-hidden{
+        visibility: hidden;
+        /* overflow: hidden; */
+        /* transform: translateX(400px);
+        transition: all 200ms ease-in-out; */
+    }
+
+}
+  
+/* Small Devices (phones and portrait tablets) */
+@media  (min-width: 480px) and (max-width: 767px) {
+    /* Your styles here */
+}
+  
+/* Tablets and Small Laptops */
+@media  (min-width: 768px) and (max-width: 1023px) {
+    /* Your styles here */
+}
+  

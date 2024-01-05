@@ -24,7 +24,7 @@
     margin-left: 50px;
     text-align: justify;
     font-size: 0.9em;
-    line-height: 20px;
+    line-height: 24px;
     text-wrap: wrap;
 }
 
@@ -102,49 +102,272 @@
 
 
 /* Extra Small Devices (phones, portrait and landscape) */
-@media (max-width: 479px) {
+@media (max-width: 340px) {
     
     .hero-container{
-        /* overflow: visible; */
         justify-content: flex-start;
-        margin-top: 25px;
+        margin-top: 20px;
     }
 
     .main-car{
-        width: 350px;
+        width: 320px;
+        margin-top: 30px;
     }
 
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .svgIcon{
+        height: 25px;
+        width: 25px;
+        transition-duration: 1.5s;
+    }
+    
+    .tagline-txt{
+        font-size: 2.4rem;
+        margin-left: 22px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .discription{
+        width: 280px;
+        margin-left: 15px;
+        font-size: 0.7em;
+        margin-top: 5px;
+        line-height: 20px;
+    }
+
+    .button{
+        width: 120px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding-left: 20px;
+        margin: 20px 0px 10px 10px;
+        transition-duration: .5s;
+    }
+
+    .svgIcon{
+        height: 20px;
+        width: 20px;
+    }
+    
+}
+
+
+/* Extra Small Devices (phones, portrait and landscape) */
+@media (min-width: 341px) and (max-width: 769px) {
+    
+    .hero-container{
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .main-car{
+        width: 90vw;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .svgIcon {
+        height: 25px;
+        width: 25px;
+        transition-duration: 1.5s;
+    }
+
+    .tagline{
+        display: flex;
+    }
+    
+    .tagline-txt{
+        font-size: 6vw;
+        margin-left: 0;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .discription{
+        width: 90vw;
+        margin-left: 0px;
+        font-size: 0.7em;
+        margin-top: 4px;
+        line-height: 20px;
+    }
+
+    .button {
+        width: 140px;
+        height: 40px;
+        gap: 10px;
+        padding-left: 20px;
+        margin: 20px 0px 10px 10px;
+        transition-duration: .5s;
+    }
+
+    .svgIcon {
+        height: 20px;
+        width: 20px;
+    }
+    
+}
+  
+/* Tablets and Small Laptops */
+@media  (min-width: 769px) and (max-width: 1044px) {
+    /* Your styles here */
+    .hero-container{
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .main-car{
+        width: 50vw;
+        margin-top: 80px;
+        margin-left: 35px;
+    }
+
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 20px;
+        margin-left: 30px;
+    }
+    
+    .svgIcon {
+        height: 15px;
+        width: 15px;
+    }
+    
     .tagline-txt{
         font-size: 2.5rem;
-        margin-left: 22px;
+        margin-left: 0;
         padding: 0px;
     }
 
     .discription{
-        width: 300px;
-        margin-left: 15px;
-        font-size: 0.78em;
-        margin-top: 5px;
+        width: 280px;
+        margin-left: 0px;
+        font-size: 0.55em;
+        margin-top: 4px;
+        line-height: 18px;
+    }
+
+    .button {
+        width: 100px;
+        height: 35px;
+        gap: 8px;
+        padding-left: 15px;
+        margin: 10px 0px 10px 10px;
+        transition-duration: .5s;
+        font-size: 12px;
+    }
+}
+
+/* Medium Laptops and Desktops */
+@media  (min-width: 1045px) and (max-width: 1440px) {
+
+    .hero-container{
+        justify-content: flex-start;
+        margin-top: 60px;
+    }
+
+    .main-car{
+        width: 48vw;
+        margin-top: 70px;
+        margin-left: 60px;
+    }
+
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 20px;
+        margin-left: 40px;
     }
     
-}
-  
-/* Small Devices (phones and portrait tablets) */
-@media  (min-width: 480px) and (max-width: 767px) {
-    /* Your styles here */
-}
-  
-/* Tablets and Small Laptops */
-@media  (min-width: 768px) and (max-width: 1023px) {
-    /* Your styles here */
-}
-  
-/* Medium Laptops and Desktops */
-@media  (min-width: 1024px) and (max-width: 1199px) {
-    /* Your styles here */
+    .svgIcon {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .tagline-txt{
+        font-size: 3.5rem;
+        margin-left: 0;
+        padding: 0px;
+    }
+
+    .discription{
+        width: 400px;
+        margin-left: 0px;
+        font-size: 0.9em;
+        margin-top: 4px;
+        line-height: 24px;
+    }
+
+    .button {
+        width: 120px;
+        height: 40px;
+        gap: 10px;
+        padding-left: 20px;
+        margin: 15px 0px 10px 10px;
+        transition-duration: .5s;
+        font-size: 12px;
+    }
 }
   
 /* Large Laptops and Desktops */
-@media  (min-width: 1200px) {
-    /* Your styles here */
+@media  (min-width: 1441px) and (max-width: 1600px) {
+    .hero-container{
+        justify-content: flex-start;
+        margin-top: 60px;
+    }
+
+    .main-car{
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 20px;
+        margin-left: 40px;
+    }
+    
+    .tagline-txt{
+        font-size: 3.5rem;
+        margin-left: 0;
+        padding: 0px;
+    }
+
+    .discription{
+        width: 450px;
+        margin-left: 0px;
+        font-size: 0.9em;
+        margin-top: 4px;
+        line-height: 24px;
+    }
+
+    .button {
+        width: 150px;
+        height: 50px;
+        margin: 25px 0px 0px 15px;
+        transition-duration: .5s;
+        font-size: 12px;
+    }
 }

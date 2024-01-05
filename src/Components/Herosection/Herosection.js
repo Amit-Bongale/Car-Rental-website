@@ -27,7 +27,6 @@ function Herosection(){
                         Explore
                     </button> </Link>
 
-
                 </div>
                 
             </div>

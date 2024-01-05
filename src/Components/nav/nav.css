@@ -8,7 +8,7 @@
 
 .logo{
     width: 180px;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .menu-icon{
@@ -17,7 +17,8 @@
 
 .nav-elemts{
     justify-content: space-around;
-    padding: 20px;
+    padding: 0px;
+    margin-top: -30px;
 }
 
 .nav-link{
@@ -44,11 +45,11 @@
 
 
 /* Extra Small Devices (phones, portrait and landscape) */
-@media (max-width: 479px) {
+@media (max-width: 801px) {
 
     .nav-menu{
         display: flex;
-        width: 80%;
+        width: 90%;
         justify-content: space-between;
         align-items: center;
         height: 60px;
@@ -77,7 +78,7 @@
         display: flex;
         text-align: center;
         padding: 80px;
-        height: 90vh;
+        height: 95vh;
         width: 100vw;
         flex-direction: column;
         background-color: orange;
@@ -87,27 +88,55 @@
     }
 
     .menu-visible{
-        visibility: visible;
+       visibility: visible;
        /* transform: translateY(0px);
        transition: all 200ms ease-in-out; */
     }
 
     .menu-hidden{
         visibility: hidden;
-        /* overflow: hidden; */
-        /* transform: translateX(400px);
+        /* overflow: auto;
+        transform: translateX(400px);
         transition: all 200ms ease-in-out; */
     }
 
 }
   
-/* Small Devices (phones and portrait tablets) */
-@media  (min-width: 480px) and (max-width: 767px) {
-    /* Your styles here */
-}
   
 /* Tablets and Small Laptops */
-@media  (min-width: 768px) and (max-width: 1023px) {
+@media  (min-width: 800px) and (max-width: 1023px) {
     /* Your styles here */
+    .nav-menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+    }
+
+    .nav-container{
+       height: 60px;
+       padding: 0px;
+       display: flex;
+    }
+
+    .nav-logo-container > img{
+        width: 80px;
+        height: auto;
+    }
+
+    .menu-icon{
+       display: none;
+    }
+    
+    .nav-elemts{
+        position: relative;
+        display: flex;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-link{
+        font-size: 8px;
+    }
 }
   

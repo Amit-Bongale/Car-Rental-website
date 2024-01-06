@@ -170,9 +170,9 @@
     }
 
     .main-car{
-        width: 90vw;
+        width: 98vw;
         margin-top: 20px;
-        margin-left: 30px;
+        margin-left: 5px;
     }
 
     .text{
@@ -192,14 +192,14 @@
     }
     
     .tagline-txt{
-        font-size: 6vw;
+        font-size: 6.5vw;
         margin-left: 0;
         padding: 0px;
         text-align: center;
     }
 
     .discription{
-        width: 90vw;
+        width: 86vw;
         margin-left: 0px;
         font-size: 0.7em;
         margin-top: 4px;
@@ -207,11 +207,11 @@
     }
 
     .button {
-        width: 140px;
+        width: 130px;
         height: 40px;
         gap: 10px;
-        padding-left: 20px;
-        margin: 20px 0px 10px 10px;
+        padding-left: 18px;
+        margin: 15px 0px 10px 10px;
         transition-duration: .5s;
     }
 
@@ -233,7 +233,7 @@
     .main-car{
         width: 50vw;
         margin-top: 80px;
-        margin-left: 35px;
+        margin-left: 40px;
     }
 
     .text{

@@ -88,11 +88,13 @@ input:focus{
 
 
 
-@media (max-width: 479px){
 
+/* Extra Small Devices  */
+@media (max-width: 340px){
     .contact-form{
-        width: 280px;
+        width: 85vw;
         margin: 10px;
+        padding-left: 0px;
     }
 
     .name-input{
@@ -127,17 +129,24 @@ input:focus{
         border: 0;
         padding: 10px;
         margin: 20px;
+        margin-left: 0;
+    }
+
+    
+    #contact-button{
+        padding-left: 35px;
+        margin-top: 20px;
     }
         
     .our-details{
         padding: 0px;
-        margin: 8px;
-        margin-top: 40px;
+        margin: 10px;
+        margin-top: 60px;
     }
 
     .logowhite{
-        width: 200px;
-        margin-left: 30px;
+        width: 150px;
+        margin-left: 50px;
     }
 
     .details{
@@ -151,4 +160,210 @@ input:focus{
         padding: 0px 10px;
     }
  
+}
+
+/* Small Devices (phones, portrait and landscape) */
+@media (min-width: 341px) and (max-width: 450px) {
+    
+    .contact-form{
+        width: 90vw;
+        margin: 10px;
+        padding-left: 5px;
+    }
+
+    .name-input{
+        height: 10px;
+        padding: 20px;
+        margin: 10px 40px;
+        width: 240px;
+    }
+
+    .contact-bar{
+        width: 240px;
+    }
+
+    .quicklinks-main-container{
+        margin-top: 60px;
+        margin-left: 100px;
+    }
+
+    .Quick-links-container{
+        align-items: center;
+        text-align: center;
+    }
+    
+    .quick-links{
+        background-color: transparent;
+        color: white;
+        border: 0;
+        padding: 10px;
+        margin: 20px;
+        margin-left: 0;
+    }
+
+    
+    #contact-button{
+        padding-left: 35px;
+        margin-top: 20px;
+    }
+        
+    .our-details{
+        padding: 0px;
+        margin: 10px;
+        margin-top: 60px;
+        margin-left: 30px;
+    }
+
+    .logowhite{
+        width: 150px;
+        margin-left: 80px;
+    }
+
+    .details{
+        padding: 8px;
+        font-size: 18px;
+        display: flex;  
+        align-items: center;
+    }
+
+    .details > img {
+        padding: 0px 10px;
+    }
+}
+
+
+@media (min-width: 451px) and (max-width: 700px){
+
+    .contact-form{
+        width: max(380px , 90vw);
+        margin: 10px;
+        padding-left: 5px;
+    }
+
+    #contact-button{
+        padding-left: 38px;
+        margin-top: 20px;
+    }
+
+    .quicklinks-main-container{
+        margin-top: 60px;
+        margin-left: max(140px , 35vw);
+        /* margin-left: 35vw; */
+    }
+
+    .our-details{
+        padding: 0px;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+
+    .our-details{
+        margin-top: 50px;
+        margin-left:  max(140px , 25vw);
+    }
+}
+
+/* Tablets and Small Laptops */
+@media  (min-width: 700px) and (max-width: 1110px) {
+
+    .footer-container{
+        justify-content: space-around;
+    }
+
+    .contact-form{
+        width: 320px;
+        margin: 10px;
+        padding-left: 5px;
+    }
+
+    .name-input{
+        height: 10px;
+        padding: 20px;
+        margin: 10px 40px;
+        width: 240px;
+    }
+
+    .contact-bar{
+        width: 240px;
+    }
+
+    .quicklinks-main-container{
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+
+    .Quick-links-container{
+        align-items: center;
+        text-align: center;
+    }
+    
+    .quick-links{
+        background-color: transparent;
+        color: white;
+        border: 0;
+        padding: 10px;
+        margin: 20px;
+        margin-left: 0;
+    }
+
+    
+    #contact-button{
+        padding-left: 35px;
+        margin-top: 20px;
+    }
+        
+    .our-details{
+        padding: 0px;
+        margin: 10px;
+        margin-top: 60px;
+    }
+
+    .logowhite{
+        width: 150px;
+        margin-left: 80px;
+    }
+
+    .details{
+        padding: 8px;
+        font-size: 18px;
+        display: flex;  
+        align-items: center;
+    }
+
+    .details > img {
+        padding: 0px 10px;
+    }
+}
+
+ /* Medium Laptops */
+@media  (min-width: 830px) and (max-width: 1140px){
+
+    .footer-container{
+        justify-content: space-between;
+    }
+
+    .contact-form{
+        margin: 10px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    #contact-button{
+        padding-left: 25px;
+        margin-top: 20px;
+    }
+}
+
+@media  (min-width: 1024px) and (max-width: 1440px){
+    #contact-button{
+        padding-left: 35px;
+        margin-top: 20px;
+    }
+}
+
+/* Large Laptops and Desktops */
+@media  (min-width: 1441px) and (max-width: 1600px){
+    .footer-container{
+        justify-content: space-between;
+    }
 }

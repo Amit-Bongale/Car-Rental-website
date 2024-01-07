@@ -84,12 +84,14 @@
         background-color: orange;
         z-index: 5;
         padding: 0;
-        margin-top: 0;
+        margin-top: 0px;
+        /* margin-top: 1200px; */
     }
 
     .menu-visible{
        visibility: visible;
-       /* position: fixed; */
+       /* position: fixed;
+       z-index: 999; */
        /* transform: translateY(0px);
        transition: all 200ms ease-in-out; */
     }

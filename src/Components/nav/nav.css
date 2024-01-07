@@ -68,7 +68,7 @@
     }
 
     .logo{
-        width: 120px;
+        width: 100px;
         margin: 0;
         padding: 0;
     }
@@ -89,6 +89,7 @@
 
     .menu-visible{
        visibility: visible;
+       /* position: fixed; */
        /* transform: translateY(0px);
        transition: all 200ms ease-in-out; */
     }

@@ -25,7 +25,7 @@ function FeaturedCardetails(){
         let bodyData = { "car":carname
         };
 
-        fetch( 'http://localhost:3000/cars',
+        fetch( 'http://localhost:3000/featuredcarsdetails',
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),

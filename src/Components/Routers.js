@@ -2,9 +2,8 @@ import {Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Login from './login/Login';
-import FeaturedCardetails from './Featuredcardetails/FeaturedCarDetails';
+import Cardetails from './Cardetails/CarDetails';
 import Allcars from './Cars/Allcars';
-import ViewCardetails from './viewpage/viewpage';
 import Signup from './signup/Signup';
 import Contactus from './Contactus/Contactus';
 import Booking from './booking/Booking';
@@ -23,8 +22,7 @@ function CustomRouters(){
 
             <Route path='/' element={<Home></Home>}> </Route>
             <Route path='/login' element={<Login></Login>} ></Route>
-            <Route path='/cardetails/:carname?' element={<FeaturedCardetails></FeaturedCardetails>}></Route>
-            <Route path='/cars/cardetails/:carname?' element={<ViewCardetails></ViewCardetails>}></Route>
+            <Route path='/cardetails/:carname?' element={<Cardetails></Cardetails>}></Route>
             <Route path='/cars' element={<Allcars></Allcars>}></Route>
             <Route path='/booking/:carname?' element={<Booking></Booking>}></Route>
             <Route path='/contactus' element={<Contactus></Contactus>}></Route>

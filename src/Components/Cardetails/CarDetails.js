@@ -1,6 +1,4 @@
-import '../Featuredcardetails/Details.css'
-import Nav from '../nav/Nav'
-
+import './CarDetails.css'
 
 import ImageSlider from "../Imageslider/Cardcaurosal";
 
@@ -14,8 +12,9 @@ import { Link, Outlet } from 'react-router-dom';
 
 import arrow from '../../Assets/icons/arrow-white.png'
 import driverimage from '../../Assets/icons/driver.jpg'
+import Nav from '../nav/Nav';
 
-function ViewCardetails(){
+function FeaturedCardetails(){
 
     let { carname } = useParams();
 
@@ -49,16 +48,16 @@ function ViewCardetails(){
     return(
 
         <>
+
         <Nav></Nav>
 
-        <div className="cardetails-container" id='view-page'>
+        <div className="cardetails-container">
 
             <ImageSlider image1={cardetails.imageurl1} image2={cardetails.imageurl2} image3={cardetails.imageurl3} image4={cardetails.imageurl4} className='imageslider'></ImageSlider>
                 
             <div className="cardetails">
                 
                 <div className="car-title"> 
-               
                     <h1>{cardetails.model}</h1>
                     <div className='car-ratings'>
                         <h2 className='car-rating-elem'>{cardetails.carrating}</h2> 
@@ -67,7 +66,7 @@ function ViewCardetails(){
                 </div>
 
                 <div></div>
-                <h2>price: {cardetails.priceperday} rs/km</h2>
+                <h2>price: {cardetails.priceperday} rs/Day</h2>
                 <h2> Seats : {cardetails.seats}</h2>
 
                 <Link to={`/booking/${cardetails.model}`}>
@@ -89,10 +88,11 @@ function ViewCardetails(){
                 </div>
                 
             </div>
+
             <Outlet></Outlet>
         </div>
         </>
     );
 }
 
-export default ViewCardetails;
+export default FeaturedCardetails;

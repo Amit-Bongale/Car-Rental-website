@@ -9,12 +9,6 @@
     width: 50%; 
     margin: 0 20px;
 }
-
-  
-.slider-image {
-    justify-self: center; 
-}
-
   
 .slider-image  {
     min-height: 160px;
@@ -27,12 +21,12 @@
   
 }
 
-.slider-image  img{
+.slider-image > img{
     min-height: 160px;
     width: auto;
     height: 400px;
     max-width: 600px;
-    object-fit: cover;
+    object-fit: contain;
     margin-left: 80px;
     overflow: hidden;
 }

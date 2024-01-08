@@ -40,6 +40,7 @@
 .driver-details-container{
     margin: 50px 100px;
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(251, 250, 223);
     height: 300px;
     border-radius: 20px;
@@ -69,3 +70,220 @@
 .car-booking-button:hover {
     box-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
 }
+
+@media (max-width: 340px){
+
+    .cardetails{
+        margin: 15px;
+    }
+    
+    .car-title{
+        margin: 40px 0px 20px 0px;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        height: max-content;
+    }
+
+    .car-ratings{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        height: 45px;
+        border-radius: 8px;
+        width: 60px;
+    }
+
+    .car-rating-elem{
+        padding: 0px 6px;
+        margin-bottom: 2px;
+        padding-bottom: 0px;
+    }
+
+    .driver-details-container{
+        margin: 40px 20px 5px 20px;
+        height: max-content;
+        border-radius: 20px;
+        width: 90vw;
+    }
+
+    .driver-image{
+        margin: 15px 5px 0px 15px;
+        padding: 2px;
+    }
+
+    .driver-image > img{
+        width: 60px;
+        height: auto;
+        border-radius: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .driver-details{
+        margin: 0px 10px;
+        padding: 2px 10px;
+        font-size: 10px;
+        text-wrap: wrap;
+    }
+
+    .car-booking-button{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 16px 15px;
+        border-radius: 20px;
+    } 
+}
+
+@media (min-width: 341px) and (max-width: 450px) {
+
+    .cardetails{
+        margin: 15px;
+    }
+    
+    .car-title{
+        margin: 40px 0px 20px 0px;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        height: max-content;
+    }
+
+    .car-ratings{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        height: 45px;
+        border-radius: 8px;
+        width: 90px;
+    }
+
+    .car-rating-elem{
+        padding: 0px 6px;
+        margin-bottom: 2px;
+        padding-bottom: 0px;
+    }
+
+    .driver-details-container{
+        margin: 40px 20px 5px 20px;
+        height: max-content;
+        border-radius: 20px;
+        width: 90vw;
+    }
+
+    .driver-image{
+        margin: 15px 5px 0px 15px;
+        padding: 2px;
+    }
+
+    .driver-image > img{
+        width: 60px;
+        height: auto;
+        border-radius: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .driver-details{
+        margin: 0px 10px;
+        padding: 2px 10px;
+        font-size: 10px;
+        text-wrap: wrap;
+    }
+
+    .car-booking-button{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 16px 15px;
+        border-radius: 20px;
+    } 
+}
+
+
+@media (min-width: 451px) and (max-width: 700px){
+
+    .cardetails{
+        margin: 25px;
+    }
+
+    .car-title{
+        margin: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        height: max-content;
+    }
+
+    .car-ratings{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100px;
+    }
+
+    .car-rating-elem{
+        padding: 0px 6px;
+        margin-bottom: 2px;
+        padding-bottom: 0px;
+    }
+
+    .car-details{
+        margin-top: 8px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .driver-details-container{
+        margin: 40px 20px 25px 20px;
+        height: max-content;
+        border-radius: 20px;
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .driver-image > img{
+        width: 100px;
+        height: auto;
+        border-radius: 100%;
+        margin: 10px;
+        padding: 0;
+    }
+
+    .driver-details{
+        margin: 0px 10px;
+        padding: 2px 10px;
+        text-wrap: wrap;
+    }
+}
+
+@media  (min-width: 700px) and (max-width: 1110px){
+
+    .driver-details-container{
+        margin: 40px 20px 5px 50px;
+        height: max-content;
+        border-radius: 18px;
+        width: 90vw;
+    }
+
+    .driver-image > img{
+        width: 100px;
+        height: auto;
+        margin: 10px;
+        padding: 0;
+    }
+}
+
+
+/* 
+@media  (min-width: 1024px) and (max-width: 1440px){
+
+}
+
+@media  (min-width: 1441px) and (max-width: 1600px){
+
+} */

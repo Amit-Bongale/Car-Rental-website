@@ -16,7 +16,9 @@ const ImageSlider = ( {image1,image2,image3,image4} ) => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:5500
     };
 
     const goToNext = () => {
@@ -31,7 +33,7 @@ const ImageSlider = ( {image1,image2,image3,image4} ) => {
         
         <div className='image-slider-container'>
 
-            <button onClick={goToPrev} id='left-arrow'><img src={arrow} alt="left" height={40} /></button>
+            <button onClick={goToPrev} id='left-arrow-btn'><img src={arrow} alt="left" className='left-arrow' /></button>
 
             <Slider ref={sliderRef} {...settings} className='slide-container'>
 
@@ -51,7 +53,7 @@ const ImageSlider = ( {image1,image2,image3,image4} ) => {
             
             </Slider>
 
-            <button onClick={goToNext} id='right-arrow'><img src={arrow} alt="right" height={40} /></button>
+            <button onClick={goToNext} id='right-arrow-btn'><img src={arrow} alt="right" className='right-arrow'  /></button>
 
         </div>
 

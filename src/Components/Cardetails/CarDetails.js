@@ -65,10 +65,11 @@ function FeaturedCardetails(){
                     </div>
                 </div>
 
-                <div></div>
-                <h2>price: {cardetails.priceperday} rs/Day</h2>
-                <h2> Seats : {cardetails.seats}</h2>
-
+                <div className='car-details'>
+                    <h2>price: {cardetails.priceperday} rs/Day</h2>
+                    <h2> Seats : {cardetails.seats}</h2>
+                </div>
+        
                 <Link to={`/booking/${cardetails.model}`}>
                 <button className='car-booking-button'> Rent Now <img src={arrow} alt="arrow" height={10}/>
                 </button></Link>

@@ -1,6 +1,6 @@
 
 .loginsection{
-    margin-top: 12px;
+    margin-top: 40px;
     background-image: url(../../Assets/images/pexels-mathias-reding-9322198.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,12 +52,6 @@
     align-self: center;
 }
 
-.Quote-container{
-    margin: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 14px;
-}
 
 .login_form{
     display: flex;
@@ -106,4 +100,86 @@
     box-shadow: none;
     margin-left: -8px;
     margin-top: 2px;
+}
+
+
+/* Extra Small Devices  */
+@media (max-width: 340px){
+    
+    .loginsection{
+        margin-top: 0px;
+        background-image: url(../../Assets/images/pexels-mathias-reding-9322198.jpg);
+        background-size: cover;
+        background-position: 0px -120px;
+        overflow: hidden;
+        height: 100vh;
+        background-color: rebeccapurple;
+    }
+
+    
+    .main-container-login{
+        margin: 1.5% 5% 0% 5%;
+        padding: 1%;
+    }
+
+    
+    .login-main-container{
+        margin: 3%;
+        width: 80vw;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    .Username-container {
+        font-size: 12px;
+        width: 80vw;
+    }
+
+    .Username-container > input{
+        margin-top: 8px;
+        padding: 2px;
+        width: 150px;
+    }
+
+    .login_button_container{
+        margin: 20px 0px 10px 0px;
+    }
+
+    .login_text_container{
+        margin: 20px 0px 10px 0px
+    }
+
+    .login_button{
+        width: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        height: 45px;
+}
+
+    #signup-button{
+        width: 100px;
+        margin-left: -8px;
+        margin-top: 2px;
+    }
+
+}
+
+/* Small Devices (phones, portrait and landscape) */
+@media (min-width: 341px) and (max-width: 769px) {
+
+}
+
+/* Tablets and Small Laptops */
+@media  (min-width: 769px) and (max-width: 1044px) {
+
+}
+
+/*  Medium Laptops */
+@media  (min-width: 1045px) and (max-width: 1440px){
+
+}
+
+/* Large Laptops and Desktops */
+@media  (min-width: 1441px) and (max-width: 1600px){
+
 }

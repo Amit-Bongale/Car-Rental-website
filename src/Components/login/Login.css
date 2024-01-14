@@ -5,7 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px -120px;
-    height: 89vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -65,13 +65,12 @@
     margin-top: 20px;
 }
 
-.Username-container > input{
+.login-input-bar{
     background-color: transparent;
     border: 0px;
     font-size: 20px;
     border-bottom: .5px solid rgb(0, 0, 0);
     outline: none;
-    width: 300px;
     margin-top: 8px;
     padding: 2px;
 }
@@ -104,57 +103,59 @@
 
 
 /* Extra Small Devices  */
-@media (max-width: 340px){
+@media (max-width: 360px){
     
     .loginsection{
+        padding-top: 0px;
         margin-top: 0px;
-        background-image: url(../../Assets/images/pexels-mathias-reding-9322198.jpg);
+        background-image: url(../../Assets/images/dhiva-krishna-YApS6TjKJ9c-unsplash.jpg);
         background-size: cover;
-        background-position: 0px -120px;
         overflow: hidden;
-        height: 100vh;
-        background-color: rebeccapurple;
+        background-position: 0px 0px;
     }
-
     
     .main-container-login{
         margin: 1.5% 5% 0% 5%;
         padding: 1%;
     }
-
     
     .login-main-container{
         margin: 3%;
-        width: 80vw;
-        height: 500px;
-        border-radius: 10px;
+        width: 84vw;
+        height: 450px;
+        border-radius: 8px;
+    }
+
+    .login_form{
+        overflow: hidden;
+        margin-left: 20px;
     }
 
     .Username-container {
-        font-size: 12px;
+        font-size: 14px;
         width: 80vw;
     }
 
-    .Username-container > input{
-        margin-top: 8px;
-        padding: 2px;
-        width: 150px;
+    .login-input-bar{
+        margin-top: 0px;
+        padding: 0px;
+        width: 70vw;
     }
 
     .login_button_container{
-        margin: 20px 0px 10px 0px;
-    }
-
-    .login_text_container{
-        margin: 20px 0px 10px 0px
+        margin: 30px 20px 10px 0px;
     }
 
     .login_button{
-        width: 150px;
+        width: 100px;
         padding: 5px;
         border-radius: 10px;
         height: 45px;
-}
+    }
+
+    .login_text_container{
+        margin: 20px 30px 10px 0px
+    }
 
     #signup-button{
         width: 100px;
@@ -167,16 +168,83 @@
 /* Small Devices (phones, portrait and landscape) */
 @media (min-width: 341px) and (max-width: 769px) {
 
+    .loginsection{
+        padding-top: 0px;
+        margin-top: 0px;
+        background-image: url(../../Assets/images/mateusz-delegacz-1Ah8CAwk3vM-unsplash.jpg);
+        background-size: cover;
+        overflow: hidden;
+        background-position: 0px 0px;
+    }
+    
+    .main-container-login{
+        margin: 15% 5% 0% 5%;
+        padding: 1%;
+    }
+    
+    .login-main-container{
+        margin-top: 50px;
+        margin: 3%;
+        width: 84vw;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    .login_form{
+        overflow: hidden;
+        margin-left: 20px;
+    }
+
+    .Username-container {
+        font-size: 14px;
+        width: 60vw;
+    }
+
+    .login-input-bar{
+        margin-top: 5px;
+        padding: 0px;
+        width: 60vw;
+    }
+
+    .login_button_container{
+        margin: 30px 20px 10px 0px;
+    }
+
+    .login_button{
+        width: 100px;
+        padding: 5px;
+        border-radius: 10px;
+        height: 45px;
+    }
+
+    .login_text_container{
+        margin: 20px 30px 10px 0px
+    }
+
+    #signup-button{
+        width: 100px;
+        margin-left: -8px;
+        margin-top: 2px;
+    }
+
 }
 
 /* Tablets and Small Laptops */
 @media  (min-width: 769px) and (max-width: 1044px) {
-
+    #signup-button{
+        width: 100px;
+        margin-left: -8px;
+        margin-top: 2px;
+    }
 }
 
 /*  Medium Laptops */
 @media  (min-width: 1045px) and (max-width: 1440px){
-
+    #signup-button{
+        width: 100px;
+        margin-left: -8px;
+        margin-top: 2px;
+    }
 }
 
 /* Large Laptops and Desktops */

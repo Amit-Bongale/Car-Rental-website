@@ -21,12 +21,12 @@ function Signup(){
 
                     <div className="Signin_form">
                         
-                        <div className="Username-container">
+                        <div className="username-container">
                             <label>Username</label>
                             <input type="text" />
                         </div>
 
-                        <div className="Username-container">
+                        <div className="username-container">
                             <label>Email</label>
                             <input type="text" />
                         </div>   

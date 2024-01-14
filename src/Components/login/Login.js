@@ -26,11 +26,11 @@ function Login(){
                         <div className="login_form">
                             <div className="Username-container">
                                 <label className="login-Username-container-label">Username</label>
-                                <input type="text" />
+                                <input className='login-input-bar' type="text" />
                             </div>  
                             <div className="Username-container">
                                 <label className="login-Username-container-label" >Password</label>
-                                <input type="password" />
+                                <input className='login-input-bar' type="password" />
                             </div>
                             <div className="login_button_container">
                                 <button className="login_button">Log in</button>

@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 
-import logo from '../../Assets/Logo/rides for rent logo orange.png'
+import logo from '../../Assets/Logo/RFR logo orange.png'
 import menuicon from '../../Assets/icons/menu.png'
 
 import './nav.css'
@@ -33,7 +33,7 @@ function Nav(){
                     </div> </Link>
 
                     <button className="menu-icon" onClick={()=> handlemenu()}>
-                        <img src={menuicon} alt="menu" width={30} height={30} />
+                        <img src={menuicon} alt="menu" width={25} height={23} />
                     </button>
                 
                 </div>

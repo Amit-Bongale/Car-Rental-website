@@ -2,7 +2,7 @@ import './Contact.css'
 
 import { Link, Outlet } from 'react-router-dom'
 
-import logowhite from '../../Assets/Logo/rides for rent logo white.png'
+import logowhite from '../../Assets/Logo/rfr logo white.png'
 import callicon from '../../Assets/icons/call.png'
 import locationicon from '../../Assets/icons/location.png'
 import emailicon from '../../Assets/icons/mail.png'

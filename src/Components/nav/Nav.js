@@ -11,7 +11,7 @@ function Nav(){
     let [menuvisible, setmenuvisible] = useState(false)
 
     function handlemenu(){ 
-        if (menuvisible == true){
+        if (menuvisible === true){
             setmenuvisible(false)
         }else{
             setmenuvisible(true)

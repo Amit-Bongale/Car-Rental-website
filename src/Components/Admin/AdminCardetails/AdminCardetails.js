@@ -2,10 +2,17 @@ import { useEffect, useState } from "react"
 import AdminNav from "../AdminNav/AdminNav"
 
 import './admincardetails.css'
+import { Link } from "react-router-dom";
+
+import Confirmdeletion from "../Confirmdeletion/Confirmdeletion";
 
 function AdminCardetails() {
 
-    let [carsdata , setcars] = useState([])
+    let [carsdata , setcars] = useState([]);
+
+    let [popup , setpopup] = useState(false);
+    let [carmodel, setcarmodel] = useState('')
+
 
     useEffect(() => {
         try {
@@ -21,11 +28,14 @@ function AdminCardetails() {
         } catch (error) {
             console.error('Error:', error);
         }
-    },[])
+    },[popup])
 
   return (
     <div> 
         <AdminNav></AdminNav>
+
+        { popup && ( <Confirmdeletion model={carmodel} setpopup={setpopup} >
+        </Confirmdeletion>) }
 
         <div className='cars-details-container'>
           
@@ -89,6 +99,18 @@ function AdminCardetails() {
                             <td className="details-table-data">
                                 <img  src={car.imageurl4} alt="image1" height={40} />
                             </td>
+
+                            <Link to={`/admin/UpdateDetails/${car.model}`}>
+                                <td className="details-table-data">
+                                    <button>Update</button>
+                                </td>
+                            </Link>
+
+                            <td>
+                                <button  onClick={() => {setpopup(true);
+                                setcarmodel(car.model); }}> Delete </button>
+                            </td>
+
                         </tr>
                      
                     ))

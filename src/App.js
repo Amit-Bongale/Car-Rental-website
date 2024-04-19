@@ -2,7 +2,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import CustomRouters from './Components/Routers';
-import Nav from './Components/nav/Nav';
 
 // animate on scroll
 import AOS from 'aos';

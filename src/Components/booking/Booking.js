@@ -158,7 +158,7 @@ function Booking(){
                     <hr/>
 
                     <div>
-                        <img src={cardetails.imageurl1} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
+                        <img src={cardetails.thumbnail} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
                         <h3>  car name : {cardetails.model}</h3>
                         <h3>  seats : {cardetails.seats}</h3>
                         <h3>  driver name : {cardetails.drivername}</h3>

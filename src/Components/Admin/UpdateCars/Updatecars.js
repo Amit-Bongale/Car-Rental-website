@@ -3,18 +3,14 @@ import AdminNav from "../AdminNav/AdminNav";
 
 import { useParams } from 'react-router-dom';
 
-import arrow from '../../../Assets/icons/arrow-white.png'
-
 function Updatecars() {
 
-    let [carsdata , setcars] = useState([])
-    let [popup , setpopup] = useState(false);
-    let [carmodel, setcarmodel] = useState('');
+    // let [carsdata , setcars] = useState([])
+    // let [popup , setpopup] = useState(false);
+    // let [carmodel, setcarmodel] = useState('');
 
     let {model} = useParams();
     console.log(model);
-
-
 
 
     let [drivername , setdrivername] = useState('');
@@ -54,7 +50,7 @@ function Updatecars() {
         setthumbnail(val[0].thumbnail)
       })
 
-    },[]);
+    },[model]);
 
   
 

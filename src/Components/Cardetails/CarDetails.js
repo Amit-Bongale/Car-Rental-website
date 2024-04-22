@@ -42,7 +42,7 @@ function FeaturedCardetails(){
 
         window.scrollTo(0, 0)
 
-    },[]);
+    },[carname]);
 
 
     return(
@@ -53,7 +53,7 @@ function FeaturedCardetails(){
 
         <div className="cardetails-container">
 
-            <ImageSlider image1={cardetails.imageurl1} image2={cardetails.imageurl2} image3={cardetails.imageurl3} image4={cardetails.imageurl4} className='imageslider'></ImageSlider>
+            <ImageSlider id={cardetails.carid} className='imageslider'></ImageSlider>
                 
             <div className="cardetails">
                 

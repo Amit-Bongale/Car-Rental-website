@@ -5,9 +5,37 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './slider.css'
 
+import { useState , useEffect } from 'react';
+
 import arrow from '../../Assets/icons/arrow.png'
 
-const ImageSlider = ( {image1,image2,image3,image4} ) => {
+const ImageSlider = ( {id} ) => {
+
+
+    let [carimages,setimages] = useState([])
+
+    useEffect(()=>{
+
+        let bodyData = { 'id' : id };
+
+        fetch( 'http://localhost:3000/carsimages',
+            {
+                method:"POST",
+                body:JSON.stringify(bodyData),
+                headers: { 'Content-Type': 'application/json'},
+            },
+        )
+
+        .then((res)=>{
+            res.json().then((val)=>{
+                console.log(val)
+                setimages(val)
+            }
+        )})
+
+        window.scrollTo(0, 0)
+
+    },[id]);
 
     const sliderRef = useRef(null);
 
@@ -36,19 +64,12 @@ const ImageSlider = ( {image1,image2,image3,image4} ) => {
             <button onClick={goToPrev} id='left-arrow-btn'><img src={arrow} alt="left" className='left-arrow' /></button>
 
             <Slider ref={sliderRef} {...settings} className='slide-container'>
-
-                <div className='slider-image'>
-                    <img src={image1} alt="car1" />
-                </div>
-                <div className='slider-image'>
-                    <img src={image2} alt="car2" />
-                </div>
-                <div className='slider-image'>
-                    <img src={image3} alt="car3" />
-                </div>
-                <div className='slider-image'>
-                    <img src={image4} alt="car4" />
-                </div>
+                {carimages.map((car , index) => (
+                    <div key={index} className='slider-image'>
+                        <img src={car.image} alt="car" />
+                    </div>
+                ))}
+                
                 {/* Add more slides as needed */}
             
             </Slider>

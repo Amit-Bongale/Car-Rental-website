@@ -42,6 +42,7 @@ function AdminCardetails() {
             <table className='details-table'>
 
                 <tr>
+                    <th className="details-table-header"> Car ID</th>
                     <th className="details-table-header"> Car Name</th>
                     <th className="details-table-header"> Driver Name</th>
                     <th className="details-table-header"> Driver Rating</th>
@@ -50,10 +51,9 @@ function AdminCardetails() {
                     <th className="details-table-header"> Pricing</th>
                     <th className="details-table-header"> Contact Number</th>
                     <th className="details-table-header"> Email</th>
-                    <th className="details-table-header"> Image 1</th>
-                    <th className="details-table-header"> Image 2</th>
-                    <th className="details-table-header"> Image 3</th>
-                    <th className="details-table-header"> Image 4</th>
+                    <th className="details-table-header"> Thumbnail</th>
+                    <th className="details-table-header"> </th>
+                    <th className="details-table-header"> </th>
                 </tr>
                 
                 {
@@ -61,6 +61,9 @@ function AdminCardetails() {
                      
                         <tr className="deatils-table-row">
 
+                            <td className="details-table-data">
+                                {car.carid} 
+                            </td>
                             <td className="details-table-data">
                                 {car.model} 
                             </td>
@@ -88,16 +91,7 @@ function AdminCardetails() {
                                 {car.driveremail}
                             </td>
                             <td className="details-table-data">
-                                <img  src={car.imageurl1} alt="image1" height={40} />
-                            </td>
-                            <td className="details-table-data">
-                                    <img  src={car.imageurl2} alt="image1" height={40} />
-                            </td>
-                            <td className="details-table-data">
-                                <img  src={car.imageurl3} alt="image1" height={40} />
-                            </td>
-                            <td className="details-table-data">
-                                <img  src={car.imageurl4} alt="image1" height={40} />
+                                <img  src={car.thumbnail} alt="image1" height={40} />
                             </td>
 
                             <Link to={`/admin/UpdateDetails/${car.model}`}>

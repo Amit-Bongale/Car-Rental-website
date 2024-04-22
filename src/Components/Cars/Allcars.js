@@ -88,7 +88,7 @@ function Allcars(){
                                     data-aos-delay= {car.aosDelay}>
         
                                     <div className='image-container'>
-                                        <img src={car.imageurl1} alt="car" />
+                                        <img src={car.thumbnail} alt="car" />
                                     </div>
                                 
                                     <div className='card-text'>

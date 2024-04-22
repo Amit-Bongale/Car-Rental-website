@@ -14,10 +14,9 @@ function AdminNav() {
         <div className="admin-details-container">
           <img src={user} alt="user" height={100} className="admin-image" />
           <h3>Admin</h3>
-        </div>
+        </div> 
 
         <div className='admin-navlink-container'>
-
 
           <Link to='/admin'><button className='admin-nav-button'> Cars Details </button> </Link>
 
@@ -29,9 +28,7 @@ function AdminNav() {
 
         </div>
 
-       
-
-        </div>
+      </div>
     
     </div>
     

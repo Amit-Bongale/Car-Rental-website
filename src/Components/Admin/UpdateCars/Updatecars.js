@@ -14,52 +14,49 @@ function Updatecars() {
     let {model} = useParams();
     console.log(model);
 
+
+
+
+    let [drivername , setdrivername] = useState('');
+    let [driverrating , setdriverrating] = useState('');
+    let [carrating, setcarrating] = useState('');
+    let [seats, setseats] = useState('');
+    let [priceperday, setprice] = useState('');
+    let [mobilenumber ,  setmobilenumber] = useState('')
+    let [email, setemail] = useState('')
+    let [thumbnail , setthumbnail] = useState('')
+
     
     useEffect(()=>{
 
-        let bodyData = { 
-            'car':model
-        };
+      let bodyData = { 
+        'car':model
+      };
 
-        fetch( 'http://localhost:3000/cars/carsdata',
-            {
-                method:"POST",
-                body:JSON.stringify(bodyData),
-                headers: { 'Content-Type': 'application/json'},
-            },
-        )
+      fetch( 'http://localhost:3000/cars/carsdata',
+        {
+          method:"POST",
+          body:JSON.stringify(bodyData),
+          headers: { 'Content-Type': 'application/json'},
+        },
+      )
 
-        .then((res)=> res.json())
-        .then((val)=>{
-            console.log(val)
-            setdrivername(val[0].drivername)
-            setdriverrating(val[0].driverrating)
-            setcarrating(val[0].carrating)
-            setseats(val[0].seats)
-            setprice(val[0].priceperday)
-            setmobilenumber(val[0].drivercontact)
-            setemail(val[0].driveremail)
-            setimage1(val[0].imageurl1)
-            setimage2(val[0].imageurl2)
-            setimage3(val[0].imageurl3)
-            setimage4(val[0].imageurl4)
-
-        })
+      .then((res)=> res.json())
+      .then((val)=>{
+        console.log(val)
+        setdrivername(val[0].drivername)
+        setdriverrating(val[0].driverrating)
+        setcarrating(val[0].carrating)
+        setseats(val[0].seats)
+        setprice(val[0].priceperday)
+        setmobilenumber(val[0].drivercontact)
+        setemail(val[0].driveremail)
+        setthumbnail(val[0].thumbnail)
+      })
 
     },[]);
 
-    
-  let [drivername , setdrivername] = useState('');
-  let [driverrating , setdriverrating] = useState('');
-  let [carrating, setcarrating] = useState('');
-  let [seats, setseats] = useState('');
-  let [priceperday, setprice] = useState('');
-  let [mobilenumber ,  setmobilenumber] = useState('')
-  let [email, setemail] = useState('')
-  let [image1,setimage1] = useState('')
-  let [image2,setimage2] = useState('')
-  let [image3,setimage3] = useState('')
-  let [image4,setimage4] = useState('')
+  
 
   function send(){
 
@@ -72,10 +69,7 @@ function Updatecars() {
       'priceperday': priceperday,
       'drivercontact':mobilenumber,
       'driveremail': email, 
-      'imageurl1' : image1, 
-      'imageurl2' : image2,
-      'imageurl3' : image3 ,
-      'imageurl4' : image4 
+      'thumbnail' : thumbnail
     }
 
 
@@ -187,43 +181,14 @@ function Updatecars() {
 
             <tr>
               <td>
-                <label className="insert-car-label">Image 1</label>
+                <label className="insert-car-label">Thumbnail</label>
               </td>
               <td>
-                <input className="insert-car-input" type="text" required value={image1}
-                onChange={(val) => {setimage1(val.target.value)}}/>
+                <input className="insert-car-input" type="text" required value={thumbnail}
+                onChange={(val) => {setthumbnail(val.target.value)}}/>
               </td>
             </tr>
 
-            <tr>
-              <td>
-                <label className="insert-car-label">Image 2</label>
-              </td>
-              <td>
-                <input className="insert-car-input" type="text" required value={image2}
-                onChange={(val) => {setimage2(val.target.value)}}/>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <label className="insert-car-label">Image 3</label>
-              </td>
-              <td>
-                <input className="insert-car-input" type="text" required value={image3}
-                onChange={(val) => {setimage3(val.target.value)}}/>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <label className="insert-car-label">Image 4</label>
-              </td>
-              <td>
-                <input className="insert-car-input" type="text" required value={image4}
-                onChange={(val) => {setimage4(val.target.value)}}/>
-              </td>
-            </tr>
           </tbody>
 
           <button type="submit" className="insertcar-button" onClick={send}> Update </button>

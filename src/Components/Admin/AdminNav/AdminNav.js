@@ -22,6 +22,8 @@ function AdminNav() {
 
           <Link to='/admin/insertcars'><button className='admin-nav-button'> Insert Cars </button> </Link>
 
+          <Link to='/admin/carsimages'><button className='admin-nav-button'>Cars images </button> </Link>
+
           <Link to='/admin/Bookedcars'> <button className='admin-nav-button'> Bookings </button> </Link> 
 
           <Link to='/'> <button className='admin-nav-button'> Home </button> </Link> 

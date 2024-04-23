@@ -1,18 +1,19 @@
-.cars-details-container{
+.cars-carimage-container{
     position: relative;
     left: 280px;
     padding: 40px 60px;
     z-index: -1;
 }
 
-.details-table {
+.carimage-table {
     border-collapse: collapse;
-    width: 100%;
+    width: max-content;
 }
   
-.details-table-data , .details-table-header {
+.carimage-table-data , .carimage-table-header {
     border: 1px solid #dddddd;
     text-align: left;
+    max-width: 150px;
     padding: 8px;
 }
   
@@ -20,16 +21,6 @@
     background-color:  rgba(248, 236, 219, 0.9)
 }
 
-.Updatebutton{
-    padding: 10px;
-    border: 0px transparent;
-    background-color: orange;
-    color: white;
-    font-weight: 600;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .deletebutton{
     padding: 10px;
@@ -38,6 +29,10 @@
     color: white;
     font-weight: 600;
     border-radius: 5px;
-    margin-left: 5px;
+    margin: 0px 15px 0px 15px;
     cursor: pointer;
+}
+
+.deletebutton:hover{
+    background-color: rgb(255, 0, 0);
 }

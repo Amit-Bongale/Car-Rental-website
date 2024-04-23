@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import './confirmdeletion.css'
 
-import star from '../../../Assets/icons/star.png'
+import star from '../../../../Assets/icons/star.png'
 
 
 function Confirmdeletion({model , setpopup}) {
@@ -72,7 +72,7 @@ function Confirmdeletion({model , setpopup}) {
            
             <div className="deletecar-section">
 
-                <img src={cardetails.imageurl1} alt="car" height={300} className="deletecar-image" />
+                <img src={cardetails.thumbnail} alt="car" height={300} className="deletecar-image" />
 
                 <div className="deletecardetails-container">
                     

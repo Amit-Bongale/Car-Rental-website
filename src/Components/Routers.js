@@ -11,9 +11,10 @@ import Booking from './booking/Booking';
 // Admin routes
 import AdminCardetails from './Admin/AdminCardetails/AdminCardetails';
 import Insertcars from './Admin/Insercars/Insertcars';
-import Confirmdeletion from './Admin/Confirmdeletion/Confirmdeletion';
 import BookedCardetails from './Admin/BookedCarsDetails/BookedCardetails';
-import Updatecars from './Admin/UpdateCars/Updatecars';
+import Updatecars from './Admin/AdminCardetails/UpdateCars/Updatecars';
+
+import Carimages from './Admin/Carsimages/Carimages';
 
 function CustomRouters(){
     return(
@@ -33,6 +34,7 @@ function CustomRouters(){
             <Route path='/admin/insertcars' element={<Insertcars></Insertcars>}></Route>
             <Route path='/admin/Bookedcars' element={<BookedCardetails></BookedCardetails>}></Route>
             <Route path='/admin/UpdateDetails/:model?' element={<Updatecars/>}></Route>
+            <Route path='/admin/carsimages' element={<Carimages></Carimages>}></Route>
             
         </Routes>
         

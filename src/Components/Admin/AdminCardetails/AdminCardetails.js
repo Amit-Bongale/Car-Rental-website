@@ -4,7 +4,7 @@ import AdminNav from "../AdminNav/AdminNav"
 import './admincardetails.css'
 import { Link } from "react-router-dom";
 
-import Confirmdeletion from "../Confirmdeletion/Confirmdeletion";
+import Confirmdeletion from "./Confirmdeletion/Confirmdeletion";
 
 function AdminCardetails() {
 
@@ -93,15 +93,15 @@ function AdminCardetails() {
                             <td className="details-table-data">
                                 <img  src={car.thumbnail} alt="image1" height={40} />
                             </td>
-
-                            <Link to={`/admin/UpdateDetails/${car.model}`}>
-                                <td className="details-table-data">
-                                    <button>Update</button>
-                                </td>
-                            </Link>
+                        
+                            <td className="details-table-data">
+                                <Link to={`/admin/UpdateDetails/${car.model}`}>
+                                    <button className="Updatebutton">Update</button>
+                                </Link>
+                            </td>
 
                             <td>
-                                <button  onClick={() => {setpopup(true);
+                                <button className="deletebutton"  onClick={() => {setpopup(true);
                                 setcarmodel(car.model); }}> Delete </button>
                             </td>
 

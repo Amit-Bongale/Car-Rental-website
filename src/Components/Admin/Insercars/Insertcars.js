@@ -31,11 +31,22 @@ function Insertcars() {
 
 
     try{
-      fetch(`http://localhost:3000/insertcars` , {method : "POST" , headers:{'Content-Type': 'application/json'} ,  body:JSON.stringify(data)})
+      fetch(`http://localhost:3000/insertcars` , 
+      { method : "POST" , headers:{'Content-Type': 'application/json'} , body:JSON.stringify(data)})
       .then((res) => res.json())
+      .then((data) => {
+        if (data.message){
+          console.log(data.message);
+          alert(data.message);
+        }
+        else if(data.sqlMessage){
+          console.log(data.sqlMessage);
+          alert(data.sqlMessage);
+        }
+        console.log(data.results); 
+      })
       .catch((error) => console.log(error));
       alert('Car inserted sucessfully');
-
     }
     catch (error) {
       console.log("error :", error)
@@ -97,7 +108,6 @@ function Insertcars() {
               <td>
                 <label className="insert-car-label">Seats</label>
               </td>
-
               <td>
                 <input className="insert-car-input" type="text" required
                 onChange={(val) => {setseats(val.target.value)}}/>
@@ -153,7 +163,6 @@ function Insertcars() {
         </table>
 
       </div>
-
     </div>
   );
 }

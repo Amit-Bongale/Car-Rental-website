@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import AdminNav from "../AdminNav/AdminNav";
+import AdminNav from "../../AdminNav/AdminNav";
 
 import { useParams } from 'react-router-dom';
 

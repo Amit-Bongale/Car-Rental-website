@@ -5,10 +5,48 @@ import './Login.css'
 
 import { Link } from 'react-router-dom';
 
+import { useState } from 'react';
+
 function Login(){
 
-    return(
+    let [email , setemail] = useState("");
+    let [password , setpassword] = useState("");
 
+
+    function send(){
+
+        let data = {
+          'email' : email,
+          'password' : password
+        }
+    
+        try{
+          fetch(`http://localhost:3000/login` , 
+          { method : "POST" , headers:{'Content-Type': 'application/json'} , body:JSON.stringify(data)})
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.message){
+            //   console.log(data.message);
+              alert(data.message);
+
+              if(data.message === 'Loged in Sucessfully'){
+                window.location.href = '/';
+              }
+            }
+            else if(data.sqlMessage){
+            //   console.log(data.sqlMessage);
+              alert(data.sqlMessage);
+            }
+            // console.log(data.results);
+          })
+          .catch((error) => console.log(error));
+        }
+        catch (error) {
+          console.log("error :", error)
+        }
+      }
+
+    return(
         <>
         <Nav></Nav>
         <div className='loginsection'>
@@ -24,16 +62,21 @@ function Login(){
                         </div>
 
                         <div className="login_form">
+
                             <div className="Username-container">
-                                <label className="login-Username-container-label">Username</label>
-                                <input className='login-input-bar' type="text" />
-                            </div>  
+                                <label className="login-Username-container-label">Email</label>
+                                <input className='login-input-bar' type="email"
+                                onChange={val => setemail(val.target.value)}/>
+                            </div>
+
                             <div className="Username-container">
                                 <label className="login-Username-container-label" >Password</label>
-                                <input className='login-input-bar' type="password" />
+                                <input className='login-input-bar' type="password"
+                                onChange={val => setpassword(val.target.value)} />
                             </div>
+
                             <div className="login_button_container">
-                                <button className="login_button">Log in</button>
+                                <button className="login_button" onClick={send}>Log in</button>
                             </div>
 
                             <div className="login_text_container">
@@ -44,7 +87,6 @@ function Login(){
                                     <span>Sign Up</span>
                                     <img className='arrow-login' src={arrow} alt="arrow"/>
                                 </button> </Link>
-                                
                             </div>
 
                         </div>

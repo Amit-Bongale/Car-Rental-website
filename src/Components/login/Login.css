@@ -75,6 +75,10 @@
     padding: 2px;
 }
 
+.login-input-bar:focus{
+    outline: 0px transparent;
+}
+
 .login_button_container{
     margin: 20px 0px 10px 0px;
 }

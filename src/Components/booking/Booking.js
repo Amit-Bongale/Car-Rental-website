@@ -67,7 +67,7 @@ function Booking(){
             }
         )})
 
-    },[]);
+    },[carname]);
 
     let price = cardetails.priceperday
 
@@ -88,16 +88,22 @@ function Booking(){
         }
 
         try{
-
-            fetch('http://localhost:3000/cars/bookings' ,
+            fetch('http://localhost:3000/bookings' ,
             { method :'POST', headers:{'Content-Type' : 'application/json'} ,
-                body: JSON.stringify(data) }
-            )  .then((res) => res.json())
-             .catch((error) => {
-                console.error('Error:', error);
-            });
-
-            alert('Car booked Sucessfully')
+                body: JSON.stringify(data) })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.message){
+                    console.log(data.message);
+                    alert(data.message);
+                }
+                else if(data.sqlMessage){
+                    console.log(data.sqlMessage);
+                    alert(data.sqlMessage);
+                }
+                console.log(data.results);
+            })
+            .catch((error) => { console.error('Error:', error); });
         }
         catch (error){
             console.log(error)
@@ -107,71 +113,70 @@ function Booking(){
     
     return(
         <>
-        <Nav></Nav>
-        <div className='booking-section'>
+            <Nav></Nav>
+            <div className='booking-section'>
 
-            <div className='booking-container'>
-
-                <div>
-
-                    <div className='booking-text'>
-
-                        <label className='booking-label'>Name</label>
-                        <input onChange={(val) => {setname(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter your name' />
-                
-                        <label className='booking-label'>Mobile</label>
-                        <input onChange={(val) => {setmobile(val.target.value)}} className='booking-inputbar' type="number" placeholder='enter your Mobile number' />
-                
-                        <label className='booking-label'>Email</label>
-                        <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
-                    
-                        <div className='times'>
-                            <div className='picktimes'>
-                                <label className='booking-label' >From</label>
-                                <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' id='time' type="date" placeholder='enter pickup time' />
-                            </div>
-                        
-                            <div className='picktimes'>
-                                <label className='booking-label'>To</label>
-                                <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar'   id='time' type="date" placeholder='enter droping time' /> 
-                            </div>
-                        </div>
-
-                        <label className='booking-label'>Pickup location</label>
-                        <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
-
-                        <label className='booking-label'>Pickup time</label>
-                        <input onChange={(val) => {settime(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
-                    
-                    </div>
-
-                    <button className='button' type='submit' onClick={send}>
-                        <img src={wheel} alt="wheel" height={25}  class="svgIcon" />
-                        Book Now
-                    </button>
-
-                </div>
-
-                {/* CALCULTAING PRICE  */}
-                <div className='booking-summery'>
-                    <h1>Booking summery</h1>
-                    <hr/>
+                <div className='booking-container'>
 
                     <div>
-                        <img src={cardetails.thumbnail} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
-                        <h3>  car name : {cardetails.model}</h3>
-                        <h3>  seats : {cardetails.seats}</h3>
-                        <h3>  driver name : {cardetails.drivername}</h3>
+
+                        <div className='booking-text'>
+
+                            <label className='booking-label'>Name</label>
+                            <input onChange={(val) => {setname(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter your name' />
+                    
+                            <label className='booking-label'>Mobile</label>
+                            <input onChange={(val) => {setmobile(val.target.value)}} className='booking-inputbar' type="number" placeholder='enter your Mobile number' />
+                    
+                            <label className='booking-label'>Email</label>
+                            <input  onChange={(val) => {setemail(val.target.value)}} className='booking-inputbar' type="email" placeholder='enter your email' />
+                        
+                            <div className='times'>
+                                <div className='picktimes'>
+                                    <label className='booking-label' >From</label>
+                                    <input onChange={(val) => {setpickup(val.target.value)}} className='booking-inputbar' id='time' type="date" placeholder='enter pickup time' />
+                                </div>
+                            
+                                <div className='picktimes'>
+                                    <label className='booking-label'>To</label>
+                                    <input onChange={(val) => {setdrop(val.target.value)}} className='booking-inputbar'   id='time' type="date" placeholder='enter droping time' /> 
+                                </div>
+                            </div>
+
+                            <label className='booking-label'>Pickup location</label>
+                            <input  onChange={(val) => {setlocation(val.target.value)}} className='booking-inputbar' type="text" placeholder='enter pickup Location' />
+
+                            <label className='booking-label'>Pickup time</label>
+                            <input onChange={(val) => {settime(val.target.value)}} className='booking-inputbar' type="time" placeholder='enter pickup time' />
+                        
+                        </div>
+
+                        <button className='button' type='submit' onClick={send}>
+                            <img src={wheel} alt="wheel" height={25}  class="svgIcon" />
+                            Book Now
+                        </button>
+
                     </div>
-                    <hr/>
-                   
-                    <h2>Total Price = {price * days} rs.</h2>
+
+                    {/* CALCULTAING PRICE  */}
+                    <div className='booking-summery'>
+                        <h1>Booking summery</h1>
+                        <hr/>
+
+                        <div>
+                            <img src={cardetails.thumbnail} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
+                            <h3>  car name : {cardetails.model}</h3>
+                            <h3>  seats : {cardetails.seats}</h3>
+                            <h3>  driver name : {cardetails.drivername}</h3>
+                        </div>
+                        <hr/>
+                    
+                        <h2>Total Price = {price * days} rs.</h2>
+                    </div>
+
                 </div>
-
+            
             </div>
-           
-        </div>
-
         </>
 
     );

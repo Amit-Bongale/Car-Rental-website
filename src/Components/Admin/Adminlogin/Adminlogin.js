@@ -1,50 +1,45 @@
-import arrow from '../../Assets/icons/right-arrow.png'
-import Nav from '../nav/Nav';
 
-import './Login.css'
+import Nav from '../../nav/Nav';
 
-import { Link } from 'react-router-dom';
+import '../../login/Login.css'
 
 import { useState } from 'react';
 
-function Login(){
+function Adminlogin(){
 
-    let [email , setemail] = useState("");
+    let [id , setid] = useState("");
     let [password , setpassword] = useState("");
 
 
     function login(){
 
         let data = {
-          'email' : email,
+          'id' : id,
           'password' : password
         }
     
         try{
-          fetch(`http://localhost:3000/login` , 
+          fetch(`http://localhost:3000/adminlogin` , 
           { method : "POST" , headers:{'Content-Type': 'application/json'} , body:JSON.stringify(data)})
           .then((res) => res.json())
           .then((data) => {
-            if (data.message){
-            //   console.log(data.message);
-              alert(data.message);
 
-              if(data.message === 'Loged in Sucessfully'){
-                window.location.href = '/';
-              }
+            if(data.message === 'acess granted'){
+                window.location.href = '/admin';
             }
             else if(data.sqlMessage){
             //   console.log(data.sqlMessage);
               alert(data.sqlMessage);
             }
             // console.log(data.results);
+
           })
           .catch((error) => console.log(error));
-        }
-        catch (error) {
+
+        } catch (error) {
           console.log("error :", error)
         }
-      }
+    }
 
     return(
         <>
@@ -58,15 +53,15 @@ function Login(){
                     <div className="Main-login-form">
 
                         <div className="login-logo">
-                            <h2>Welcome Back!</h2>
+                            <h2>Log In</h2>
                         </div>
 
                         <div className="login_form">
 
                             <div className="Username-container">
-                                <label className="login-Username-container-label">Email</label>
-                                <input className='login-input-bar' type="email"
-                                onChange={val => setemail(val.target.value)}/>
+                                <label className="login-Username-container-label">ID</label>
+                                <input className='login-input-bar' type="text"
+                                onChange={val => setid(val.target.value)}/>
                             </div>
 
                             <div className="Username-container">
@@ -79,27 +74,14 @@ function Login(){
                                 <button className="login_button" onClick={login}>Log in</button>
                             </div>
 
-                            <div className="login_text_container">
-                                New User? join us now
-                                
-                                <Link to='/signup'>
-                                <button className='card-button' id='signup-button'>
-                                    <span>Sign Up</span>
-                                    <img className='arrow-login' src={arrow} alt="arrow"/>
-                                </button> </Link>
-                            </div>
-
                         </div>
 
                     </div>
-
                 </div>
-
             </div>
-
         </div>
         </>
     );
 }
 
-export default Login;
+export default Adminlogin;

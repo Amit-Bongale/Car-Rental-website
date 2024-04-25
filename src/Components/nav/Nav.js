@@ -49,7 +49,7 @@ function Nav(){
                         
                         <Link to='/contactus'> <button className="nav-link"> Contact us </button> </Link>
 
-                        <Link to='/admin'> <button className="nav-link"> Admin </button> </Link>
+                        <Link to='/adminlogin'> <button className="nav-link"> Admin </button> </Link>
                     </div>
                     
                 </div>

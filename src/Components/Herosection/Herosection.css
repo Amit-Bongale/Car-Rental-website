@@ -77,6 +77,14 @@
 }
 
 
+/* .logo-bg{
+    position: absolute;
+    z-index: -5;
+    right: -10px;
+    top: -120px;
+    opacity: 50%;
+} */
+
 @keyframes car {
     from{
         transform: translateX(800px);

@@ -9,6 +9,7 @@ import Contactus from './Contactus/Contactus';
 import Booking from './booking/Booking';
 
 // Admin routes
+import Adminlogin from './Admin/Adminlogin/Adminlogin';
 import AdminCardetails from './Admin/AdminCardetails/AdminCardetails';
 import Insertcars from './Admin/Insercars/Insertcars';
 import BookedCardetails from './Admin/BookedCarsDetails/BookedCardetails';
@@ -29,8 +30,8 @@ function CustomRouters(){
             <Route path='/contactus' element={<Contactus></Contactus>}></Route>
             <Route path='/signup' element={<Signup></Signup>}></Route>
             
+            <Route path='/adminlogin' element={<Adminlogin></Adminlogin>}></Route>
             <Route path='/admin' element={<AdminCardetails></AdminCardetails>}></Route>
-
             <Route path='/admin/insertcars' element={<Insertcars></Insertcars>}></Route>
             <Route path='/admin/Bookedcars' element={<BookedCardetails></BookedCardetails>}></Route>
             <Route path='/admin/UpdateDetails/:model?' element={<Updatecars/>}></Route>

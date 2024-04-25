@@ -2,6 +2,7 @@ import './Herosection.css'
 
 import carimg from '../../Assets/images/main-car.png'
 import wheel from '../../Assets/icons/wheel.png'
+// import logo from '../../Assets/Logo/rfr logo.jpg'
 
 import { Link, Outlet } from 'react-router-dom';
 
@@ -34,6 +35,7 @@ function Herosection(){
             <div className='main-img'>
 
                 <img className="main-car" src={carimg} alt="main img" />
+                {/* <img className="logo-bg" src={logo} alt="main img" height={950}/> */}
 
             </div>
 

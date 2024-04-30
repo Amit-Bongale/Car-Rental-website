@@ -1,4 +1,4 @@
-
+import './adminlogin.css'
 import Nav from '../../nav/Nav';
 
 import '../../login/Login.css'
@@ -44,7 +44,7 @@ function Adminlogin(){
     return(
         <>
         <Nav></Nav>
-        <div className='loginsection'>
+        <div className='admin-loginsection'>
 
             <div className="main-container-login">
 
@@ -70,7 +70,7 @@ function Adminlogin(){
                                 onChange={val => setpassword(val.target.value)} />
                             </div>
 
-                            <div className="login_button_container">
+                            <div className="login_button_container" style={{marginTop : 40}}>
                                 <button className="login_button" onClick={login}>Log in</button>
                             </div>
 

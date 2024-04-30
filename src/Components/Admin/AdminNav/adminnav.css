@@ -42,15 +42,28 @@
 .admin-nav-button{
     background-color:transparent;
     border: 0px;
-    width: 150px;
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
-    margin: 15px;
+    margin: 15px 15px 5px 15px;
     transition: all 200ms ease-in-out;
 }
 
-.admin-nav-button:hover{
-    scale: 1.1;
+.admin-nav-link:hover{
+    scale: 1.05;
     border-bottom: 1px solid black;
+}
+
+.admin-nav-image{
+    height: 30px;
+    margin-top: 20px;
+    transition: all 200ms ease-in-out;
+    margin-bottom: 0px;
+}
+
+
+.admin-nav-link{
+    display: flex;
+    width: 220px;
+    margin: 4px;
 }

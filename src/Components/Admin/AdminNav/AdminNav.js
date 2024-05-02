@@ -48,8 +48,7 @@ function AdminNav() {
 
           <Link to='/' className='admin-nav-link'>
             <img src={home} alt="car" className='admin-nav-image' />
-            <button className='admin-nav-button'> Home </button> </Link> 
-
+            <button className='admin-nav-button' onClick={ localStorage.removeItem("LoggedIn")}> Home </button> </Link> 
         </div>
 
       </div>

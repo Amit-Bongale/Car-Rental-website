@@ -1,14 +1,15 @@
 import './adminlogin.css'
-import Nav from '../../nav/Nav';
-
 import '../../login/Login.css'
 
+import Nav from '../../nav/Nav';
 import { useState } from 'react';
+// import Auth from '../Auth/Auth';
 
 function Adminlogin(){
 
     let [id , setid] = useState("");
     let [password , setpassword] = useState("");
+    // let [loggedIn , setloggedin] = useState(false);
 
 
     function login(){
@@ -25,11 +26,19 @@ function Adminlogin(){
           .then((data) => {
 
             if(data.message === 'acess granted'){
-                window.location.href = '/admin';
+                // setloggedin(true)
+                // Set a variable in local storage
+                localStorage.setItem('LoggedIn', 'true');
+                window.location.href = 'admin/dashboard';
+                // return <Auth loggedIn={loggedIn} />;
             }
             else if(data.sqlMessage){
             //   console.log(data.sqlMessage);
               alert(data.sqlMessage);
+              console.log("ACESS DENIED")
+            }
+            else{
+                alert("Invalid ID or Password")
             }
             // console.log(data.results);
 

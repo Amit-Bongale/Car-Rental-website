@@ -1,4 +1,4 @@
-import {useState, useEffect } from 'react';
+import {useState, useEffect, lazy } from 'react';
 import arrow from '../../Assets/icons/right-arrow.png'
 
 import Nav from '../nav/Nav';
@@ -6,7 +6,10 @@ import Nav from '../nav/Nav';
 import '../featuredcars/Featuredcars.css'
 import './cars.css'
 
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import { Suspense } from 'react';
+let Footer = lazy(() => import('../footer/Footer'));
 
 
 function Allcars(){
@@ -50,7 +53,7 @@ function Allcars(){
             setCarsFound(data.length);
         }
 
-    }, [search] );
+    }, [search , carsdata] );
 
 
     useEffect(() => {
@@ -115,9 +118,10 @@ function Allcars(){
                     <p>No cars found</p>
                 )}
 
-                <Outlet></Outlet>
-
             </div>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Footer />
+            </Suspense>
         </div>
     );
 }

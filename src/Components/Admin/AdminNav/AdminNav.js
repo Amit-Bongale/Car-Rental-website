@@ -26,7 +26,7 @@ function AdminNav() {
 
         <div className='admin-navlink-container'>
 
-          <Link to='/admin' className='admin-nav-link'>
+          <Link to='/admin/dashboard' className='admin-nav-link'>
             <img src={cars} alt="car" className='admin-nav-image' />
             <button className='admin-nav-button'>Cars Details </button> 
           </Link>

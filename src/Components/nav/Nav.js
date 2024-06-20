@@ -24,7 +24,6 @@ function Nav(){
     return(
         
         <div className="navigation-section">
-
             <div className="nav-container flex">
 
                 <div className="nav-menu">

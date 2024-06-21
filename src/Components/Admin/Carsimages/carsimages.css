@@ -2,7 +2,7 @@
     position: relative;
     left: 280px;
     padding: 40px 60px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .carimage-table {
@@ -34,5 +34,19 @@
 }
 
 .deletebutton:hover{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 98, 0);
+}
+
+.imageinsertbutton{
+    margin: 20px;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 0px transparent;
+    background-color: rgb(13, 117, 55);
+    color: white;
+    font-weight: 600;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }

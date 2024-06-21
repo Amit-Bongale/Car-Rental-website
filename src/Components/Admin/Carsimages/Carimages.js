@@ -2,11 +2,12 @@ import { useState , useEffect } from "react"
 
 import AdminNav from "../AdminNav/AdminNav";
 import './carsimages.css'
-
+import { Link } from "react-router-dom";
 
 function Carimages() {
 
     let [ carsimage , setcarsimage] = useState([]);
+    let [car , setcar] = useState('')
 
     useEffect(() => {
         try{
@@ -17,12 +18,46 @@ function Carimages() {
         } catch (error){
             console.log(error);
         }
-    },[])
+    },[car])
+
+
+    function deleteimage(id , image){
+
+        let bodyData = { 
+            "carid":id,
+            "image":image
+        };
+
+        try {
+            fetch('http://localhost:3000/deleteimage',
+            { 
+                method: "POST" ,
+                body:JSON.stringify(bodyData),
+                headers: {'Content-Type': 'application/json'}
+            })
+            .then((res) => res.json())
+            .catch(error => {
+                console.log('Error fetching data:', error);
+            });
+
+            setcar(image);
+
+            alert('Car Image Deleted Sucessfully');
+
+        }
+        catch (error) {
+          console.error('Error:', error);
+        }
+    }
 
   return (
     <div>
         <AdminNav></AdminNav>
         <div className='cars-carimage-container'>
+            <Link to={`/admin/insertcarimages`}>
+                
+                <button className="imageinsertbutton"> Insert</button>
+            </Link>
             <table className='carimage-table'>
                 <tr>
                     <th className="carimage-table-header">Car Id</th>
@@ -38,7 +73,7 @@ function Carimages() {
                         </td>
 
                         <td>
-                            <button className="deletebutton"> Delete </button>
+                            <button className="deletebutton" onClick={() => deleteimage(car.carid , car.image)}> Delete </button>
                         </td>
                     </tr>
                 ))}

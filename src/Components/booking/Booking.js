@@ -160,9 +160,8 @@ function Booking(){
 
                     {/* CALCULTAING PRICE  */}
                     <div className='booking-summery'>
-                        <h1>Booking summery</h1>
+                        <h1>Booking summary</h1>
                         <hr/>
-
                         <div>
                             <img src={cardetails.thumbnail} alt="car" height={200} style={{borderRadius: 20, marginTop:10}} />
                             <h3>  car name : {cardetails.model}</h3>

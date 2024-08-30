@@ -41,7 +41,6 @@ function Allcars(){
     
 
     useEffect(() => {
-
         if (search === '') {
             setresult([]);
             setCarsFound(1)
@@ -52,7 +51,6 @@ function Allcars(){
             console.log(data.length)
             setCarsFound(data.length);
         }
-
     }, [search , carsdata] );
 
 

@@ -3,14 +3,16 @@ import '../../login/Login.css'
 
 import Nav from '../../nav/Nav';
 import { useState } from 'react';
-// import Auth from '../Auth/Auth';
+
+import {useDispatch } from 'react-redux'
+import { adminlogin } from '../../../Redux/Admin/Adminslice';
 
 function Adminlogin(){
 
     let [id , setid] = useState("");
     let [password , setpassword] = useState("");
-    // let [loggedIn , setloggedin] = useState(false);
 
+    const dispatch = useDispatch()
 
     function login(){
 
@@ -26,22 +28,17 @@ function Adminlogin(){
           .then((data) => {
 
             if(data.message === 'acess granted'){
-                // setloggedin(true)
-                // Set a variable in local storage
-                localStorage.setItem('LoggedIn', 'true');
+                dispatch(adminlogin());
                 window.location.href = 'admin/dashboard';
-                // return <Auth loggedIn={loggedIn} />;
             }
             else if(data.sqlMessage){
-            //   console.log(data.sqlMessage);
               alert(data.sqlMessage);
               console.log("ACESS DENIED")
             }
             else{
                 alert("Invalid ID or Password")
             }
-            // console.log(data.results);
-
+            
           })
           .catch((error) => console.log(error));
 
@@ -54,7 +51,6 @@ function Adminlogin(){
         <>
         <Nav></Nav>
         <div className='admin-loginsection'>
-
             <div className="main-container-login">
 
                 <div className="login-main-container">

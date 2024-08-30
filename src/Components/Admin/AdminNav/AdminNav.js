@@ -2,17 +2,22 @@
 import user from '../../../Assets/icons/driver.jpg'
 import { Link } from "react-router-dom";
 
-import home from '../../../Assets/icons/home.png'
+
 import insert from '../../../Assets/icons/addition.png'
 import cars from '../../../Assets/icons/car (1).png'
 import carimg from '../../../Assets/icons/car (2).png'
 import booking from '../../../Assets/icons/bookings.png'
+import logout from '../../../Assets/icons/logout.png'
 
-
+import { useDispatch } from 'react-redux';
+import { adminlogout } from '../../../Redux/Admin/Adminslice';
 
 import "./adminnav.css";
 
 function AdminNav() {
+
+  const dispatch = useDispatch();
+
   return (
 
     <div className="Admin">
@@ -47,8 +52,8 @@ function AdminNav() {
           </Link> 
 
           <Link to='/' className='admin-nav-link'>
-            <img src={home} alt="car" className='admin-nav-image' />
-            <button className='admin-nav-button' onClick={ localStorage.removeItem("LoggedIn")}> Home </button> </Link> 
+            <img src={logout} alt="car" className='admin-nav-image' />
+            <button className='admin-nav-button' onClick={() => dispatch(adminlogout())}> Log out </button> </Link> 
         </div>
 
       </div>

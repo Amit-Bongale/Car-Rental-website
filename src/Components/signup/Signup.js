@@ -36,7 +36,6 @@ function Signup(){
               console.log(data.sqlMessage);
               alert(data.sqlMessage);
             }
-            console.log(data.results);
           })
           .catch((error) => console.log(error));
         }

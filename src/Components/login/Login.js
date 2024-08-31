@@ -13,8 +13,9 @@ import { userlogin } from "../../Redux/User/UserSlice";
 import { useSelector } from "react-redux";
 
 function Login() {
-  const name = useSelector((state) => state.user.name);
-  const customer_id = useSelector((state) => state.user.customer_id);
+  // const name = useSelector((state) => state.user.name);
+  // const customer_id = useSelector((state) => state.user.customer_id);
+  // const status = useSelector((state) => state.user.loggedin)
 
   let [email, setemail] = useState("");
   let [password, setpassword] = useState("");
@@ -42,8 +43,9 @@ function Login() {
 
           if (data.message === "Loged in Sucessfully") {
             console.log(data);
-            dispatch( userlogin({ name: data.data[0].name, customer_id: data.data[0].customer_id }));
-            window.location.href = '/';
+            dispatch( userlogin({ name: data.data[0].name, customer_id: data.data[0].customer_id,
+              loggedin: true }));
+            // window.location.href = '/';
           }
 
         } else if (data.sqlMessage) {

@@ -5,15 +5,19 @@ import { useState , useEffect} from 'react';
 
 import wheel from '../../Assets/icons/wheel.png'
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import {  Navigate } from 'react-router-dom'
 
 
 function Booking(){ 
 
     let { carname } = useParams();
-    
+
+    let loggedin = useSelector((state) => state.user.loggedin)
+    let customer_id = useSelector(state => state.user.customer_id);
+
     let [cardetails,setDetails] = useState({})
- 
-    let [customer_id , setcustomerid] = useState('')
+
     let [name, setname] = useState('')
     let [mobile, setmobile] = useState('')
     let [email, setemail] = useState('')
@@ -23,6 +27,9 @@ function Booking(){
     let [dropdate, setdrop] = useState('')
 
     let [days , setdays] = useState(0)
+
+    let [price , setprice] = useState()
+
 
 
     useEffect(() => {
@@ -45,7 +52,7 @@ function Booking(){
         setdays(daysDifference)
         
     }, [pickup, dropdate]);
-    
+
 
     useEffect(()=>{
 
@@ -64,14 +71,11 @@ function Booking(){
             res.json().then((val)=>{
                 console.log(val)
                 setDetails(val[0])
+                setprice(val[0].priceperday)
             }
         )})
 
     },[carname]);
-
-    let price = cardetails.priceperday
-
-
 
     // Send Booking Info to Backend
     function send(){
@@ -110,10 +114,18 @@ function Booking(){
             console.log(error)
         }
     }
+
+    let [totalprice , settotalprice] = useState(price)
+
+    useEffect(() => {
+        let calcprice = price * days
+        settotalprice(calcprice)
+    },[days])
   
     
     return(
         <>
+            { loggedin ? ( <div> </div>) : ( <Navigate to="/login" />) }
             <Nav></Nav>
             <div className='booking-section'>
 
@@ -171,7 +183,7 @@ function Booking(){
                         </div>
                         <hr/>
                     
-                        <h2>Total Price = {price * days} rs.</h2>
+                        <h2>Total Price = {totalprice} rs.</h2>
                     </div>
 
                 </div>

@@ -13,7 +13,7 @@ function Booking(){
     
     let [cardetails,setDetails] = useState({})
  
-    
+    let [customer_id , setcustomerid] = useState('')
     let [name, setname] = useState('')
     let [mobile, setmobile] = useState('')
     let [email, setemail] = useState('')
@@ -77,6 +77,7 @@ function Booking(){
     function send(){
 
         var data = {
+            'customer_id' : customer_id,
             'name':name,
             'mobile':mobile,
             'email':email,

@@ -17,6 +17,7 @@ function Nav(){
             setmenuvisible(true)
         }
     }
+
     console.log(menuvisible)
 
     const menustate = menuvisible ? 'menu-visible' : 'menu-hidden'
@@ -47,6 +48,26 @@ function Nav(){
                         <Link to='/login'> <button className="nav-link">Login</button> </Link>
                         
                         <Link to='/contactus'> <button className="nav-link"> Contact us </button> </Link>
+
+                        <Link>
+                        <div className="dropdown">
+                            <button  className="dropdown-toggle nav-link">
+                                user <span className="arrow"></span>
+                            </button>
+                        
+                            <ul className="dropdown-menu">
+                                <li className="menu-item"><span className="icon">👤</span> My Profile</li>
+                                <li className="menu-item"><span className="icon">⚡</span> SuperCoin Zone</li>
+                                <li className="menu-item"><span className="icon">⭐</span> Flipkart Plus Zone</li>
+                                <li className="menu-item"><span className="icon">📦</span> Orders</li>
+                                <li className="menu-item"><span className="icon">❤️</span> Wishlist (67)</li>
+                                <li className="menu-item"><span className="icon">🏷️</span> Coupons</li>
+                                <li className="menu-item"><span className="icon">💳</span> Gift Cards</li>
+                                <li className="menu-item"><span className="icon">🔔</span> Notifications</li>
+                                <li className="menu-item"><span className="icon">🚪</span> Logout</li>
+                            </ul>
+                        </div>
+                        </Link>
 
                         <Link to='/admin/dashboard'> <button className="nav-link"> Admin </button> </Link>
                     </div>

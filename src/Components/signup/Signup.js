@@ -28,13 +28,12 @@ function Signup(){
           { method : "POST" , headers:{'Content-Type': 'application/json'} , body:JSON.stringify(data)})
           .then((res) => res.json())
           .then((data) => {
-            if (data.message){
-              console.log(data.message);
-              alert(data.message);
+            if(data.message){
+                alert(data.message)
             }
-            else if(data.sqlMessage){
-              console.log(data.sqlMessage);
-              alert(data.sqlMessage);
+            else if (data.message === "Account Created Successfully"){
+              alert(data.message);
+              window.location.href = '/login'
             }
           })
           .catch((error) => console.log(error));

@@ -10,7 +10,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { userlogin } from "../../Redux/User/UserSlice";
 
-import { useSelector } from "react-redux";
 
 function Login() {
   // const name = useSelector((state) => state.user.name);
@@ -45,7 +44,7 @@ function Login() {
             console.log(data);
             dispatch( userlogin({ name: data.data[0].name, customer_id: data.data[0].customer_id,
               loggedin: true }));
-            // window.location.href = '/';
+            window.location.href = '/';
           }
 
         } else if (data.sqlMessage) {

@@ -11,11 +11,10 @@ const persistConfig = {
 };
   
 const rootreducer = {
-    admin : persistReducer(persistConfig, adminReducer),
-    user : persistReducer(persistConfig , userReducer ),
+  admin : persistReducer(persistConfig, adminReducer),
+  user : persistReducer(persistConfig , userReducer ),
 }
-    
-  
+
 
 const store = configureStore({
   reducer: rootreducer,

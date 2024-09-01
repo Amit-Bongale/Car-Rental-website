@@ -17,9 +17,15 @@ import AdminCardetails from './Admin/AdminCardetails/AdminCardetails';
 import Insertcars from './Admin/Insercars/Insertcars';
 import BookedCardetails from './Admin/BookedCarsDetails/BookedCardetails';
 import Updatecars from './Admin/AdminCardetails/UpdateCars/Updatecars';
-
 import Carimages from './Admin/Carsimages/Carimages';
 import Insertcarimage from './Admin/InsertCarImage/Insertcarimage';
+
+import Home2 from './Home2/Home2';
+
+// Users
+import Userdetails from './Users/details/Userdetails';
+import Userbookings from './Users/Bookings/Userbookings';
+import Userwishlist from './Users/wishlist/Userwishlist';
 
 function CustomRouters(){
     return(
@@ -34,6 +40,7 @@ function CustomRouters(){
             <Route path='/contactus' element={<Contactus></Contactus>}></Route>
             <Route path='/signup' element={<Signup></Signup>}></Route>
             
+            
             {/* Admin routes */}
             <Route path='/adminlogin' element={<Adminlogin></Adminlogin>}></Route>
             <Route path='/admin' element={<Auth></Auth>}>
@@ -44,6 +51,13 @@ function CustomRouters(){
                 <Route path='carsimages' element={<Carimages></Carimages>}></Route>
                 <Route path='insertcarimages' element={<Insertcarimage></Insertcarimage>}></Route>
             </Route>
+            
+            <Route path='/home2' element={<Home2></Home2>}></Route>
+
+            {/* User Routes */}
+            <Route path='/userdetails' element={<Userdetails/>}></Route>
+            <Route path='/userbookings' element={<Userbookings/>}></Route>
+            <Route path='/userwishlist' element={<Userwishlist/>}></Route>
             
         </Routes>
         

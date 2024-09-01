@@ -1,0 +1,27 @@
+.home-container{
+    overflow: hidden;
+}
+
+.maintext{
+    z-index: -5;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 72px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.car{
+    height: fit-content;
+    height: 400px;
+}
+
+.carimg{
+    z-index: -3;
+    position: relative;
+    top: -350px;
+    left: 160px;
+    margin-top: 0;
+    width: 80vw;
+    /* filter: hue-rotate(230deg); */
+}

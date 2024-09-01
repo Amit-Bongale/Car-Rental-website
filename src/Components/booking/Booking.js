@@ -17,6 +17,7 @@ function Booking(){
     let customer_id = useSelector(state => state.user.customer_id);
 
     let [cardetails,setDetails] = useState({})
+    let [carid , setcarid] = useState('')
 
     let [name, setname] = useState('')
     let [mobile, setmobile] = useState('')
@@ -56,8 +57,7 @@ function Booking(){
 
     useEffect(()=>{
 
-        let bodyData = { "car":carname
-        };
+        let bodyData = { "car":carname };
 
         fetch( 'http://localhost:3000/cars/carsdata',
             {
@@ -72,6 +72,7 @@ function Booking(){
                 console.log(val)
                 setDetails(val[0])
                 setprice(val[0].priceperday)
+                setcarid(val[0].carid)
             }
         )})
 
@@ -89,6 +90,7 @@ function Booking(){
             'pickuptime':time,
             'pickupdate':pickup,
             'dropdate':dropdate,
+            'car_id' : carid,
             'carmodel' : carname
         }
 
@@ -120,7 +122,7 @@ function Booking(){
     useEffect(() => {
         let calcprice = price * days
         settotalprice(calcprice)
-    },[days])
+    },[days , price])
   
     
     return(

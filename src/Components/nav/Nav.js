@@ -29,81 +29,82 @@ function Nav() {
 
   return (
     <div className="navigation-section">
-      <div className="nav-container flex">
-        <div className="nav-menu">
-          <Link to="/">
-            {" "}
-            <div className="nav-logo-container">
-              <img className="logo" src={logo} alt="" />
-            </div>{" "}
-          </Link>
-
-          <button className="menu-icon" onClick={() => handlemenu()}>
-            <img src={menuicon} alt="menu" width={25} height={23} />
-          </button>
-        </div>
-
-        <div className={menustate}>
-          <div className="nav-elemts">
+        <div className="nav-container flex">
+            <div className="nav-menu">
             <Link to="/">
-              <button className="nav-link">Home</button>{" "}
+              <div className="nav-logo-container">
+                <img className="logo" src={logo} alt="" />
+              </div>
             </Link>
 
-            <Link to="/cars">
-              <button className="nav-link">Cars</button>{" "}
-            </Link>
+            <button className="menu-icon" onClick={() => handlemenu()}>
+                <img src={menuicon} alt="menu" width={25} height={23} />
+            </button>
+            </div>
 
-            <Link to="/contactus">
-              <button className="nav-link"> Contact us </button>{" "}
-            </Link>
+            <div className={menustate}>
+                <div className="nav-elemts">
+                    <Link to="/">
+                      <button className="nav-link">Home</button>{" "}
+                    </Link>
 
-            { loginstatus ? (
-              <Link>
-                <div className="dropdown">
-                  <button className="dropdown-toggle nav-link">
-                    user <span className="arrow"></span>
-                  </button>
+                    <Link to="/home2">
+                      <button className="nav-link">Home2</button>{" "}
+                    </Link>
 
-                  <ul className="dropdown-menu">
-                    <button className="menu-item">
-                      <span className="icon">👤</span> My Profile
-                    </button>
-                    <button className="menu-item">
-                      <span className="icon">📦</span> Bookings
-                    </button>
-                    <button className="menu-item">
-                      <span className="icon">❤️</span> Wishbuttonst
-                    </button>
-                    <button className="menu-item">
-                      <span className="icon">🏷️</span> Coupons
-                    </button>
-                    <button className="menu-item">
-                      <span className="icon">💳</span> Gift Cards
-                    </button>
-                    <button className="menu-item">
-                      <span className="icon">🔔</span> Notifications
-                    </button>
-                    <button
-                      className="menu-item"
-                      onClick={() => dispatch(userlogout())}
-                    >
-                      {" "}
-                      <span className="icon">🚪</span> Logout
-                    </button>
-                  </ul>
+                    <Link to="/cars">
+                      <button className="nav-link">Cars</button>{" "}
+                    </Link>
+
+                    <Link to="/contactus">
+                      <button className="nav-link"> Contact us </button>{" "}
+                    </Link>
+
+                    { loginstatus ? (
+                    <span>
+                        <div className="dropdown">
+                          <button className="dropdown-toggle nav-link">
+                            user <span className="arrow"></span>
+                          </button>
+
+                          <ul className="dropdown-menu">
+                            
+                            <Link to="/userdetails">
+                              <button className="menu-item">
+                              <span className="icon">👤</span> My Profile
+                              </button>
+                            </Link>
+                            
+                            <Link to="/userbookings">
+                              <button className="menu-item">
+                              <span className="icon">📦</span> Bookings
+                              </button>
+                            </Link>
+
+                            <Link to="/userwishlist">
+                              <button className="menu-item">
+                              <span className="icon">❤️</span> Wish list
+                              </button>
+                            </Link>
+                              
+                            <button className="menu-item"
+                              onClick={() => dispatch(userlogout())} >
+                            <span className="icon">🚪</span> Logout
+                            </button>
+                          </ul>
+                        </div>
+                    </span>
+                    ) : (
+                    <Link to="/login"> <button className="nav-link">Login</button>{" "} </Link>
+                    )}
+
+                    <Link to="/admin/dashboard"> <button className="nav-link"> Admin </button>{" "} </Link>
+                    
                 </div>
-              </Link>
-            ) : (
-              <Link to="/login"> <button className="nav-link">Login</button>{" "} </Link>
-            )}
 
-            <Link to="/admin/dashboard"> <button className="nav-link"> Admin </button>{" "} </Link>
-            
-          </div>
+            </div>
 
         </div>
-
-      </div>
 
     </div>
   );

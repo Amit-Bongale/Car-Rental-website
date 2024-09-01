@@ -28,6 +28,7 @@ function BookedCardetails() {
           <table className='details-table'>
 
             <tr>
+                <th className="details-table-header"> Car id</th>
                 <th className="details-table-header"> Car Model</th>
                 <th className="details-table-header"> Customer ID</th>
                 <th className="details-table-header"> Customer Name</th>
@@ -43,13 +44,16 @@ function BookedCardetails() {
             {
                 details.map((booking) => (
                 
-                    <tr className="deatils-table-row">
+                    <tr className="deatils-table-row"> 
 
+                        <td className="details-table-data">
+                            {booking.car_id}
+                        </td>
                         <td className="details-table-data">
                             {booking.carmodel}
                         </td>
                         <td className="details-table-data">
-                            {booking.id} 
+                            {booking.customer_id}
                         </td>
                         <td className="details-table-data">
                             {booking.name} 
@@ -63,14 +67,12 @@ function BookedCardetails() {
                         <td className="details-table-data">
                             {booking.location}
                         </td>
-
                         <td className="details-table-data">
                             {booking.pickuptime}
                         </td>
                         <td className="details-table-data">
                             {booking.pickupdate}
                         </td>
-
                         <td className="details-table-data">
                             {booking.dropdate}
                         </td>
@@ -81,7 +83,7 @@ function BookedCardetails() {
             }
               
           </table>
-      </div>
+        </div>
         
         
     </div>

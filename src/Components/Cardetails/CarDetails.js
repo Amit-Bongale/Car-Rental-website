@@ -16,16 +16,16 @@ import Nav from '../nav/Nav';
 
 function FeaturedCardetails(){
 
-    let { carname } = useParams();
+    let { carid } = useParams();
 
     let [cardetails,setDetails] = useState({})
 
     useEffect(()=>{
 
-        let bodyData = { "car":carname
+        let bodyData = { "car":carid
         };
 
-        fetch( 'http://localhost:3000/cars/carsdata',
+        fetch( 'http://localhost:3000/cardetails',
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -42,7 +42,7 @@ function FeaturedCardetails(){
 
         window.scrollTo(0, 0)
 
-    },[carname]);
+    },[carid]);
 
 
     return(

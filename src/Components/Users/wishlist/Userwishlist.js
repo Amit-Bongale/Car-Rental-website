@@ -1,10 +1,13 @@
 import Nav from "../../nav/Nav"
 
 import { useState , useEffect } from "react"
-
-import { useSelector ,  } from "react-redux"
-
 import { Navigate } from "react-router-dom"
+
+import { useSelector   } from "react-redux"
+
+import Card from "../../Carcard/Card"
+
+import './wishlist.css'
 
 
 function Userwishlist() {
@@ -40,14 +43,16 @@ function Userwishlist() {
         }
     }, [userid]);
 
+    const carsid = carid.map((i) => i.carid)
+
     useEffect(() => {
 
         let data = {
-            "carid": carid
+            "carid": carsid
         }
 
         try {
-            fetch('http://localhost:3000/carsdata',
+                fetch('http://localhost:3000/wishlistcars',
                 {   method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),
@@ -72,9 +77,15 @@ function Userwishlist() {
         { loggedin ? (<></>) : <Navigate to="/"></Navigate>}
 
         <Nav></Nav>
-        <div>
+        <div className="wishlist-container">
+            {
+                cars.map((car) => {
+                    return <div key={car.id} >
+                        <Card car={car}></Card>
+                    </div>
+                })
+            }
 
-            Userwishlist
         </div>
     </div>
   )

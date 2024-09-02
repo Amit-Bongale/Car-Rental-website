@@ -1,5 +1,5 @@
-import arrow from '../../Assets/icons/right-arrow.png'
 import {Link } from 'react-router-dom';
+import Card from '../Carcard/Card';
 
 import './Featuredcars.css'
 
@@ -25,35 +25,11 @@ function FeaturedCars(){
         <div className='card-container'>
             <div className='cards'>
             { cars.map((car, index) => {
-                
                 return(
-                 
                  <div key={index} >
-                    <div className='card'  data-aos='zoom-in-up' data-aos-duration='350'
-                        data-aos-delay= {car.aosDelay} >
- 
-                        <div className='image-container'>
-                            <img src={car.thumbnail} alt="car" />
-                        </div>
-                         
-                        <div className='card-text'>
- 
-                            <h2 className='title'>{car.model}</h2>
-                            <h2>price : {car.priceperday} rs/Day</h2>
-                            
-                            <Link to={`cardetails/${car.model}`}><button className='card-button'>
-                            <span> View </span>
-                            <img src={arrow} alt="arrow" />
-                            </button> </Link>
- 
-                        </div>
- 
-                    </div>
-                     
+                    <Card car={car}></Card>
                  </div>
-                 
                 );
- 
              })}
             </div>
 

@@ -1,5 +1,4 @@
 import {useState, useEffect, lazy } from 'react';
-import arrow from '../../Assets/icons/right-arrow.png'
 
 import Nav from '../nav/Nav';
 
@@ -7,9 +6,11 @@ import '../featuredcars/Featuredcars.css'
 import './cars.css'
 
 import { Link } from 'react-router-dom';
+import Card from '../Carcard/Card';
 
 import { Suspense } from 'react';
 let Footer = lazy(() => import('../footer/Footer'));
+
 
 
 function Allcars(){
@@ -75,40 +76,12 @@ function Allcars(){
         
             <div className='card-container' id='view-page'>
 
-                {/* set carsFound = 1(true) if cars found, else set to 0(false) */}
-
                 { carsFound ? (
 
                     renderCars.map((car) => {
                     
                         return(
-                            
-                            <div className='cards'>
-        
-                                <div className='card' data-aos='zoom-in-down' data-aos-duration='400'
-                                    data-aos-delay= {car.aosDelay}>
-        
-                                    <div className='image-container'>
-                                        <img src={car.thumbnail} alt="car" />
-                                    </div>
-                                
-                                    <div className='card-text'>
-        
-                                        <h2 className='title'>{car.model}</h2>
-                                        <h2>price : {car.priceperday} rs/Day</h2>
-                                    
-                                        <Link to={`/cardetails/${car.model}`}><button className='card-button'>
-                                            <span> View </span>
-                                            <img src={arrow} alt="arrow" />
-                                            </button>
-                                        </Link>
-        
-                                    </div>
-        
-                                </div>
-                            
-                            </div>
-                        
+                            <Card car={car}></Card>
                         );
                     })
 

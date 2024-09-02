@@ -34,7 +34,7 @@ function CustomRouters(){
 
             <Route path='/' element={<Home></Home>}> </Route>
             <Route path='/login' element={<Login></Login>} ></Route>
-            <Route path='/cardetails/:carname?' element={<Cardetails></Cardetails>}></Route>
+            <Route path='/cardetails/:carid?' element={<Cardetails></Cardetails>}></Route>
             <Route path='/cars' element={<Allcars></Allcars>}></Route>
             <Route path='/booking/:carname?' element={<Booking></Booking>}></Route>
             <Route path='/contactus' element={<Contactus></Contactus>}></Route>

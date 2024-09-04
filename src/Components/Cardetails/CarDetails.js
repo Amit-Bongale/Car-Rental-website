@@ -3,26 +3,36 @@ import './CarDetails.css'
 import ImageSlider from "../Imageslider/Cardcaurosal";
 
 import star from '../../Assets/icons/star.png'
+import heart from '../../Assets/icons/heart.png'
+import heartfill from '../../Assets/icons/heartfill.png'
 
 
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
+import { useSelector } from 'react-redux';
+
 
 import arrow from '../../Assets/icons/arrow-white.png'
 import driverimage from '../../Assets/icons/driver.jpg'
 import Nav from '../nav/Nav';
 
-function FeaturedCardetails(){
+function Cardetails(){
 
     let { carid } = useParams();
 
     let [cardetails,setDetails] = useState({})
 
+    let userid = useSelector((state) => state.user.customer_id)
+
+    let [wishlist , setwishlist] = useState('')
+    let [isWishlisted, setIsWishlisted] = useState(false)
+
     useEffect(()=>{
 
-        let bodyData = { "car":carid
+        let bodyData = {
+            "car":carid
         };
 
         fetch( 'http://localhost:3000/cardetails',
@@ -33,16 +43,82 @@ function FeaturedCardetails(){
             },
         )
 
-        .then((res)=>{
-            res.json().then((val)=>{
-                console.log(val)
-                setDetails(val[0])
-            }
-        )})
+        .then((res)=> res.json() )
+        .then((val)=>{
+            console.log(val)
+            setDetails(val[0])
+        })
 
         window.scrollTo(0, 0)
 
-    },[carid]);
+    },[carid , userid]);
+
+
+    useEffect(()=>{
+
+        let bodyData = {
+            "customer_id": userid,
+            "carid" : carid
+        };
+
+        fetch( 'http://localhost:3000/checkwishlist',
+            {
+                method:"POST",
+                body:JSON.stringify(bodyData),
+                headers: { 'Content-Type': 'application/json'},
+            },
+        )
+        .then((res)=> res.json())
+        .then((val)=>{
+            console.log(val)
+            setIsWishlisted(val[0])
+        }
+
+    )},[carid , userid , wishlist ]);
+    
+
+    function add(){
+     
+        let bodyData = { 
+            "customer_id": userid,
+            "carid" : carid
+        };
+
+        fetch( 'http://localhost:3000/addwishlist',
+            {
+                method:"POST",
+                body:JSON.stringify(bodyData),
+                headers: { 'Content-Type': 'application/json'},
+            },
+        )
+        .then((res)=> res.json())
+        .then((val)=> {
+            console.log(val)
+            // alert("Added to Wishlist");
+        })
+        setwishlist(true)
+    }
+
+    function remove(){
+        let bodyData = { 
+            "customer_id": userid,
+            "carid" : carid
+        };
+
+        fetch( 'http://localhost:3000/removewishlist',
+            {
+                method:"POST",
+                body:JSON.stringify(bodyData),
+                headers: { 'Content-Type': 'application/json'},
+            },
+        )
+        .then((res)=> res.json())
+        .then((val)=> {
+            console.log(val)
+            // alert("Removed from Wishlist");
+        })
+        setwishlist(false)
+    }
 
 
     return(
@@ -59,20 +135,33 @@ function FeaturedCardetails(){
                 
                 <div className="car-title"> 
                     <h1>{cardetails.model}</h1>
-                    <div className='car-ratings'>
-                        <h2 className='car-rating-elem'>{cardetails.carrating}</h2> 
-                        <img src={star} alt="rating" height={20} className='car-rating-elem'/>
-                    </div>
+                    {
+                        isWishlisted ? (
+                            <button className='wishlist-button' onClick={() => remove() }> <img src={heartfill} alt="arrow" height={50}/>
+                            </button>)
+                        : ( 
+                            <button className='wishlist-button' onClick={() => add() }> <img src={heart} alt="arrow" height={50}/>
+                            </button>
+                        )
+                    }
                 </div>
 
                 <div className='car-details'>
                     <h2>price: {cardetails.priceperday} rs/Day</h2>
                     <h2> Seats : {cardetails.seats}</h2>
+                    <div className='car-ratings'>
+                        <h2 className='car-rating-elem'>{cardetails.carrating}</h2> 
+                        <img src={star} alt="rating" height={20} className='car-rating-elem'/>
+                    </div>
                 </div>
         
                 <Link to={`/booking/${cardetails.model}`}>
                 <button className='car-booking-button'> Rent Now <img src={arrow} alt="arrow" height={10}/>
                 </button></Link>
+
+                
+
+                
             </div>
 
             <div className='driver-details-container'>
@@ -96,4 +185,4 @@ function FeaturedCardetails(){
     );
 }
 
-export default FeaturedCardetails;
+export default Cardetails;

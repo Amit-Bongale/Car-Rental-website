@@ -25,6 +25,8 @@
     background-color: rgb(205, 255, 205);
     height: 35px;
     border-radius: 8px;
+    width: 80px;
+    margin-bottom: 30px;
 }
 
 .car-ratings > h2{
@@ -69,6 +71,19 @@
 
 .car-booking-button:hover {
     box-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
+}
+
+.wishlist-button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.wishlist-button:hover{
+    opacity: 0.9;
+    scale: 1.05;
 }
 
 @media (max-width: 340px){

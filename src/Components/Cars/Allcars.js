@@ -5,7 +5,6 @@ import Nav from '../nav/Nav';
 import '../featuredcars/Featuredcars.css'
 import './cars.css'
 
-import { Link } from 'react-router-dom';
 import Card from '../Carcard/Card';
 
 import { Suspense } from 'react';

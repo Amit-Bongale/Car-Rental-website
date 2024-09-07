@@ -27,6 +27,8 @@ function Nav() {
 
   const menustate = menuvisible ? "menu-visible" : "menu-hidden";
 
+  
+
   return (
     <div className="navigation-section">
         <div className="nav-container flex">
@@ -38,7 +40,7 @@ function Nav() {
             </Link>
 
             <button className="menu-icon" onClick={() => handlemenu()}>
-                <img src={menuicon} alt="menu" width={25} height={23} />
+              <img src={menuicon} alt="menu" width={25} height={23} />
             </button>
             </div>
 
@@ -48,9 +50,9 @@ function Nav() {
                       <button className="nav-link">Home</button>{" "}
                     </Link>
 
-                    <Link to="/home2">
+                    {/* <Link to="/home2">
                       <button className="nav-link">Home2</button>{" "}
-                    </Link>
+                    </Link> */}
 
                     <Link to="/cars">
                       <button className="nav-link">Cars</button>{" "}

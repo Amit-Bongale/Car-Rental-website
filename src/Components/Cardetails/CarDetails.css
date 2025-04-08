@@ -82,7 +82,7 @@
 }
 
 .wishlist-button:hover{
-    opacity: 0.9;
+    opacity: 0.8;
     scale: 1.05;
 }
 
@@ -91,11 +91,15 @@
     .cardetails{
         margin: 15px;
     }
+
+    .wishlist-button > img{
+        width: 20px;
+        height: 20px;
+    }
     
     .car-title{
         margin: 40px 0px 20px 0px;
         display: flex;
-        flex-direction: column;
         font-size: 4vw;
         height: max-content;
     }
@@ -152,17 +156,29 @@
 }
 
 @media (min-width: 341px) and (max-width: 450px) {
+    .wishlist-button > img{
+        width: 30px;
+        height: 30px;
+    }
 
     .cardetails{
         margin: 15px;
     }
     
     .car-title{
-        margin: 40px 0px 20px 0px;
+        margin: 40px 0px 0px 0px;
         display: flex;
-        flex-direction: column;
         font-size: 4vw;
         height: max-content;
+    }
+
+    .car-title > h1{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .car-details > h2 {
+        margin: 12px 0px;
     }
 
     .car-ratings{
@@ -182,11 +198,12 @@
     }
 
     .driver-details-container{
-        margin: 40px 20px 5px 20px;
+        margin: 10px 20px 5px 20px;
         height: max-content;
         border-radius: 20px;
         width: 90vw;
     }
+
 
     .driver-image{
         margin: 15px 5px 0px 15px;
@@ -219,16 +236,30 @@
 
 @media (min-width: 451px) and (max-width: 700px){
 
+
     .cardetails{
         margin: 25px;
     }
 
+    .wishlist-button > img{
+        width: 40px;
+        height: 40px;
+    }
+
     .car-title{
-        margin: 40px 0px;
+        margin-top: 40px;
         display: flex;
-        flex-direction: column;
         font-size: 4vw;
         height: max-content;
+    }
+
+    .car-title > h1{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .car-details > h2 {
+        margin: 20px 0px 20px 0px;
     }
 
     .car-ratings{

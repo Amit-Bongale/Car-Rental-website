@@ -25,7 +25,7 @@ function Allcars(){
     useEffect(() => {
 
         try {
-            fetch('http://localhost:3000/carsdata', { method: "POST" })
+            fetch(`${process.env.REACT_APP_API_URL}/carsdata`, { method: "POST" })
                 .then((res) => res.json())
                 .then((data) => {
                     console.log('Fetched data:', data);

@@ -25,7 +25,7 @@ function Contactus(){
         }
 
         try{
-            fetch('http://localhost:3000/contactus', {method:'Post' , headers:{'Content-Type': 'application/json'}, body:JSON.stringify(data)})
+            fetch(`${process.env.REACT_APP_API_URL}/contactus`, {method:'Post' , headers:{'Content-Type': 'application/json'}, body:JSON.stringify(data)})
             .then((res) => res.json())
             .catch((error) => console.log('Error:',error));
             alert('thanks for contacting')

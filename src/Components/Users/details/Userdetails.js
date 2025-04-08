@@ -24,6 +24,7 @@ function Userdetails() {
         <h3> User Id : {userid} </h3>
 
         <button className="button-center" onClick={() => dispatch(userlogout())}>Logout</button>
+        
       </div>
     </div>
   )

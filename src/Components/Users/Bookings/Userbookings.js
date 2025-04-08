@@ -1,9 +1,7 @@
 import Nav from "../../nav/Nav"
 
 import { useState , useEffect } from "react"
-
 import { useSelector ,  } from "react-redux"
-
 import { Navigate } from "react-router-dom"
 
 function Userbookings() {
@@ -20,7 +18,7 @@ function Userbookings() {
         }
 
         try {
-            fetch('http://localhost:3000/customerbookingdetails',
+            fetch(`${process.env.REACT_APP_API_URL}/customerbookingdetails`,
                 {   method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),

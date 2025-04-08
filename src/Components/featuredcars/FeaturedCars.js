@@ -11,7 +11,7 @@ function FeaturedCars(){
 
     useEffect(() => {
         try{
-            fetch('http://localhost:3000/featuredcars' , {method : 'POST'})
+            fetch(`${process.env.REACT_APP_API_URL}/featuredcars` , {method : 'POST'})
             .then(res => res.json())
             .then(data => { console.log(data) ; setcars(data)})
             .catch(error => console.log(error));

@@ -35,7 +35,7 @@ function Cardetails(){
             "car":carid
         };
 
-        fetch( 'http://localhost:3000/cardetails',
+        fetch( `${process.env.REACT_APP_API_URL}/cardetails`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -61,7 +61,7 @@ function Cardetails(){
             "carid" : carid
         };
 
-        fetch( 'http://localhost:3000/checkwishlist',
+        fetch( `${process.env.REACT_APP_API_URL}/checkwishlist`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -84,7 +84,7 @@ function Cardetails(){
             "carid" : carid
         };
 
-        fetch( 'http://localhost:3000/addwishlist',
+        fetch(`${process.env.REACT_APP_API_URL}/addwishlist`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -105,7 +105,7 @@ function Cardetails(){
             "carid" : carid
         };
 
-        fetch( 'http://localhost:3000/removewishlist',
+        fetch( `${process.env.REACT_APP_API_URL}/removewishlist`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),

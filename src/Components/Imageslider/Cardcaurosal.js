@@ -18,14 +18,13 @@ const ImageSlider = ( {id} ) => {
 
         let bodyData = { 'id' : id };
 
-        fetch( 'http://localhost:3000/carsimages',
+        fetch( `${process.env.REACT_APP_API_URL}/carsimages`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
                 headers: { 'Content-Type': 'application/json'},
             },
         )
-
         .then((res)=>{
             res.json().then((val)=>{
                 console.log(val)

@@ -19,7 +19,7 @@ function Confirmdeletion({model , setpopup}) {
             "car":model
         };
 
-        fetch( 'http://localhost:3000/cars/carsdata',
+        fetch( `${process.env.REACT_APP_API_URL}/cars/carsdata`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -46,7 +46,7 @@ function Confirmdeletion({model , setpopup}) {
         };
 
         try {
-            fetch('http://localhost:3000/deletecar',
+            fetch(`${process.env.REACT_APP_API_URL}/deletecar`,
             { 
                 method: "POST" ,
                 body:JSON.stringify(bodyData),

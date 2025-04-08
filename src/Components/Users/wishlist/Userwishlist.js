@@ -24,7 +24,7 @@ function Userwishlist() {
         }
 
         try {
-            fetch('http://localhost:3000/wishlist',
+            fetch(`${process.env.REACT_APP_API_URL}/wishlist`,
                 {   method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),
@@ -52,7 +52,7 @@ function Userwishlist() {
         }
 
         try {
-                fetch('http://localhost:3000/wishlistcars',
+                fetch(`${process.env.REACT_APP_API_URL}/wishlistcars`,
                 {   method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),

@@ -11,7 +11,7 @@ function Carimages() {
 
     useEffect(() => {
         try{
-            fetch('http://localhost:3000/allcarsimages', {method: 'POST'})
+            fetch(`${process.env.REACT_APP_API_URL}/allcarsimages`, {method: 'POST'})
             .then((res) => res.json())
             .then((data) => {console.log('Fetched data:', data); setcarsimage(data)})
             .catch((err) => console.log(err));
@@ -29,7 +29,7 @@ function Carimages() {
         };
 
         try {
-            fetch('http://localhost:3000/deleteimage',
+            fetch(`${process.env.REACT_APP_API_URL}/deleteimage`,
             { 
                 method: "POST" ,
                 body:JSON.stringify(bodyData),

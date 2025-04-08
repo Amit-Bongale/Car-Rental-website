@@ -59,7 +59,7 @@ function Booking(){
 
         let bodyData = { "car":carname };
 
-        fetch( 'http://localhost:3000/cars/carsdata',
+        fetch( `${process.env.REACT_APP_API_URL}/cars/carsdata`,
             {
                 method:"POST",
                 body:JSON.stringify(bodyData),
@@ -95,7 +95,7 @@ function Booking(){
         }
 
         try{
-            fetch('http://localhost:3000/bookings' ,
+            fetch(`${process.env.REACT_APP_API_URL}/bookings` ,
             { method :'POST', headers:{'Content-Type' : 'application/json'} ,
                 body: JSON.stringify(data) })
             .then((res) => res.json())

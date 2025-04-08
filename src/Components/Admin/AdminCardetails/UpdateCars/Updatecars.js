@@ -29,7 +29,7 @@ function Updatecars() {
         'car':model
       };
 
-      fetch( 'http://localhost:3000/cars/carsdata',
+      fetch( `${process.env.REACT_APP_API_URL}/cars/carsdata`,
         {
           method:"POST",
           body:JSON.stringify(bodyData),
@@ -50,9 +50,7 @@ function Updatecars() {
         setthumbnail(val[0].thumbnail)
       })
 
-    },[model]);
-
-  
+  },[model]);
 
   function send(){
 
@@ -68,14 +66,12 @@ function Updatecars() {
       'thumbnail' : thumbnail
     }
 
-
     try{
-      fetch(`http://localhost:3000/updatecars` ,
+      fetch(`${process.env.REACT_APP_API_URL}/updatecars` ,
       {method : "POST" , headers:{'Content-Type': 'application/json'} ,  body:JSON.stringify(data)})
       .then((res) => res.json())
       .catch((error) => console.log(error));
       alert('Car Updated sucessfully');
-
     }
     catch (error) {
       console.log("error :", error)
@@ -87,7 +83,6 @@ function Updatecars() {
   return (
     <div className="container-admin">
       <AdminNav></AdminNav>
-
       <div className="cars-input-container">
         <table className="cars-input-table">
 
@@ -136,7 +131,6 @@ function Updatecars() {
               <td>
                 <label className="insert-car-label">Seats</label>
               </td>
-
               <td>
                 <input className="insert-car-input" type="text" required value={seats}
                 onChange={(val) => {setseats(val.target.value)}}/>

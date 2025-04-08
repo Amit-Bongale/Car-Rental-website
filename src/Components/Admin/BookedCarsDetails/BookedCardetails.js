@@ -7,7 +7,7 @@ function BookedCardetails() {
 
     useEffect(() => {
         try{
-            fetch('http://localhost:3000/bookingdetails' , {method : 'POST'})
+            fetch(`${process.env.REACT_APP_API_URL}/bookingdetails` , {method : 'POST'})
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

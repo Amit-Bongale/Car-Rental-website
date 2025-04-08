@@ -31,7 +31,7 @@ function Insertcars() {
 
 
     try{
-      fetch(`http://localhost:3000/insertcars` , 
+      fetch(`${process.env.REACT_APP_API_URL}/insertcars` , 
       { method : "POST" , headers:{'Content-Type': 'application/json'} , body:JSON.stringify(data)})
       .then((res) => res.json())
       .then((data) => {

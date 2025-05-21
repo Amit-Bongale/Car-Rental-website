@@ -37,7 +37,7 @@ function Login() {
       .then((data) => {
         if (data.message) {
           alert(data.message);
-          if (data.message === "Loged in Sucessfully" && data.data.length > 0) {
+          if (data.message === "Loged in Sucessfully" && data.data.length > 0 && data.success) {
             console.log(data);
             dispatch( userlogin({ name: data.data[0].name, customer_id: data.data[0].customer_id,
               loggedin: true }));

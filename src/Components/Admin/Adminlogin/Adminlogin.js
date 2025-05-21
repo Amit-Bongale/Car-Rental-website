@@ -26,7 +26,7 @@ function Adminlogin(){
           { method : "POST" , headers:{'Content-Type': 'application/json'} , body:JSON.stringify(data)})
           .then((res) => res.json())
           .then((data) => {
-            if(data.message === 'acess granted' && data.data.length > 0){
+            if(data.message === 'Login Sucessfully' && data.data.length > 0 && data.success){
                 dispatch(adminlogin());
                 window.location.href = 'admin/dashboard';
             } else{

@@ -36,21 +36,16 @@ function Login() {
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-
-          console.log(data.message);
           alert(data.message);
-
-          if (data.message === "Loged in Sucessfully") {
+          if (data.message === "Loged in Sucessfully" && data.data.length > 0) {
             console.log(data);
             dispatch( userlogin({ name: data.data[0].name, customer_id: data.data[0].customer_id,
               loggedin: true }));
             window.location.href = '/';
           }
-
-        } else if (data.sqlMessage) {
-          alert(data.sqlMessage);
+        } else {
+          alert("Invalid Credentials");
         }
-
       })
       .catch((error) => console.log(error));
     } catch (error) {
@@ -94,8 +89,7 @@ function Login() {
 
                 <div className="login_button_container">
                   <button className="login_button" onClick={login}>
-                    Log in
-                  </button>
+                    Log in                  </button>
                 </div>
 
                 <div className="login_text_container">
